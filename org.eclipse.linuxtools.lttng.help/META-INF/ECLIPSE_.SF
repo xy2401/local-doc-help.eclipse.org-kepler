@@ -1,0 +1,622 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: SMZDda00cLVF1UYAoM6+GYdZJ3I=
+Created-By: 1.6.0 (IBM Corporation)
+SHA1-Digest-Manifest-Main-Attributes: vWNCv7Imzt28o9/Ynq84PtY6Wdc=
+
+Name: doc/images/LTTng2SelectConnection.png
+SHA1-Digest: 7mvMe++vhq4WY055ACyLw2GSyHs=
+
+Name: doc/images/show_legend.gif
+SHA1-Digest: rN3O9LmCjUa8jC94dbhV9kjoFMs=
+
+Name: doc/images/Channel_disabled.gif
+SHA1-Digest: zcmAzpph6UT6vrFa2DRMewigWzA=
+
+Name: doc/images/ExplorerWithAssociatedTraceType.png
+SHA1-Digest: UiLHAiNa2T5yMFCezUtBu+CjZc8=
+
+Name: doc/images/LTTng2UstTracepointEventsDialog.png
+SHA1-Digest: A+eqI1oUZpoBgVw1pGr17gVVx/E=
+
+Name: doc/images/LTTng2EnabledKernelProbeEvent.png
+SHA1-Digest: nzRT8CTRS9c+n3NNT3reyAq3Ia8=
+
+Name: doc/images/LTTng2DisableChannelAction.png
+SHA1-Digest: krTCdLwX0OXFQ0O9HxrJkP/PoQA=
+
+Name: doc/images/LTTng2CreateSessionAction.png
+SHA1-Digest: Rou0DV4dmr8pTvKJGssgw4EcaWA=
+
+Name: doc/images/LTTng2StartTracingAction.png
+SHA1-Digest: Hk5ry28f4mtC3YsZPFHnZRXqZvM=
+
+Name: doc/images/LTTng2AssignEventDialogWithFilter.png
+SHA1-Digest: A16Fj3op1hOFgJIBBys1OVikuc4=
+
+Name: doc/images/SelectGenericCTFTraceType.png
+SHA1-Digest: cyVIo975bMPz1IJagJyssg/VD04=
+
+Name: doc/images/LTTng2EnableEventWithFilter.png
+SHA1-Digest: U9Fpwzf7dUroJzrpqq9XsIsDu0M=
+
+Name: doc/images/ShowTracingViews.png
+SHA1-Digest: BAmHnApUXWHmFBC644Dlj31faN4=
+
+Name: doc/images/LTTngControlViewConnect.png
+SHA1-Digest: kK6g5xqoGP7wjhgM0X7vUNwzYdo=
+
+Name: doc/images/LTTng2CalibrateAction.png
+SHA1-Digest: S5OQwn0oNH5ynK/rvpoRrwEeZM8=
+
+Name: doc/images/LTTng2CreateChannelOnDomainAction.png
+SHA1-Digest: UJ+DFZNgux/PPG+EKn4OFGvrsDg=
+
+Name: doc/images/LTTng2CreateSessionDialog.png
+SHA1-Digest: J2KxoDsnOsl+KJcOmDnv7Is+EAE=
+
+Name: doc/images/LTTng2DisableEventAction.png
+SHA1-Digest: +uGR2KXzNS+5Jrt2b/0lTBvGph8=
+
+Name: doc/images/Target_connected.gif
+SHA1-Digest: zpU5StX4faVl7Lxh0iPLpqNmERY=
+
+Name: doc/images/tracePackageImages/exportSelectedTrace.png
+SHA1-Digest: da2R35749/p1PKtf61r5FqaAjDg=
+
+Name: doc/images/importImages/importScan4.png
+SHA1-Digest: DtWxGndqmjE+OxHABZGGO1Sn9hQ=
+
+Name: doc/images/prev_event.gif
+SHA1-Digest: sfjvauG+l0Q3r6mVe26Zom2+rl0=
+
+Name: doc/images/importImages/importFinish.png
+SHA1-Digest: DEwbZffIxNJT7R1ZQTJCQIJyzEI=
+
+Name: doc/images/importImages/importSelectTraceTypeToImport.png
+SHA1-Digest: dHB8HZYMnlWnSqNm9CMuFh4cvZk=
+
+Name: doc/images/NewTracingProjectPage2.png
+SHA1-Digest: qKFeI7QmlygJPxvUt0nnphgf7v0=
+
+Name: doc/images/LTTng2CreateChannelAction.png
+SHA1-Digest: 6dPBVk7J799CHSeIEjCg4LoqmWM=
+
+Name: doc/images/LTTng2AssignedEvents.png
+SHA1-Digest: 4NRhbvYGP8+tXF3KxdF0Vg3K3Mk=
+
+Name: doc/images/zoomin_nav.gif
+SHA1-Digest: Ksu/JAl1oXut9GR+8Zk1q7/XzWQ=
+
+Name: doc/User-Guide-toc.xml
+SHA1-Digest: yM6iXNYSBI1TFB9hS1UgbAr7ktM=
+
+Name: doc/images/importImages/importImportMenu.png
+SHA1-Digest: rxAx5VbL+QmfnNvcnfyOkD9iRGM=
+
+Name: doc/References.html
+SHA1-Digest: uABpcYa9dwkAe3FoxRCFqXhauEc=
+
+Name: doc/images/LTTng2CreateChannelDialog.png
+SHA1-Digest: 1xujapHRNMSFGKpkSmdvIOkTz44=
+
+Name: doc/images/CopyTraceAction.png
+SHA1-Digest: lRvMAfTgD1as8il/3J6EA/ENtbA=
+
+Name: doc/images/tracePackageImages/fileExport.png
+SHA1-Digest: sSFrWhOebBxLKFPDcUwjVIPQoxI=
+
+Name: doc/images/prev_menu.gif
+SHA1-Digest: rEniV1Lz60pB8NNG2hbU9MIG3rM=
+
+Name: META-INF/maven/org.eclipse.linuxtools.lttng/org.eclipse.linuxtoo
+ ls.lttng.help/pom.properties
+SHA1-Digest: OFCFGPvDJNDlle4asb/E3GJ1Qns=
+
+Name: doc/images/prev.gif
+SHA1-Digest: wBqOdbbC2J+FoHXQZJqbR4tWUUg=
+
+Name: doc/images/Cfv_toolbar.png
+SHA1-Digest: 8jorwka0QvKasCos2soHdQ3KPWY=
+
+Name: doc/images/LTTng2ImportOverwriteConfirmationDialog.png
+SHA1-Digest: ujaPxGJA3jQaI14ehpiYq+2/pb4=
+
+Name: doc/images/Event_enabled.gif
+SHA1-Digest: utzUkLOsRBhrcouiMYEZZkHpxIc=
+
+Name: doc/images/CopyTraceDialog.png
+SHA1-Digest: f+yqL085chE7SKA6YS2/ql4o9eI=
+
+Name: doc/images/CopyExperimentDialog.png
+SHA1-Digest: WeM08JrL9CPRq6qDWHJNztHYH+E=
+
+Name: META-INF/maven/org.eclipse.linuxtools.lttng/org.eclipse.linuxtoo
+ ls.lttng.help/pom.xml
+SHA1-Digest: fHabS5iYrVNWzqYv6MB2NQV7gQc=
+
+Name: doc/images/RemoveTracesAction.png
+SHA1-Digest: H74XrIDMhfoibUNiFyTUGrdpuBE=
+
+Name: doc/images/LTTng2AddContextOnDomainAction.png
+SHA1-Digest: 0NgfjO3AJt/yxkxC6LmJXf3pMlI=
+
+Name: doc/images/LTTng2AssignEventAction.png
+SHA1-Digest: MBxBYc7G3gMnuAWS8ujBrx8G2tU=
+
+Name: doc/images/LTTng2PreferencesLogging.png
+SHA1-Digest: WZcntK36NzQA5xnTdAE+U0RJwPA=
+
+Name: doc/images/LTTng2EnabledUstWildcardEvents.png
+SHA1-Digest: c6i7BC5ACFWhi+Swl1OoZfRldlQ=
+
+Name: doc/images/TimeChartView.png
+SHA1-Digest: ny+w90R6YNJrTh64ZmvTU7LPQyQ=
+
+Name: doc/images/Cfv_show_view.png
+SHA1-Digest: +It7akW+ybE7zODyv8etqKbVWTk=
+
+Name: doc/images/ProjectImportTraceAction.png
+SHA1-Digest: +l69FLrwyU9YSBz6558e4w9FNZI=
+
+Name: doc/images/CustomTextParserOutput.png
+SHA1-Digest: Z7cnP8+0d49lXwLRfQSoXT8Ko3g=
+
+Name: doc/images/LTTng2AssignEventDialog.png
+SHA1-Digest: +qVbl2SlUG+ngAoGdFFU6FTjUZc=
+
+Name: doc/images/follow_arrow_bwd.gif
+SHA1-Digest: 2wJkz4wo+3kqF3f8B7hMhnu3sS0=
+
+Name: doc/images/LTTng2EventOnDomainAction.png
+SHA1-Digest: kdQ7rRb8UpPZ/2yiKrHv370YGaw=
+
+Name: doc/images/Rv_legend.png
+SHA1-Digest: Z2vdquHWi7mx5Hq3qOfNCYY0E1Q=
+
+Name: doc/images/LTTng2EnableChannelAction.png
+SHA1-Digest: RFlxLFqQPTbkLOSU9kYGK1s1m2g=
+
+Name: doc/images/LTTngKernelEventsViewer.png
+SHA1-Digest: lUrVZGSWHJjLE4vR+kfqIDM/F5Q=
+
+Name: doc/images/ProjectImportTraceDialog.png
+SHA1-Digest: CZ0aWvEcZs9+W8M/pNaBpEjKokQ=
+
+Name: doc/LTTng.html
+SHA1-Digest: vjUi2RvmtCRSXmsekjCUef6mq/o=
+
+Name: doc/images/link.gif
+SHA1-Digest: IR/9ZGkaI5equoGoVwKi4YFIWDA=
+
+Name: doc/images/ShowTracingPerspective.png
+SHA1-Digest: z13YLeeIHEsDzE+6OfANPTCue2I=
+
+Name: doc/images/LTTng2EnabledKernelTracepoints.png
+SHA1-Digest: r6xFtjtvmEhugJ41k60xG69C2Ts=
+
+Name: doc/images/importImages/importScan3.png
+SHA1-Digest: tkrLbu3xfC9OghFsbBNJo4AqvVQ=
+
+Name: doc/images/TmfEventFilter.gif
+SHA1-Digest: evjerDlGsSf6AmEVa7DYBEgwz+Q=
+
+Name: doc/images/Rv_toolbar.png
+SHA1-Digest: kLdpSv+su3ZccyDy0c1g6mqu3Pw=
+
+Name: doc/images/ExplorerWithExperiment.png
+SHA1-Digest: 037k142/tCzsXnerUkkYqisAXrQ=
+
+Name: doc/images/LTTng2UstWildcardEventsDialog.png
+SHA1-Digest: 1o+cMMZawSu083a4fl1upjXrw7U=
+
+Name: doc/images/OpenLTTngKernelPerspective.png
+SHA1-Digest: eDWg55dkt7kXJJ5v88r61IijBrc=
+
+Name: doc/images/NewTracingProjectPage1.png
+SHA1-Digest: ESVuSb/U0V4QNbwR/mJtqIjCgQg=
+
+Name: plugin.properties
+SHA1-Digest: TiOM3JMTDhhxrU8MPThYU9RddPk=
+
+Name: doc/images/LTTngKernelPerspective.png
+SHA1-Digest: gqfNHn25EQUZJbbxJLjn4iPvmmc=
+
+Name: doc/images/Cfv_zoom.png
+SHA1-Digest: u5qsm6i0b+7KLp9y56V1PNGstbM=
+
+Name: doc/images/LTTng2AddContextOnChannelAction.png
+SHA1-Digest: P5znzZwuwDiC+LDOQVQFSM4gUoE=
+
+Name: doc/images/LTTng2EventOnSessionAction.png
+SHA1-Digest: wA7gRpytPuEvzO8BYrFvY/LhmuY=
+
+Name: plugin.xml
+SHA1-Digest: wm+WauGQQOwrQDq6RnPYXxGr4W0=
+
+Name: doc/images/TmfEventSearch.gif
+SHA1-Digest: HlDIaPpXdUpm8ryfNPlpzgpSFJU=
+
+Name: doc/images/OpenTraceAction.png
+SHA1-Digest: mJzk8Z4h8h7/FtVo/hv/ikknYuM=
+
+Name: doc/images/LTTng2EventOnSessionDialog.png
+SHA1-Digest: u3yfAV7LgZUwp/st3OxUan3p6BY=
+
+Name: doc/images/LTTng2PreferencesGroup.png
+SHA1-Digest: j5JTQSihuszJjZet5VS0rwAlJ8c=
+
+Name: doc/images/Cfv_tooltip.png
+SHA1-Digest: tyKSgEou3G80nE2Okw69xL/z7uw=
+
+Name: doc/images/NewProjectExplorer.png
+SHA1-Digest: sp95F1dwmdB1wuJ6MrVeV0fYGvY=
+
+Name: doc/images/Cfv_process_tree.png
+SHA1-Digest: kSPyUrQ6BhL/a8oRZW41MN6rL2Y=
+
+Name: doc/Limitations.html
+SHA1-Digest: i1Nthd0CTH+zrhcuDL790GYIml0=
+
+Name: doc/images/SelectTracesAction.png
+SHA1-Digest: MZWT3qJJvDpHreNCVE328fAqSLs=
+
+Name: doc/How-to-use-LTTng-to-diagnose-problems.html
+SHA1-Digest: TYrR5VTNsylpjtzkE7IAC1fw9RU=
+
+Name: doc/images/importImages/importSelectTraceTypeComplete.png
+SHA1-Digest: yI8wccNODFL8n1+5MJLha/1BXr8=
+
+Name: doc/images/next_event.gif
+SHA1-Digest: GhzRVQT8L/3t6n2G6aiTke3LAkk=
+
+Name: doc/images/LTTng2DestroyConfirmationDialog.png
+SHA1-Digest: 4F9ig/B9ADO9cwNpoqw7l5Xqrc8=
+
+Name: doc/images/tracePackageImages/importPackage.png
+SHA1-Digest: 9azepZdE/oRpGQAEIcYwF+YePLc=
+
+Name: doc/images/Environment_variables.png
+SHA1-Digest: LYloYedR8ThOWyrqp88R3Q4s6jU=
+
+Name: doc/images/LTTng2CreateSessionDialog_Advanced.png
+SHA1-Digest: axvh6N8+0FJ83ElNEfQyY+lr0bw=
+
+Name: doc/images/LTTng2EventOnChannelAction.png
+SHA1-Digest: +WlIxypUHKd0++ewSoJrAZTsrdg=
+
+Name: doc/images/Cfv_small_dots.png
+SHA1-Digest: bQ1RDK5D7XsQbmKMPRMf20SW9s8=
+
+Name: doc/images/SelectTracesDialog.png
+SHA1-Digest: 3Dgbm19ZFqIf0HTxirmOApQjRrw=
+
+Name: doc/images/LTTng2EnvironmentsView.png
+SHA1-Digest: xy1Ui+VgycS7IPiIUcPB/yEuHp0=
+
+Name: doc/images/NewExperimentAction.png
+SHA1-Digest: zXq2Y4l7HaYgi/bY6V/e/L0BLFc=
+
+Name: doc/images/LTTng2TracepointEventsDialog.png
+SHA1-Digest: YE+6KH+gcwUkzwKSVJ7czeULgHo=
+
+Name: doc/images/Cfv_legend.png
+SHA1-Digest: dv5chF00oAIduKfKceMMo0o/AT0=
+
+Name: doc/images/home.gif
+SHA1-Digest: IB8LlFUEnrFsLROZTI1Pj1CD8lo=
+
+Name: doc/images/LTTng2DestroySessionAction.png
+SHA1-Digest: Qp8bv4qWsRI7/HAPJWQjcjl9+iE=
+
+Name: doc/Updating-This-Document.html
+SHA1-Digest: xvGnADsdLgT6n5kvMpX3ydMDj1s=
+
+Name: doc/images/NewExperimentDialog.png
+SHA1-Digest: 0lMVhRAzBdqxZmWOWEWghreBwr8=
+
+Name: doc/images/Session_active.gif
+SHA1-Digest: 1o/IKK5fWdzIrFgFwEu+jidCTLU=
+
+Name: doc/images/next.gif
+SHA1-Digest: 1SnKGQL6SjY0yyCLH1m0p3Xz7Lc=
+
+Name: doc/images/Rv_example.png
+SHA1-Digest: SC/Djsa62pPR1b+qzKRUDn4EBig=
+
+Name: doc/images/LTTng2NewConnection.png
+SHA1-Digest: xuOLukw+THzmjonqiwgnhRnKHXQ=
+
+Name: doc/images/importImages/importScan2.png
+SHA1-Digest: dEXIHVRIz5q6ojHL9UmNoQcDXPg=
+
+Name: doc/images/DefaultEventsView.png
+SHA1-Digest: i8hMpJiTVwd4KfLsUWN1VkHdu20=
+
+Name: doc/images/importImages/importScan6.png
+SHA1-Digest: lNdnMTzjbUExOiGhdLz2xpVZpZ0=
+
+Name: doc/images/LTTng2AddContextToEventsAction.png
+SHA1-Digest: tNfhUAhLo/W9/i0NdW5Ys9LLw7I=
+
+Name: doc/images/CustomXMLParserOutput.png
+SHA1-Digest: SRMmUzH6/+SskC0sIowz2eUf41E=
+
+Name: doc/images/LTTng2ImportAction.png
+SHA1-Digest: KDRa8yj6wfo1y+3TSDt/hiLP52k=
+
+Name: doc/images/LTTng2Preferences.png
+SHA1-Digest: TTj++SQ+mec7kn3Ou5S3llrltbk=
+
+Name: doc/images/TmfTimestampFormatPage.png
+SHA1-Digest: hR/bfe8jUmjRyRzLxtk2vAeOO+E=
+
+Name: doc/images/hide_lost_events.gif
+SHA1-Digest: shlN1M9+WHDP4BPAXDMSUqy4O30=
+
+Name: doc/images/Cfv_zoom_region.png
+SHA1-Digest: CzJ4fYQjKydYcrHMTDGa6f/NFYQ=
+
+Name: doc/images/TracingPerspective.png
+SHA1-Digest: 06ugsJkYMTs/+KQFmfgBAmX05u0=
+
+Name: doc/images/LTTng2ImportDialog.png
+SHA1-Digest: 6Rb75uSWpdG64CEYBAz7A7yDavM=
+
+Name: doc/images/ManageCustomParsers.png
+SHA1-Digest: yInhDTSCS3Zx3BLnwZSrrsL4CvQ=
+
+Name: doc/images/Channel.gif
+SHA1-Digest: 987jeQs4HAWv7ss0D9Dr3B1QKME=
+
+Name: doc/images/DefaultTmfEvents-Filter.png
+SHA1-Digest: XhUSkkqMN/hA/5bEJFI1ey/q7fc=
+
+Name: doc/images/importImages/importAddFile.png
+SHA1-Digest: xPp7G6USAxPTvIev6A9y9jnXcO0=
+
+Name: doc/images/unknown_parser.gif
+SHA1-Digest: OGnShb95UF5Dp5WUBRTPkknhHLg=
+
+Name: doc/images/RV_infobox2.png
+SHA1-Digest: Pw0byjHsFKpZ68jEqeVgoHPBsKA=
+
+Name: about.html
+SHA1-Digest: p+J1lshfujMqAzV5/VljRFB28RA=
+
+Name: doc/images/LTTng2ControlViewDisconnect.png
+SHA1-Digest: dWL2n7SCVfvJR8O2GnsBX2wYnzE=
+
+Name: doc/LTTng-Kernel-Analysis.html
+SHA1-Digest: 5v5N7fvr0Y7FTQ5vBr4R8g42vIY=
+
+Name: doc/images/importImages/importMenuSelect.png
+SHA1-Digest: Tu5PCUaFXAfd9jADU2glky4pbVs=
+
+Name: doc/images/LTTng2EventsEditor.png
+SHA1-Digest: kIWvQWlp2c0/kP0TMciOA+sUq70=
+
+Name: doc/images/filter_items.gif
+SHA1-Digest: 9heQ92HHUKRNsYaxP2qIrqGxidg=
+
+Name: doc/images/LTTng2EnabledFunctionProbeEvent.png
+SHA1-Digest: b0cScTkbnP8FzF/RLKsweDnFeZ0=
+
+Name: doc/images/LTTngControlView.png
+SHA1-Digest: AHKvwOJ6v0krWNW+MMqbqpboKhE=
+
+Name: doc/images/RenameTraceAction.png
+SHA1-Digest: RxsC0DVWDh7XUD7joTjgKibb8xw=
+
+Name: doc/images/LTTng2ControlViewDelete.png
+SHA1-Digest: mM+lczjBn59/k4cqvSAFR3eNGFs=
+
+Name: doc/images/LTTng2EnableEventAction.png
+SHA1-Digest: ajd87gjZ4F1YqtSXK/+mBQzkZH4=
+
+Name: doc/images/FiltersView.png
+SHA1-Digest: 5ajZe/hKA9MVy2Wdp/Kc5Np2ubY=
+
+Name: book.css
+SHA1-Digest: USLLtXn/HXw82HFD9qdBVtYQSnk=
+
+Name: doc/images/Target_disconnected.gif
+SHA1-Digest: 6REnA01gci1p9XefXybuvK5zntY=
+
+Name: doc/images/DeleteSupplementaryFilesAction.png
+SHA1-Digest: OBU/UhIpf7Yc+0+nsffHyMfKxdM=
+
+Name: doc/images/importImages/importSelectTracingProject.png
+SHA1-Digest: rXu0NmDpSsOzD5WnyreQnVWuw3M=
+
+Name: doc/images/CustomTextParserInput.png
+SHA1-Digest: onX3uFVehfxiZR+eVG2G++7vhlo=
+
+Name: doc/images/RenameTraceDialog.png
+SHA1-Digest: 8wMq5628Q67OzYB+nCGaFc0jyMY=
+
+Name: doc/images/DefaultTmfEvents-Search.png
+SHA1-Digest: kMcO0iWsDKw6pl8w8k93UN7MEoM=
+
+Name: doc/images/LTTng2PreferencesTimeout.png
+SHA1-Digest: zEk/FLNbsYGrfAuiUnKjZdiwn1o=
+
+Name: doc/images/LTTng2_CFV_Filter.png
+SHA1-Digest: MziGIqXuDvSsqOaMu0jKkf5QT8s=
+
+Name: doc/images/importImages/importOpenProject.png
+SHA1-Digest: MBBPr6c9nohqYjzfPeraSqvgTVg=
+
+Name: doc/images/tracePackageImages/chooseTrace.png
+SHA1-Digest: t4NqSvGvKQbAXyjSN/XVnSm8BMU=
+
+Name: doc/images/DeleteSupplementaryFilesDialog.png
+SHA1-Digest: n9w3mIrSHVnjazflFgXZD8p3jls=
+
+Name: doc/User-Guide.mediawiki
+SHA1-Digest: H5CdpW5FanCk+QE48MJWitxjsrg=
+
+Name: doc/images/LTTng2CreateChannelDialogFileRotation.png
+SHA1-Digest: nHPRTLWvwXKvo7HWxkwgDsnkO58=
+
+Name: doc/images/tracePackageImages/exportPackage.png
+SHA1-Digest: YbjaHZ+plaO3GId5MjgVvgSlI8U=
+
+Name: doc/images/DeleteExperimentAction.png
+SHA1-Digest: P1GBMjdu16Erg1l2d4eouo19o1I=
+
+Name: doc/images/hide_arrows.gif
+SHA1-Digest: zuoas9oVrP1csKEi1V+mz7ZZdig=
+
+Name: doc/images/next_menu.gif
+SHA1-Digest: uJE04tCc8CuDj+Gj4OeF/mq4MJE=
+
+Name: doc/images/LTTng2EnterPassword.png
+SHA1-Digest: 19Khj+AtNdxp+Fbgjmtd7wGFCgA=
+
+Name: doc/images/LTTng2PropertyView.png
+SHA1-Digest: Cqqms57QVPBgF7dMJ7M74J9HL5w=
+
+Name: doc/images/importImages/importBatchImport.png
+SHA1-Digest: /CcxOcZ/ucQxCtvmLbRU7lGW96A=
+
+Name: doc/images/follow_arrow_fwd.gif
+SHA1-Digest: 4iqfCuloGbi8Ttke27NU/gZlGp0=
+
+Name: doc/images/LTTng2UstLoglevelEventsDialog.png
+SHA1-Digest: F43ndz5MpVYWtU0V5ZH0Q5op/c4=
+
+Name: doc/Timestamp-formatting.html
+SHA1-Digest: NpGGOdGAuj55Sw3JRRnnLqiMPgg=
+
+Name: doc/Installation.html
+SHA1-Digest: 6CJiM7QAHFrFaVgnUK5iSvOFyh8=
+
+Name: doc/images/LTTng2CreateSessionDialog_Snapshot.png
+SHA1-Digest: NoDaBYrmmiJ+N43i7+o2n2tXqh4=
+
+Name: doc/images/Cfv_global.png
+SHA1-Digest: mqqlnoKAdPebQ834fhbrwdJj6Xk=
+
+Name: doc/images/LTTng2StatisticsView.png
+SHA1-Digest: zn6wV4Fb/ykyR/fABHCTVpX5sA4=
+
+Name: doc/images/LTTng2ControlViewConnect.png
+SHA1-Digest: Tt8f9luScKkXwF1vdfSjr2tf8Ig=
+
+Name: doc/images/LTTng2ControlViewFilled.png
+SHA1-Digest: glT9JJYZAfsvJq3TvEXrduKxiYg=
+
+Name: doc/images/LTTng2ImportRenameDialog.png
+SHA1-Digest: GehCkSONbIyiHMrXBXXbtNWvcrk=
+
+Name: doc/images/LTTng2EnabledKernelSyscalls.png
+SHA1-Digest: KBkeT6Gd2OuX2gylYzF2u0ZmJGE=
+
+Name: doc/images/importImages/importSelectFilesToScan.png
+SHA1-Digest: 7d4+iPVfhbzmbCyUxxA9UF+b18g=
+
+Name: doc/images/importImages/importScan1.png
+SHA1-Digest: vv8kXhsqPGRN8+5bzfOBaRSJMxk=
+
+Name: doc/images/Bookmarks.png
+SHA1-Digest: aBrz0jC35PdgXke4KmAxCsoP0oY=
+
+Name: doc/images/LTTng2ProbeEventDialog.png
+SHA1-Digest: OAmKGt8SPlJfNBbcWScmGW5gQDg=
+
+Name: doc/images/TMF_LinkWithEditor.png
+SHA1-Digest: 2DZB15Bg7scv295dB1Ms5W2fFRs=
+
+Name: doc/images/LTTng2EnabledAllUstTracepoints.png
+SHA1-Digest: CrsAoXOPDqzwofoijyyLxh3njCA=
+
+Name: doc/images/LTTng2EventProperties.png
+SHA1-Digest: Fg7US48P9NLs3yJc/53Sp/ITEcs=
+
+Name: doc/images/importImages/importScan5.png
+SHA1-Digest: bz+Cxt9r6xsbKyIIO2JNYl5uPPY=
+
+Name: doc/images/RenameExperimentDialog.png
+SHA1-Digest: 06SudghvzdWVDeBb9JMCKBZf1bc=
+
+Name: doc/images/LTTng2AddContextDialog.png
+SHA1-Digest: GVgT1VrwSDQmFzsv5kEB7/6K6h4=
+
+Name: doc/images/DeleteExperimentConfirmationDialog.png
+SHA1-Digest: 6UcbEjd7hwCGbJS5vt1TtBwAH98=
+
+Name: doc/images/importImages/importOptions.png
+SHA1-Digest: j15aY30qKIRboANCfy/GF0SlBxQ=
+
+Name: doc/images/LTTng2StopTracingAction.png
+SHA1-Digest: jxbdE4GMQ55mNwSvu6WJoiICHQE=
+
+Name: doc/User-Guide.html
+SHA1-Digest: pbcYkn2ouiqyuvsgBHZZArFMivA=
+
+Name: doc/images/Session_inactive.gif
+SHA1-Digest: fSuUWyUL0Btkl3X7wMLVXkN+QI8=
+
+Name: doc/images/LTTng2CreateChannelDialogMetadataFlush.png
+SHA1-Digest: ofxIqEApeIbQZ7CwFK1k21f7s3M=
+
+Name: doc/images/LTTng2EditConnection.png
+SHA1-Digest: M0cEUS2JVyZkdJWod419Bfr564k=
+
+Name: doc/images/tracePackageImages/fileImport.png
+SHA1-Digest: dnXTjovZTYYxv4euqwGKdNl95KQ=
+
+Name: doc/images/LTTng2RecordSnapshotAction.png
+SHA1-Digest: 8pzgNu3KoO46QJDFyPFyTiwJHbg=
+
+Name: doc/images/tracePackageImages/importTraceFolder.png
+SHA1-Digest: XPh6YIhQVeGWB2dO8R/O8tW5xeY=
+
+Name: doc/images/SelectLTTngKernelTraceType.png
+SHA1-Digest: ILytxGbtKLxv/v4e4M0c2YoGzUs=
+
+Name: doc/images/Event_disabled.gif
+SHA1-Digest: JBd/yJK2cRauUekxsW1ryQbP4vg=
+
+Name: doc/images/LTTng2SyscallsDialog.png
+SHA1-Digest: xgN2IrXTz4mmHbX5TfDUB6sDjH4=
+
+Name: doc/images/LTTng2FunctionEventDialog.png
+SHA1-Digest: YRrRIf0jmX32lmKWyNzZBmkiUmI=
+
+Name: doc/images/LTTng2CreateSessionDialog_TracePath.png
+SHA1-Digest: klobma8gkcGkAGlX1Mz7QWM4XUM=
+
+Name: doc/images/DeleteExpSupplementaryFilesDialog.png
+SHA1-Digest: hoAzq3jyZbTV9HE+GUG3Vy3cr7w=
+
+Name: doc/images/CustomXMLParserInput.png
+SHA1-Digest: gUD+d9BeRSqGZSaIwsKY9mTToIY=
+
+Name: doc/images/HistogramView.png
+SHA1-Digest: Q7+kP9wuI2BBT1eOlmwPnk9sKck=
+
+Name: doc/images/RV_infobox1.png
+SHA1-Digest: 6G5IEfLHApS6a53U9Lxy27HenGw=
+
+Name: doc/images/ColorsView.png
+SHA1-Digest: e/n1bfhTWhbMFAxp7O0kMiD32pY=
+
+Name: doc/images/zoomout_nav.gif
+SHA1-Digest: dIJNFmMdwzVMQjdaH3Or0+J+aXg=
+
+Name: doc/images/LTTng2EnabledUstLoglevelEvents.png
+SHA1-Digest: Z90/Q7p3oLKwasNqfpXw2Lxfzko=
+
+Name: doc/images/importImages/importSelectedDirectory.png
+SHA1-Digest: +hwsh9CrpqTuMmnG0GA743hMWGc=
+
+Name: doc/images/home_nav.gif
+SHA1-Digest: IHSHnn+8j12IQqqvHGuDoinl4+Q=
+
+Name: doc/images/LTTng2CreateChannelDialogPerUIDBuffers.png
+SHA1-Digest: QDePvl+ZGZLEiVxFAFeQ7tC0lko=
+
+Name: doc/images/LTTng2RefreshAction.png
+SHA1-Digest: XzJTmV59asGbhEUx+12aWXUbYnQ=
+

@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>PTP Remote Tools</title>
+<link rel="stylesheet" type="text/css" href="help.css">
+<script type="text/javascript" src="thumb.js"> </script>
+</head> 
+<body>
+<h1 id="top">PTP Remote Tools</h1>
+<p><b>Remote Tools</b> is a lightweight remote service provider that is included
+with the Parallel Tools Platform (PTP).
+
+
+
+To access the remote target system, PTP supports a number of
+<i>remote service providers</i>. 
+Currently supported remote service providers include <b>Remote Tools</b> (part of PTP) and 
+the <b>Eclipse Remote Systems Explorer (RSE)</b> which is an optional package that can be installed at any time. 
+<b>The preferred remote service provider is Remote Tools</b> which supports all the PTP and Remote Development Tools (RDT) 
+functionality, however
+some installations use additional features that are only available in RSE. 
+Most PTP information is described using <b>Remote Tools</b>, since it is the simplest and easiest to use.</p>
+<p>See also <a href="localVsRemote.html">Local vs. Remote Projects</a> for more information on local and remote
+projects.
+<p><b>Topics:</b>
+<ul>
+<li><a href="#create">Creating Remote Connections</a>
+<ul>
+<li><a href="#remote">Connection to a remote machine</a>
+<li><a href="#tunnel">SSH tunneling</a>
+</ul>
+<li><a href="#edit">Editing Remote Connections</a>
+<li><a href="#remove">Removing Remote Connections</a>
+<li><a href="#shell">Remote Terminal access via a Remote Connection</a>
+</ul>
+<!--  --------------------------------------------------------------------  -->
+<h2 id="create">Creating Remote Connections</h2>
+<p>New connections are typically created when a need for them arises, such as creating a remote or synchronized
+project, or a run configuration on a remote target machine. 
+To create a new connection to a remote machine, e.g. when creating a <a href="sync.html">synchronized project</a>, 
+the new connection information is specified as part of the <b>New Synchronized Project</b> dialog.
+<p>
+<img src="images/rt_newConnect.png">
+<p>
+Select <b>New...</b> and on the <b>Target Environment Configuration</b> dialog, specify a target name
+of your choice. Select <b>Remote Host</b> and fill in user name and password. Select
+<b>Finish</b> to create the connection.
+<p><img src="images/rt_connection_new.png">
+<p>
+<!--   -->
+<h2 id="tunnel">SSH tunneling</h2>
+<p>See the <a href="http://wiki.eclipse.org/PTP/FAQ#Q:_How_do_I_use_PTP_to_connect_to_a_remote_system_via_an_intermediate_host_.28multi_hop.29">
+PTP Wiki FAQ on tunneling</a> for how to set up the tunnel.
+For example, pick an unused port > 1024 such as 7373 in this example:
+<pre>
+ssh -L 7373:&lt;target-host&gt;:22 &lt;intermediate-userid&gt;@&lt;intermediate-host&gt;
+</pre>
+
+<p>Then in the connection dialog, Select <b>Advanced...</b> and use the same port number that you specified
+from the command line ssh command.
+<p>
+<img src="images/rt_tunnel.png">
+<!--   -->
+<h2 id="edit">Editing Remote Connections</h2>
+<p>To edit remote connection information after a connection is created, e.g. to change userid, password, etc.,
+first select the <b>Remote Environments</b> view. 
+<blockquote>
+If the view isn't visible, open it via <b>Window > Show View > Other...</b> and under <b>Remote Tools</b>,
+select <b>Remote Environments</b>.
+<p><img src="images/rt_remEnvOpen.png">
+</blockquote>
+<p><img src="images/rt_remoteEnvironments.png">
+<p>To edit a connection, it must first be stopped if it is running.  To stop a connection, select it and use the "red box"
+action on the <b>Remote Environments</b> view toolbar.
+<p><img src="images/rt_stopConnection.png">
+<p>Once stopped, edit the connection via the context menu (right mouse)
+<p><img src="images/rt_remoteEnv_edit.png">
+<p>Then make any changes to the connection and select <b>Finish</b>
+<p><img src="images/rt_editConnection.png">
+<p>The connection need not be manually restarted.  It will automatically restart the next
+time that communication with the target machine is needed.
+
+
+<p>
+<!--   -->
+<h2 id="remove">Removing Remote Connections</h2>
+<p>To remove a connection, select it in the <b>Remote Environments</b> view, from the context menu
+(right mouse), select <b>Remove</b>.
+<p>&nbsp;</p>
+<p>
+<!--   -->
+<h2 id="shell">Shell access to Remote systems</h2>
+<p>For convenient shell access to a remote system with a <b>Remote Tools</b> (or other)
+connection, within an Eclipse view, see <a href="remoteTerminal.html">Remote Terminal</a>.
+
+<h2 id="local">Local Connections</h2>
+<p>Previous versions of PTP required an ssh connection back to the local machine in order
+to launch a parallel application on the local machine.  Now you need only specify <b>Local</b>
+for the connection type in the launch configuration.  No "connection" is required. 
+<p>&nbsp;</p>
+<p><a href="#top">Back to Top</a> | <a href="toc.html">Back to Table of Contents</a></p>
+</body>
+
+</html>

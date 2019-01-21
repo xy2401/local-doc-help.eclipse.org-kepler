@@ -1,0 +1,883 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: luLAmSOTD3SfhiMYrJEwv6IRkKs=
+Created-By: 1.6.0 (IBM Corporation)
+SHA1-Digest-Manifest-Main-Attributes: PfyGbCdjgNGSo9MaJDHU5S4mUt4=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/IETypedElementWidget.html
+SHA1-Digest: FafZnG8PmBPZkg81rHSdzItBCMA=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/class-use/CreateFacetInFacetSetHandler.html
+SHA1-Digest: 5acomaCyd9VSHl4C0H8An0QPWfs=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/creation/package-summary.html
+SHA1-Digest: aHFcFurw6uB/cSgnApBSQGLftdQ=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/core/util/package-summar
+ y.html
+SHA1-Digest: 2XK2H1qvdeWPYh5KV+dXpj5dr+0=
+
+Name: mediawiki/running_tests-toc.xml
+SHA1-Digest: ICy+ryOHks6TOGatIm/zI/B0u/Y=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/class-use/IWizardFactory.html
+SHA1-Digest: 6bMe8MUB66MtU3r90u3CDk+BaA8=
+
+Name: javadoc/index-files/index-4.html
+SHA1-Digest: kFxa5PnHtm0wNg1E9GibvNy1uz4=
+
+Name: mediawiki/running_tests.mediawiki
+SHA1-Digest: 5y+vF5F8I4h1jUz/tx/qpjj7MlY=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/getorcreate/class-use/IGetOrCreateFacetSetWidget.html
+SHA1-Digest: 2nsZ11v46xOSXN981+qeHZkZmWI=
+
+Name: javadoc/index-files/index-10.html
+SHA1-Digest: iy4j4n5ijyT3dMRwZ4IECQ3FSjY=
+
+Name: mediawiki/ramp_down.mediawiki
+SHA1-Digest: PdYGl6vX61qjN/X7QNVh2CsdaYs=
+
+Name: mediawiki/checking_BREE.html
+SHA1-Digest: 7qAMgrDTW4ljcaJ80Mug6zuVmlk=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/dialog/package-use.h
+ tml
+SHA1-Digest: 2hUYYtFGgyJRHvoy/D2eja4IX5I=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/class-use/AddReferenceInFacetHandler.html
+SHA1-Digest: /Wg01KX104x7HSLRn6umMLyzyEA=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/AddOperationInFacetHandler.html
+SHA1-Digest: aquFV5+JkxI+tWszbXsStCTNHIU=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/cl
+ ass-use/IQueryDialogFactoryStrategy.html
+SHA1-Digest: fuwY1Ucrw3QQWwgGJ9ks7FmGySw=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/di
+ alog/query/package-tree.html
+SHA1-Digest: hc8O5jVNvtQHs24PWY45fxptLp4=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/class-use/IDerivedTypedElementWidget.html
+SHA1-Digest: zYj5wa5beRCysiLJ6faE2Wv9iVg=
+
+Name: javadoc/index-files/index-1.html
+SHA1-Digest: uxumsIZBIG9KEwG7FqJqfkZieyY=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/oclexpress
+ ion/package-use.html
+SHA1-Digest: im1a2pKRgtW+XEO2/rcN4Ah/2rc=
+
+Name: mediawiki/retention_policy-toc.xml
+SHA1-Digest: +q+pbZYaNc6iMkQLfyCqRmDLFvw=
+
+Name: mediawiki/running_tests.html
+SHA1-Digest: 87lTg5pERqwOoiSXhuk5m0kkCC0=
+
+Name: org/eclipse/emf/facet/doc/tasks/GenerateApiJavadocTask.class
+SHA1-Digest: TF4RZue+NIIQtWncmTciS3uARPw=
+
+Name: mediawiki/retention_policy.mediawiki
+SHA1-Digest: G6MtoLEbQOtR0I2fEHy868Dx8k4=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/packa
+ ge-use.html
+SHA1-Digest: sEdgpQ5PX27iori7/ONTqRJ9C1k=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/query/package-use.html
+SHA1-Digest: Bat8nIa/jdA1wMLjEecRaSr+oFQ=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/package-use.html
+SHA1-Digest: jdXbaTIu6FqoBT4KapxyenkiSH4=
+
+Name: mediawiki/API_Policy-toc.xml
+SHA1-Digest: QKgyaOSivmBW5G47NI2kxD7oJGE=
+
+Name: mediawiki/capabilities.mediawiki
+SHA1-Digest: yzoX3AFAo//c8TYkOFwnhy9HFOI=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/metaclass/IGetExtendedMetaclassWidget.html
+SHA1-Digest: +Wa46uh77SxOFahQUYMbthGU7/s=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/oclexpress
+ ion/class-use/IOCLExpressionWidget.html
+SHA1-Digest: 5fXfyMyJ2h3YekIzHeT7zi05KCg=
+
+Name: javadoc/allclasses-noframe.html
+SHA1-Digest: bnBww0068fLA+6TKrMdJAaE3b6o=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/OclQu
+ eryFactory.html
+SHA1-Digest: 9EgxKwdmKpx/3hU3Z0kOHHPGBzw=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/core/util/package-tree.h
+ tml
+SHA1-Digest: PmCm9f9raOay7tH6Olk32+1u+PM=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/util/
+ package-summary.html
+SHA1-Digest: mqlnCYe6JrcZfiDR7g2/i9P/McA=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/dialog/package-fr
+ ame.html
+SHA1-Digest: xZJ9nHI8v2DvV1CrlInFjmv4nXw=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/core/util/package-use.ht
+ ml
+SHA1-Digest: 9N+Eb0vQoDrUlnCaS5nHtupI2UM=
+
+Name: META-INF/maven/org.eclipse.emft/org.eclipse.emf.facet.doc/pom.pr
+ operties
+SHA1-Digest: qreB9awhhTZAC1vrK4uudWx8WSA=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/AddParameterInOperationHandler.html
+SHA1-Digest: 3PChSrILcHLjGvHedBZbmSNv1dI=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/core/util/OclQueryUtil.h
+ tml
+SHA1-Digest: X7eX+O666mQiRoSeiy0hTV68OdU=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/class-use/CreateFacetSetInFacetSetHandler.html
+SHA1-Digest: X2+eecLSjOV2O6tbH/PDMkThSBE=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /Writer.html
+SHA1-Digest: mBILO0EAjv51U4oSpI2m0/z96eI=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/creation/class-use/IGetOrCreateFilteredFacetSetWidget.html
+SHA1-Digest: ucX4he9Ga+Zxdh9WmalNlEbUcVM=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/package-tree.html
+SHA1-Digest: e+MsGzL7l6yqKbsDA0zGOhYlhek=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/core/util/package-frame.
+ html
+SHA1-Digest: x+3cdXc1We0txOKwHMUvBkiWjwo=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/CreateFacetInFacetSetHandler.html
+SHA1-Digest: 7ixHVYNWy3og/TzaRhneyHZ8Y7Y=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /class-use/Library.html
+SHA1-Digest: 2bswjQkwV8moT0FIgHqSIWn7k5Q=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /util/package-tree.html
+SHA1-Digest: MEDTe/LD4rQBRnobDWJQAcba4dg=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/package-tree.html
+SHA1-Digest: CSRbfenTXDLBwUP4l+HBveQMhcg=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/oclexpress
+ ion/package-summary.html
+SHA1-Digest: F/QxjuvIQNxkn2CVULG8At6YAZE=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/IQ
+ ueryContext.html
+SHA1-Digest: jNWibx2/A8UxqjQ1KQPXlfWBJQQ=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/packa
+ ge-summary.html
+SHA1-Digest: S+sv/1jBi5i5I7jHZW9ND37rRG4=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/packa
+ ge-summary.html
+SHA1-Digest: +lJtHzESDYb5dhvUE+JrJphtDVk=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /util/package-use.html
+SHA1-Digest: T706vly1UVz53lUkEJ7+GcS6N9c=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/package-use.html
+SHA1-Digest: QLeIG/HFsvFmOBZh7kXcDlZZJoY=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /package-frame.html
+SHA1-Digest: nMCUcQPjCvDen1vBX0CrDttUrIk=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/class
+ -use/OclQueryPackage.Literals.html
+SHA1-Digest: hLyalkEcH8b4rUZyfO6/v1hqLA0=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /LibraryFactory.html
+SHA1-Digest: 3S1bGxYEkXruAYeAcfjB8IcAQzU=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /util/class-use/LibraryAdapterFactory.html
+SHA1-Digest: qLe7Z50PpNBbMAdbPab6FUtZZvw=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/IFacetWidget.html
+SHA1-Digest: K0Ifoa7J8Rt79wYQcWlwwdC8Bn8=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/OclQu
+ eryPackage.html
+SHA1-Digest: T7IHNDXk3lYgZVFWZQGzF/cOUEE=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/util/
+ package-use.html
+SHA1-Digest: GlOznKwImxUfheQ45q6xVF4syK4=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/class-use/AddOperationInFacetHandler.html
+SHA1-Digest: pbZHwlvIQ+mMm96sfy9M9ELWVMA=
+
+Name: javadoc/index-files/index-8.html
+SHA1-Digest: F036v75TOBdfs06W1mj69ofYT/I=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/oclexpress
+ ion/package-frame.html
+SHA1-Digest: AoYQaC+/uRbsXT9nJysUYcUSV5I=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/metaclass/package-summary.html
+SHA1-Digest: LI2uQubqgk37lGxUI/Cpt3nvkas=
+
+Name: javadoc/index-files/index-14.html
+SHA1-Digest: KzUjQA/ClSgfmTbEHxGsLUuhWng=
+
+Name: toc.html
+SHA1-Digest: 2R4HUxDl7wxMXKm1CpD1FNcf2Fg=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/page/ICreateFacetSetWizardPage.html
+SHA1-Digest: 5EYmSZ+Zrio/xln9QMQ1mV3cInM=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/page/class-use/IFacetSetPropertyWizardPage.html
+SHA1-Digest: WCIAlS6o5yu90eypFYK/lKxq7+w=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/page/package-frame.html
+SHA1-Digest: Y9kcZ2Bnhud4rTKdQPIZIhjezSQ=
+
+Name: maintoc.xml
+SHA1-Digest: p40I37Z5Y1emZbK04RpTsL/wxI8=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /LibraryPackage.Literals.html
+SHA1-Digest: tGQmQnZi7onuwkwOheBC/HGnDxE=
+
+Name: mediawiki/checking_BREE-toc.xml
+SHA1-Digest: 1zqG9WtiDB2Ot8u1mkYMqfJWo+Q=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/class
+ -use/SelectQueryTypeWidget.html
+SHA1-Digest: 5Oz0hnkvYiCJ+Koefp6nqP/VceU=
+
+Name: javadoc/overview-frame.html
+SHA1-Digest: Ep/5EeiMrqnTO/fDRIwwh3+42Ec=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/util/
+ OclQuerySwitch.html
+SHA1-Digest: jVNb9MjHFBKJRuFTt3O6aL8yb6I=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /util/class-use/LibrarySwitch.html
+SHA1-Digest: 1l1XPZa5sLHAGLsDw0UgGwnJAQU=
+
+Name: javadoc/index-files/index-5.html
+SHA1-Digest: kFcgcavqEkJevp1s+1HxAPro4HQ=
+
+Name: javadoc/index-files/index-11.html
+SHA1-Digest: vIhmWQkNlojh+oKSRTDXpRmMFO0=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/class-use/IENamedElementWidget.html
+SHA1-Digest: 4mcGODFXVfFIBNM0vLm/mMCNaI0=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/dialog/class-use/
+ IOclDialogFactory.html
+SHA1-Digest: VxwRqRAw2iOKP39W1ze6XisqHnY=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/dialog/IOclDialog
+ Factory.html
+SHA1-Digest: AqkrLxP55crKFPAe6WDI2+r26eU=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /util/package-summary.html
+SHA1-Digest: bDZ4eduNdb5LStNyHhiYki4K8Us=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/package-summary.html
+SHA1-Digest: EXlTlULskWt2e1xfMe0BceayjJc=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /LibraryPackage.html
+SHA1-Digest: qnPptQVe5VEtdUmI0kCDI+ATrQg=
+
+Name: mediawiki/new_and_noteworthy.mediawiki
+SHA1-Digest: TAcqIazhrhjs5v8ny5nGsoeFOtw=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/creation/ICreateFacetInFacetSetWidget.html
+SHA1-Digest: BnkAaMXsvCn7jtSZai3nYeITu3A=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/creation/package-use.html
+SHA1-Digest: cUL4tFN36Uihm5N6s0kARxg0ClY=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/IDerivedTypedElementWidget.html
+SHA1-Digest: +77a/lRBQ/rCTtWPL+But0MITjY=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/class
+ -use/IQueryWidgetCompositeFactoryFactory.html
+SHA1-Digest: uav/rA9MFguJMNEkav6DWNDanPk=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/dialog/IFacetDialogF
+ actory.html
+SHA1-Digest: ikpP37xsPXBDWvUWOhKDOs5+N9Q=
+
+Name: javadoc/index-files/index-2.html
+SHA1-Digest: WA2b81Et8An9ui+zsJuUfaeEyqc=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/AddAttributeInFacetHandler.html
+SHA1-Digest: 3PFkV6o6tRACOBgpeVol38vLZ2c=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/IQuer
+ yWidgetCompositeFactoryFactory.html
+SHA1-Digest: ohB/A3shOkQHElwJ86OHtYqTytA=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/page/IFacetSetPropertyWizardPage.html
+SHA1-Digest: hM+6ba5zYag/HX699WGCMuI3mxM=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/OclQu
+ eryPackage.Literals.html
+SHA1-Digest: k3MyQMbuiFrKBG/kdeoOvWVpFf0=
+
+Name: plugin.xml
+SHA1-Digest: giqsv/dv/qQCOln51D5of86Yd6s=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/CreateFacetSetInFacetSetHandler.html
+SHA1-Digest: nVVWAG0RkknzTUDfOF4Tvh5lkCQ=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /package-use.html
+SHA1-Digest: XzXu5MLd64QANyka9kFurXOhacM=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/class
+ -use/AbstractQueryDialogFactory.html
+SHA1-Digest: t+UR0W/4PG6e4f2wu7TevT8IdgY=
+
+Name: javadoc/constant-values.html
+SHA1-Digest: 8FG50O05gYwdD3DbQunTnD2pneQ=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/IWizardFactory.html
+SHA1-Digest: t/F72jnF2RwC7HOtjazqluP2x20=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/getorcreate/package-use.html
+SHA1-Digest: /l3kM/O0J1pYCSzzVdTStEJAoWI=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /package-tree.html
+SHA1-Digest: PdKas43lwLEYQsOWAKAD+q7DnpM=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /util/LibrarySwitch.html
+SHA1-Digest: SWmhhLI9fAz07w34RJQNzRmFeBA=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/dialog/package-su
+ mmary.html
+SHA1-Digest: 8NarZEt0+J7l+A050aYyuO7kR2E=
+
+Name: mediawiki/capabilities-toc.xml
+SHA1-Digest: SCrw1T1EXqc6cM2+Fo2WusP9Ogg=
+
+Name: mediawiki/new_and_noteworthy-toc.xml
+SHA1-Digest: Pq/LmUdtm55y/81Hzm+bHRq0bzY=
+
+Name: mediawiki/retention_policy.html
+SHA1-Digest: iGah3nKxm4qiCrfeeqhPkDezkMo=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/package-use.html
+SHA1-Digest: 1X/QFqKpFzH5RSesvwBj8MYLVzc=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/IENamedElementWidget.html
+SHA1-Digest: XACfTU66ThLrT9cRkTrUSx8UCq0=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/packa
+ ge-frame.html
+SHA1-Digest: CSFzVqViOTmzxK0l18NTuYRwVWg=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/IEStructuralFeatureWidget.html
+SHA1-Digest: YZC2i0xec4q6pCCmLHz+yQrAtvM=
+
+Name: toc-full.xml
+SHA1-Digest: M4QCZSuYhBm3FyM5633Yn0uY6a0=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/di
+ alog/query/package-use.html
+SHA1-Digest: fqNHOJxq7M/55S/XzY1nAPjctVs=
+
+Name: javadoc/index.html
+SHA1-Digest: Y2kL8xiO7C06lT4Ud3PZYrZZeRg=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /class-use/LibraryFactory.html
+SHA1-Digest: aTB1dY6jzFd27+xlH/3/657n/2Y=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/metaclass/package-frame.html
+SHA1-Digest: x6gUUeLVD873k3BYYsQHIoatcK4=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/Query
+ WidgetCompositeFactoryImpl.html
+SHA1-Digest: /hSGLOzFzx4a9tmZYHg/WDrmctA=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /Book.html
+SHA1-Digest: fUEj3fi9N/h6Up0FUCKVWYxLFDk=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/class
+ -use/IQueryCreationResult.html
+SHA1-Digest: w8I7ONa4XrXct5Rv2EOYI5npdWo=
+
+Name: javadoc/index-files/index-9.html
+SHA1-Digest: bRPXiDKgLCAhtrkFuxEkL0JGKyg=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/class-use/IFacetWidget.html
+SHA1-Digest: TcjCEVC8z5GlFrhEwukX1ML9s8g=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/class
+ -use/GetQueryDialog.html
+SHA1-Digest: 3Skjfp98WJeU7NQAYOwibrLXQHI=
+
+Name: mediawiki/capabilities.html
+SHA1-Digest: 0lcNpIfjtm1MjbL2rMK1JdXe6As=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/getorcreate/package-summary.html
+SHA1-Digest: 8ggal1L1S11fhm8qenBo94Sx+EI=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/dialog/package-us
+ e.html
+SHA1-Digest: UPWpWghWy4BxO2suwjdvjnhr/+c=
+
+Name: javadoc/index-files/index-15.html
+SHA1-Digest: QlsCAxRhr6xTs22Fl/ZbYBezdP4=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/class-use/AddAttributeInFacetHandler.html
+SHA1-Digest: 8BMn1bVMfztUeoybfCa72ad4V0s=
+
+Name: javadoc/help-doc.html
+SHA1-Digest: IfDTJKmGoeRuKTMCwbGaADfqNQk=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/class-use/AddParameterInOperationHandler.html
+SHA1-Digest: P8Ai5zw43rKwxYqqjsXqn3uUJwM=
+
+Name: mediawiki/API_Policy.mediawiki
+SHA1-Digest: 7YDunqHBDIYPWhA3tCP7CL9nz7w=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/query/class-use/ICreateQueryWidget.html
+SHA1-Digest: PNyZi/BcNyvR7UitDbk+sKYv3HM=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/packa
+ ge-use.html
+SHA1-Digest: 4MMSYG1hwgbeGTAvNZEDl8j0x/8=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/core/util/class-use/OclQ
+ ueryUtil.html
+SHA1-Digest: iqnb5fnaGjoJkphd+AQyZkSaOJw=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/class
+ -use/OclQueryFactory.html
+SHA1-Digest: mk9xE0kHEMquBjE5GWzxgwJbzs8=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/oclexpress
+ ion/package-tree.html
+SHA1-Digest: NhdLlCSALiI/wekUesDJsZXyS/0=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/page/package-summary.html
+SHA1-Digest: 9wj6j+L5/N9wiYj5P4a5iWguT80=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/getorcreate/package-frame.html
+SHA1-Digest: qQuPdew78fhZkwPLbcm08bISRm8=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/GetQu
+ eryDialog.html
+SHA1-Digest: bAF04QRKR+mJES6o9IcKtdvO36k=
+
+Name: index.html
+SHA1-Digest: /wwKdKyPs0TdpVw+nrH/EJT4qMQ=
+
+Name: javadoc/index-files/index-6.html
+SHA1-Digest: K7t75Rt/7nQSIIgFpE3Oh98ihUI=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/metaclass/package-use.html
+SHA1-Digest: QgnXQieGBaQmldPTp6ilxj8YinU=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/dialog/class-use/IFa
+ cetDialogFactory.html
+SHA1-Digest: S8J8fBs7UJcDq79USs2vAcPb+wo=
+
+Name: javadoc/overview-summary.html
+SHA1-Digest: pA7J2xYVhfeL3ru146SV3SqEJ2g=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/query/package-frame.html
+SHA1-Digest: S664ACEHiBIWcYxDtx0O3G93/Ps=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/package-frame.html
+SHA1-Digest: pSM7MWqGyCk0CS4GPU6HgttF3ZQ=
+
+Name: javadoc/index-files/index-12.html
+SHA1-Digest: Blm2gCpQX1bQFutK1oBF20f4FBw=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/package-summary.html
+SHA1-Digest: AQ81rPf3osN0R86usFMVXQl9VHo=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/class-use/IEStructuralFeatureWidget.html
+SHA1-Digest: hMcAYchIu1SeK+e04RzHQZ7BZkg=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /class-use/LibraryPackage.Literals.html
+SHA1-Digest: V6OFmI4cXwUGi7VVWejuq94WC0k=
+
+Name: javadoc/package-list
+SHA1-Digest: CK1PmQEnIPX/dkiCiFTjRA4QJv0=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/pa
+ ckage-summary.html
+SHA1-Digest: /Xo5gQuCgvH+6QzbDxncqBZuQM4=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/dialog/package-summa
+ ry.html
+SHA1-Digest: VWArW/KOP4dYO6DfQYq0Sm0YS0A=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/metaclass/package-tree.html
+SHA1-Digest: uQ3bfkZ5W0ftA/T9FJOYQ3VhPPg=
+
+Name: mediawiki/ramp_down.html
+SHA1-Digest: 0+qDNeYKnKObI+gNimlNu16W5zY=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /class-use/LibraryPackage.html
+SHA1-Digest: hcM5jsFElAS8wfGg+yoFy4Lccjg=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/creation/package-tree.html
+SHA1-Digest: Ty2lwUFh8V/0e7EgSebzvq0SWFU=
+
+Name: img/EMFFacet_NatTable_CustomizationExample.png
+SHA1-Digest: hB6kcoB/r793RWMS8YaruXHkvzI=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/package-frame.html
+SHA1-Digest: 8EUOdK3Tx8RwgEgQtveW/0Qti3A=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/IQ
+ ueryDialogFactoryStrategy.html
+SHA1-Digest: ADohF+eJsKl+i0vETlYNJpgDRCA=
+
+Name: about.html
+SHA1-Digest: fmipzqUTVer2EefsjuA1KwXRET8=
+
+Name: javadoc/index-files/index-3.html
+SHA1-Digest: 4/DKZR8adr8/N9UuqOlN4c5ZYsg=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/package-su
+ mmary.html
+SHA1-Digest: JMPKUKtY3As4wy3BiIgzTjupHXI=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/packa
+ ge-tree.html
+SHA1-Digest: H693czE1EQGPiMaK9z5U//dWdWc=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/creation/IGetOrCreateFilteredFacetSetWidget.html
+SHA1-Digest: 7Axc2enjTqkaotNx9qqDMsjoyiI=
+
+Name: javadoc/allclasses-frame.html
+SHA1-Digest: XuG9hU+rvb4ueDeZeB1ceKymYu8=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/page/package-use.html
+SHA1-Digest: RyTfEI8mf/o7iOHs969EVVaJS5s=
+
+Name: javadoc/overview-tree.html
+SHA1-Digest: bGte7W4c76QEB4XxkiuVbUlaG1A=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/class
+ -use/OclQueryPackage.html
+SHA1-Digest: pND+CfbxOW4WGZZAmZyQDTNrLpo=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/util/
+ OclQueryAdapterFactory.html
+SHA1-Digest: sOu39fUrAIv9a/Ke1tnsiJKX1vQ=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/Abstr
+ actQueryDialogFactory.html
+SHA1-Digest: eS/QT8gUeqJrjLn2TZG4Di8/1kg=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/IQuer
+ yCreationResult.html
+SHA1-Digest: 9CnK/U32YBrISpvVjX0yV42TYKY=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/getorcreate/package-tree.html
+SHA1-Digest: ENa2QVfy6Qus6PG2IFkdh1mosjc=
+
+Name: mediawiki/API_Policy.html
+SHA1-Digest: Z4hO/G4TQdpzqWCjcnMrQyH1ZXM=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/util/
+ package-tree.html
+SHA1-Digest: 0OPmKPrKxBwsUpNQuIB5jEWvj1s=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /class-use/Book.html
+SHA1-Digest: 9r6bi21oMoShIWOl67LBYy4gdds=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/dialog/package-tree.
+ html
+SHA1-Digest: k3Ks9CBjMwzkUcD/x5jwHPkSfdk=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/class
+ -use/OclQuery.html
+SHA1-Digest: 6HedEK6tDnC++fclkBj8VIUrBtA=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/packa
+ ge-frame.html
+SHA1-Digest: 6gUP+vWkCnsk5pehdzu+XPLFJsc=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/page/package-tree.html
+SHA1-Digest: nlc88lX8krLi/95hbO14JpIQiis=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/page/class-use/ICreateFacetSetWizardPage.html
+SHA1-Digest: u1cEw2EI3rfX3x9IIyzFr5fh9f8=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/query/ICreateQueryWidget.html
+SHA1-Digest: OkLevBVyHyC8qtbW3p0sPJdRoSw=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/oclexpress
+ ion/IOCLExpressionWidget.html
+SHA1-Digest: tc3c1IBQBgigz75Lb21TtIH1sMQ=
+
+Name: mediawiki/ramp_down-toc.xml
+SHA1-Digest: KIYS3bzAhtdsRul+Lb2FS6XVRCk=
+
+Name: META-INF/maven/org.eclipse.emft/org.eclipse.emf.facet.doc/pom.xm
+ l
+SHA1-Digest: kKFCEOgd/GjRQVm76Dg3E8FWd6M=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/di
+ alog/query/IQueryDialogFactory.html
+SHA1-Digest: mypwatD20a4Ye1Rl/RhDAhkeb5k=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/util/
+ package-frame.html
+SHA1-Digest: BbRgfbHvvkIeipuPKCZ8SiRgIdo=
+
+Name: mediawiki/checking_BREE.mediawiki
+SHA1-Digest: UW2Yj1CAxjEItB/Up+GRSAwV0ak=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/creation/package-frame.html
+SHA1-Digest: ilVtBgZkYhLsm9osWepG9gH+j4E=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/pa
+ ckage-use.html
+SHA1-Digest: XJVJXodAfNTkTZ1fJS3WMfeYGrI=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/class
+ -use/QueryWidgetCompositeFactoryImpl.html
+SHA1-Digest: nhsl5q0s5FEEcU6Rx7O+m5QBilo=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /package-summary.html
+SHA1-Digest: EZHwSodWwiT8+KWHyuUTRQjVaqc=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/util/
+ class-use/OclQueryAdapterFactory.html
+SHA1-Digest: 54FgS9rID1NbecDKHcGVtYncoPo=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/class-use/IETypedElementWidget.html
+SHA1-Digest: xi2ueuwWR5+ksoDS8zLtc3e96Y0=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /Library.html
+SHA1-Digest: 9AfTzjGb/It8GXyjCX2rl3x1snA=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/getorcreate/IGetOrCreateFacetSetWidget.html
+SHA1-Digest: a7lBdqmE7q0xUb/vPttoJZY6kWs=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/package-us
+ e.html
+SHA1-Digest: EEtkz2aKBCaf+EG/0fru7SeCW1E=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/IOclQueryW
+ idget.html
+SHA1-Digest: vbDd4jSowMdcKPZyIG5+zr/d4Nk=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/metaclass/class-use/IGetExtendedMetaclassWidget.html
+SHA1-Digest: mH98Jx9pj3DegYT4uX7U7173Y7I=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/packa
+ ge-tree.html
+SHA1-Digest: LChAhqiHcdDwfOeub1ZIvnqZupo=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/di
+ alog/query/package-frame.html
+SHA1-Digest: KAzKRPlu5j376sriZ+0ssUU4bK0=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/pa
+ ckage-frame.html
+SHA1-Digest: 5xzc+fqgBGxDwYPLl+8oYEPdd7w=
+
+Name: javadoc/stylesheet.css
+SHA1-Digest: 9S5XD1I90zQTEX2k18PWcQijlFo=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/handler/cre
+ ation/AddReferenceInFacetHandler.html
+SHA1-Digest: G83LLaaqCF5NJezUi/4HsEvgmLU=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /util/LibraryAdapterFactory.html
+SHA1-Digest: JOqQBU/hbR+J24j3YRdzGflYC00=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA1-Digest: sjypFIBwXgLIoXUYvsfBwRNaR2E=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/package-fr
+ ame.html
+SHA1-Digest: QVGj2IV9WUlRM1UuXO3ufuhi6S8=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/util/
+ class-use/OclQuerySwitch.html
+SHA1-Digest: tTBvcZOUuOIT9obuImz4zsUh4Yk=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /util/package-frame.html
+SHA1-Digest: Hbh54NvK/Z7Hk+n/wLsHScboLdc=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/package-frame.html
+SHA1-Digest: rrEdp/MBfduoC7XzI5ArvXpNt1g=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/package-tree.html
+SHA1-Digest: 4F6x18qT5aW4hIc1EtZK+DJh1rE=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/query/package-tree.html
+SHA1-Digest: f77Ec/abZ3HIZRbFJT9iBJZor34=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/di
+ alog/query/class-use/IQueryDialogFactory.html
+SHA1-Digest: ltKbfg7IwwMVAxOw9PDqvK6FYGg=
+
+Name: mediawiki/new_and_noteworthy.html
+SHA1-Digest: Q/MZtujcmdihx78eaIIjWDeUwjc=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/package-tr
+ ee.html
+SHA1-Digest: RvNAgWo/ur08iO6yHngEzujAinY=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/dialog/package-tr
+ ee.html
+SHA1-Digest: qjyqp2lAUWUrY6asD72nDpIV+HM=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/di
+ alog/query/package-summary.html
+SHA1-Digest: pshKtxp5C6qfNONW00Z/byuRqbo=
+
+Name: img/EMFFacet_NatTable_QueryColumn.png
+SHA1-Digest: hIKr0Z7YxNB0NPLpjOmEe1WDUDg=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/metamodel/oclquery/OclQu
+ ery.html
+SHA1-Digest: ZM31WBp2fPZRGPSndKnGx2fA0B8=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/creation/class-use/ICreateFacetInFacetSetWidget.html
+SHA1-Digest: jDqizmrgF5LEiBuKmS6g+2hhVoY=
+
+Name: javadoc/index-files/index-7.html
+SHA1-Digest: WxgDrnZzBDn4retpxq0UowfF0+I=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/query/Selec
+ tQueryTypeWidget.html
+SHA1-Digest: piGAgB2BmeU7A4klrGpo9Yt2jTk=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/pa
+ ckage-tree.html
+SHA1-Digest: +oIGGrhAi/QPjQDKEiSs9yvN10o=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/cl
+ ass-use/IQueryContext.html
+SHA1-Digest: r1M+jO8ABfTQByb4pPCMbkYQ8JM=
+
+Name: javadoc/resources/inherit.gif
+SHA1-Digest: n7zCnh/ForoXM65DwQR0kti9/Es=
+
+Name: javadoc/index-files/index-13.html
+SHA1-Digest: 0hvz19Da+YSqW47LJmCtKU9K/2w=
+
+Name: javadoc/org/eclipse/emf/facet/query/ocl/sdk/ui/widget/class-use/
+ IOclQueryWidget.html
+SHA1-Digest: 5I9vt6NdR32vTvP7skUu20GH/nE=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ zard/package-summary.html
+SHA1-Digest: Gdp2jxurNyNLc5yxYwLytmq03dE=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/internal/exported/wi
+ dget/component/query/package-summary.html
+SHA1-Digest: 655aOM2e6LBOgLjlRWnyyO89pxY=
+
+Name: javadoc/deprecated-list.html
+SHA1-Digest: z9ABIzDq7gq3eo7GnbOuc8zQfqo=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/ui/dialog/package-frame
+ .html
+SHA1-Digest: D1T/lVleeiJExAYUxOQlQXXXcIE=
+
+Name: javadoc/org/eclipse/emf/facet/efacet/sdk/tests/metamodel/library
+ /class-use/Writer.html
+SHA1-Digest: lbWb9kJK+f2yLB332//VJ2C9oMo=
+

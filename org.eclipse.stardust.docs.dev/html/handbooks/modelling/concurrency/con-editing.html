@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../../styles/carnot.css" charset="ISO-8859-1"
+    type="text/css">
+<title>Working with Model Elements in Concurrency Mode</title>
+<script language="JavaScript" src="../../../styles/naviLine.js"
+    type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Watching Collaborative Modeling Activities","../../../toc.html",
+        "con-update.html","con-vcs-view.html",
+        "../../handbooks.htm","Developer Handbook",
+        "../mg-preface.htm","Modeling Guide",
+        "con-preface.html","Collaborative Modeling");
+ -->
+</script>
+<h1>Working with Model Elements in Concurrency Mode</h1>
+<ul>
+    <li><a href="#import">Importing Model Elements</a></li>
+    <li><a href="#process">Editing Process Definitions</a></li>
+    <li><a href="#diagrams">Editing Diagrams</a></li>
+    <li><a href="#property">Editing Mode in Property Dialogs</a></li>
+    <li><a href="#copy">Cut, Copy and Paste Operations</a></li>
+    <li><a href="#direct">Renaming Model Elements</a></li>
+    <li><a href="#creating">Creating New Elements</a></li>
+    <li><a href="#delete">Deleting Elements</a></li>
+<!--    <li><a href="#changes">Model Element Changes Indication</a></li>-->
+    <li><a href="#state">Model Element State Indication</a></li>
+    <li><a href="#external">External Model Information Resources</a></li>
+</ul>
+<h2 id="import">Importing Model Elements</h2>
+<p>The import of model elements is only possible, if a global lock is
+set. This can be achieved by the <strong>Lock All For Editing</strong>
+option. Please refer to the section <a href="con-locking.html#lockAll">
+Locking all Lockable Elements</a> of the chapter <a href="con-locking.html">Locking
+and Unlocking Elements</a> for detailed information on this option.</p>
+<p>In case you try to import model elements without owning a global lock on
+the target model, the following error message requesting to obtain a global lock
+first is displayed:</p>
+<p class="image"><img src="images/import-lock-warning.png" alt="Error Message"><br>
+<strong>Figure:</strong> Message Dialog to indicate the required Lock.</p>
+<h2 id="process">Editing Process Definitions</h2>
+<p>If a process definition is not locked for editing, no
+elements pertaining to process definitions like activities, triggers,
+transitions or data paths, can be added, removed or edited in this
+process definition.</p>
+<h2 id="diagrams">Editing Diagrams</h2>
+<h3>Editing Process Diagrams</h3>
+<p>Process diagrams are not editable, if the parent process definition
+is not locked. You can open them in read-only mode, which means:</p>
+<ul>
+    <li>Symbols cannot be moved.</li>
+    <li>No symbols can be added, deleted, cut, copied or pasted.</li>
+    <li>No drag and drop from the Outline view is possible.</li>
+    <li>Options from the toolbar palette cannot be used.</li>
+    <li>Model elements pertaining to the process definition cannot be renamed.</li>
+</ul>
+<p>A diagram in locked state might contain model elements like participants, applications
+or data, that can be changed independently. In case these elements are locked for editing,
+they can be edited from within the diagram, like opening the property dialog, 
+renaming and deleting, but their symbols have the same restrictions as all
+element symbols in a non-editable diagram.</p>
+
+<p>In case you try to edit a model element pertaining to the process definition or
+another element, which is not in locked state, a message dialog opens to notify that
+the element has to be locked first:</p>
+<p class="image"><img src="images/diagram-element-lock-warning.png" alt="Lock First Warning"><br>
+<strong>Figure:</strong> Message Dialog requesting Lock on Element.</p>
+
+<h3>Editing Model Diagrams</h3>
+<p>In case a model diagram is not locked for editing, you can open it
+in read-only mode, as described for process diagrams.</p>
+<p>The behavior of the contained symbols pertaining to model elements is the
+same as described for process diagrams.</p>
+<h2 id="property">Editing Mode in Property Dialogs</h2>
+<p>Property dialogs of model elements of a model in <strong>Concurrency
+Management Mode</strong> are displaying all control fields in read-only mode. To edit
+content, a button <strong>Lock for Editing</strong> is provided at the bottom of the
+dialog. Clicking this button will lock the corresponding model element or, if
+the model element to be edited is only part of a lockable element, its
+containing element.</p>
+<p class="image"><img src="images/lock-for-editing-props.png" 
+alt="Property Dialog Example"><br>
+<strong>Figure:</strong> Property Dialog in read-only Mode.</p>
+<p>In case the lock attempt fails, an according error dialog opens and all
+controls stay in readonly mode.</p>
+<p class="image"><a href="images/lock-problem-props_orgSize.png" target="_blank">
+<img src="images/lock-problem-props.png" alt="Error Dialog"></a><br>
+<strong>Figure:</strong> Error Dialog</p>
+<!-- is removed from properties dialog (temporarily?)
+<p>To unlock the model element, select the <strong>Revert Changes</strong> button in
+the lower right corner of the property dialog. This option will revert
+your changes, unlock the model element and set the entry fields
+to read-only state. Please refer to the chapter 
+<a href="con-revert.html">Reverting Changes</a> for detailed information
+on reverting changes.</p>
+
+<p class="image"><img src="images/revert-changes-button-props.png" alt="Revert"><br>
+<strong>Figure:</strong> Revert Changes.</p>-->
+<p>Property dialogs of elements pertaining to a process definition are
+not editable if the parent process definition is not locked.</p>
+<h2 id="copy">Cut, Copy and Paste Operations</h2>
+<p>In case model elements are copied to a model in concurrency mode, the new
+elements will be displayed as newly added elements in the Outline view
+and provided to be committed in the commit dialog. In case a diagram or 
+process definition, where a copied element should
+be pasted, is not locked, a warning dialog opens to indicate that
+the target element has to be locked first.</p>
+
+<p class="image"><img src="images/paste-warning.png" alt="Paste Warning"><br>
+<strong>Figure:</strong> Message Dialog requesting Lock.</p>
+
+<h2 id="direct">Renaming Model Elements</h2>
+<p>Direct editing of symbol names, like using the <strong>F2</strong> short
+key or a mouse click on the name, requires a lock for editing on the according element or
+a lock on the according process definition accordingly.
+Otherwise a message dialog opens to inform that a lock has to be achieved
+before.</p>
+<p class="image"><img src="images/lock-element-first.png" alt=" Dialog"><br>
+<strong>Figure:</strong> Lock Failed Dialog</p>
+
+<h2 id="creating">Creating New Elements</h2>
+<p>If new lockable model elements are created, their according lock file will not be
+created and submitted immediately, this is done on commit. New elements pertaining to
+a parent node, for example a process definition, can only be created, if the parent node
+is locked for editing.</p>
+<p>For all lockable element, the newly created 
+element is indicated as new with an overlay icon displaying a plus sign 
+in the right upper corner of the element icon:</p>
+<p class="image"><img src="images/plus-icon.png" alt=""><br>
+<strong>Figure:</strong> Icon indicating an added model element.</p>
+<h2 id="delete">Deleting Elements</h2>
+<p>A confirmation dialog open when deleting a lockable element:</p>
+<p class="image"><img src="images/delete-confirm.png"
+    alt="Deletion Confirmation Dialog"><br>
+<strong>Figure:</strong> Deletion Confirmation Dialog</p>
+<p>To delete any element a lock must be obtained before the user can delete
+the element. Deleting activities or other elements pertaining to a process
+definition, requires a lock of the according process definition. In case 
+the parent process definition is not locked, the <strong>Delete</strong>
+option is not available.</p>
+<h3>Deleting Elements having Symbols in a Diagram</h3>
+<p>In case an element is deleted having symbols in a diagram, that is 
+locked for editing, the symbols are also deleted. If the according diagram is not
+locked for editing, the symbols are not deleted, but replaced with undefined 
+symbols.</p>
+<p class="image"><img src="images/undefined-element.png" 
+	alt="Undefined Model Element"><br>
+<strong>Figure:</strong> Deleted Element replaced by an undefined Element.</p>
+<h3>Indication to other Users</h3>
+<p>In case a user deletes a lockable model element and commits this change,
+this is indicated in the appropriate model element in the Outline
+view to other users by an overlay icon representing a cross.</p>
+<p class="image"><img src="images/cross-remotely-icon.png" 
+	alt="Model Element deleted remotely."><br>
+<strong>Figure:</strong> Model Element deleted remotely.</p>
+<!--<h2 id="changes">Model Element Changes Indication</h2>
+<p>In the Outline view, changes on model elements are indicated via
+an overlay icon in the right upper corner on the model element icon.
+These indicate the following sort of changes:</p>
+<ul>
+    <li><a href="#localChange">Local and Remote Changes</a></li>
+    <li><a href="#added">Added Element</a></li>
+    <li><a href="#deleted">Deleted Element</a></li>
+</ul>
+<h3 id="localChange">Local and Remote Changes</h3>
+<p>In case a model element has local or remote changes that are not committed yet, an
+overlay icon showing a pen is displayed in the right upper corner of the element
+icon in the Outline view:</p>
+<p class="image"><img src="images/pen-icon.png" alt=""><br>
+<strong>Figure:</strong> Icon indicating local changes.</p>
+<p>You can differ if the changes are local or remote by the overlay icon
+in the lower right corner indicating the model element state, which is
+described in section <a href="#state">Model Element State Indication</a>.
+Thus, a barrel icon or a locked sign icon combined with the pen icon indicates
+that the model element has been changed by another user. In that case, an
+update might be useful. For example:</p>
+<p class="image"><img src="images/pen-barrel-icon.png" alt=""><br>
+<strong>Figure:</strong> Icon indicating remote changes.</p>
+<p>Whereas the checkmark icon combined with the pen icon indicates local changes
+that are not committed yet.</p>
+<h3 id="added">Added Element</h3>
+<p>In case a model element is locally added and not committed yet, or
+a model element is added remotely, an
+overlay icon displaying a plus sign is displayed in the right upper corner of
+the element icon:</p>
+<p class="image"><img src="images/plus-icon.png" alt=""><br>
+<strong>Figure:</strong> Icon indicating an added model element.</p>
+<p>You can differ if the element is added locally or remotely by the overlay icon
+in the lower right corner indicating the model element state, which is
+described in section <a href="#state">Model Element State Indication</a>.
+Thus, a barrel icon or a locked sign icon combined with the plus icon indicates
+that the model element has been deleted by another user. In that case, an
+update might be useful.</p>
+<p>Whereas the checkmark icon combined with the plus icon indicates 
+that the element is locally added and not committed yet.</p>
+<h3 id="deleted">Deleted Element</h3>
+<p>In case a model element is deleted from the repository by another
+user, an overlay icon displaying a cross sign is displayed in the right upper corner of
+the element icon:</p>
+<p class="image"><img src="images/cross-remotely-icon.png" alt=""><br>
+<strong>Figure:</strong> Icon indicating a remotely deleted model element.</p>
+<p>You can differ if the element is deleted locally or remotely by the overlay icon
+in the lower right corner indicating the model element state, which is
+described in section <a href="#state">Model Element State Indication</a>.
+Thus, a barrel icon or a locked sign icon combined with the cross icon indicates
+that the model element has been deleted by another user. In that case, an
+update might be useful.</p>
+<p>Whereas the checkmark icon combined with the cross icon indicates 
+that the element is locally deleted.</p>-->
+
+
+<h2 id="state">Model Element State Indication</h2>
+<p>In the Outline view, the lock state of model elements are indicated in
+the lower right corner of the model elements icon. The following states are
+possible:</p>
+<ul>
+    <li><a href="#shared">Shared Mode</a></li>
+    <li><a href="#locked">Locked State</a></li>
+    <li><a href="#lockedUser">Locked by another User</a></li>
+</ul>
+<h3 id="shared">Shared Mode</h3>
+<p>In case a model element is shared with the repository, but not
+locked, the following overlay icon indicates this state:</p>
+<p class="image"><img src="images/barrel-icon.png" alt=""><br>
+<strong>Figure:</strong> Shared Mode</p>
+<h3 id="locked">Locked State</h3>
+<p>In case a model element is locked for editing, a checkmark icon
+indicates that state:</p>
+<p class="image"><img src="images/checkmark-icon.png" alt=""><br>
+<strong>Figure:</strong> Locked State</p>
+<h3 id="lockedUser">Locked by another User</h3>
+<p>In case a model element is locked by another user, the following
+icon is indicating this state:</p>
+<p class="image"><img src="images/locked-other-user-icon.png" alt=""><br>
+<strong>Figure:</strong> Locked by another User</p>
+<p>Additionally the name of the user who locked this element is
+added to the right side of the model element name, e.g.:</p>
+<p class="image"><img src="images/locked-by-user.png" alt=""><br>
+<strong>Figure:</strong> Name of the User who locked the Element.</p>
+<h2 id="external">External Model Information Resources</h2>
+<p>In case an already existing model element is imported from an external
+model resource, the original version will be replaced. A confirmation dialog
+opens, where you can choose to replace the existing element or to
+reuse the element in the model:</p>
+<p class="image"><img src="images/external-model-overwrite.png" alt=""><br>
+<strong>Figure:</strong> Replacement Dialog</p>
+
+<p>The corresponding 
+model elements have to be locked for editing before this action.
+Otherwise, an according error message requesting to lock the model
+elements before the import is displayed.</p>
+<p>Please refer to the chapter
+<a href="../mg-registry.html">External Model Resources</a> for
+general information on working with external model resources.</p>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

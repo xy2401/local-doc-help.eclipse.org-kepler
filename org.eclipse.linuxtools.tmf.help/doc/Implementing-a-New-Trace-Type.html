@@ -1,0 +1,526 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>TMF Developer Guide - Implementing a New Trace Type</title>
+		<link type="text/css" rel="stylesheet" href="book.css"/>
+	</head>
+	<body>
+		<table class="navigation" style="width: 100%;" border="0" summary="navigation">
+			<tr>
+				<th style="width: 100%" align="center" colspan="3">Implementing a New Trace Type</th>
+			</tr>
+			<tr>
+				<td style="width: 20%" align="left">
+					<a href="Developer-Guide.html" title="Introduction">
+						<img alt="Previous" border="0" src="images/prev.gif"/>
+					</a>
+				</td>
+				<td style="width: 60%" align="center"></td>
+				<td style="width: 20%" align="right">
+					<a href="View-Tutorial.html" title="View Tutorial">
+						<img alt="Next" border="0" src="images/next.gif"/>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 20%" align="left" valign="top">Introduction</td>
+				<td style="width: 60%" align="center"></td>
+				<td style="width: 20%" align="right" valign="top">View Tutorial</td>
+			</tr>
+		</table><hr/>
+		<h1 id="Implementing_a_New_Trace_Type">Implementing a New Trace Type</h1>
+		<p>The framework can easily be extended to support more trace types. To make a new trace type, one must define the following items:</p>
+		<ul>
+			<li>The event type</li>
+			<li>The trace reader</li>
+			<li>The trace context</li>
+			<li>The trace location</li>
+			<li>(Optional but recommended) The 
+				<i>org.eclipse.linuxtools.tmf.ui.tracetype</i> plug-in extension point
+			</li>
+		</ul>
+		<p>The 
+			<b>event type</b> must implement an 
+			<i>ITmfEvent</i> or extend a class that implements an 
+			<i>ITmfEvent</i>. Typically it will extend 
+			<i>TmfEvent</i>. The event type must contain all the data of an event. The 
+			<b>trace reader</b> must be of an 
+			<i>ITmfTrace</i> type. The 
+			<i>TmfTrace</i> class will supply many background operations so that the reader only needs to implement certain functions. The 
+			<b>trace context</b> can be seen as the internals of an iterator. It is required by the trace reader to parse events as it iterates the trace and to keep track of its rank and location. It can have a timestamp, a rank, a file position, or any other element, it should be considered to be ephemeral. The 
+			<b>trace location</b> is an element that is cloned often to store checkpoints, it is generally persistent. It is used to rebuild a context, therefore, it needs to contain enough information to unambiguously point to one and only one event. Finally the 
+			<i>tracetype</i> plug-in extension associates a given trace, non-programmatically to a trace type for use in the UI.
+		</p>
+		<h2 id="An_Example:_Nexus-lite_parser">An Example: Nexus-lite parser</h2>
+		<h3 id="Description_of_the_file">Description of the file</h3>
+		<p>This is a very small subset of the nexus trace format, with some changes to make it easier to read. There is one file. This file starts with 64 Strings containing the event names, then an arbitrarily large number of events. The events are each 64 bits long. the first 32 are the timestamp in microseconds, the second 32 are split into 6 bits for the event type, and 26 for the data payload.</p>
+		<p>The trace type will be made of two parts, part 1 is the event description, it is just 64 strings, comma seperated and then a line feed.</p>
+		<pre>
+Startup,Stop,Load,Add, ... ,reserved\n
+</pre>
+		<p>Then there will be the events in this format</p>
+		<table>
+			<tr>
+				<td style="width: 50%; background-color: #ffffcc;">timestamp (32 bits)</td>
+				<td style="width: 10%; background-color: #ffccff;">type (6 bits)</td>
+				<td style="width: 40%; background-color: #ccffcc;">payload (26 bits)</td>
+			</tr>
+			<tr>
+				<td style="background-color: #ffcccc;" colspan="3">64 bits total</td>
+			</tr>
+		</table>
+		<p>all events will be the same size (64 bits).</p>
+		<h3 id="NexusLite_Plug-in">NexusLite Plug-in</h3>
+		<p>Create a 
+			<b>New</b>, 
+			<b>Project...</b>, 
+			<b>Plug-in Project</b>, set the title to 
+			<b>com.example.nexuslite</b>, click 
+			<b>Next &gt;</b> then click on 
+			<b>Finish</b>.
+		</p>
+		<p>Now the structure for the Nexus trace Plug-in is set up.</p>
+		<p>Add a dependency to TMF core and UI by opening the 
+			<b>MANIFEST.MF</b> in 
+			<b>META-INF</b>, selecting the 
+			<b>Dependencies</b> tab and 
+			<b>Add ...</b> 
+			<b>org.eclipse.linuxtools.tmf.core</b> and 
+			<b>org.eclipse.linuxtools.tmf.ui</b>.
+		</p>
+		<p>
+			<img border="0" src="images/NTTAddDepend.png"/>
+			<br/>
+
+			<img border="0" src="images/NTTSelectProjects.png"/>
+			<br/>
+		</p>
+		<p>Now the project can access TMF classes.</p>
+		<h3 id="Trace_Event">Trace Event</h3>
+		<p>The 
+			<b>TmfEvent</b> class will work for this example. No code required.
+		</p>
+		<h3 id="Trace_Reader">Trace Reader</h3>
+		<p>The trace reader will extend a 
+			<b>TmfTrace</b> class.
+		</p>
+		<p>It will need to implement:</p>
+		<ul>
+			<li>validate (is the trace format valid?)</li>
+		</ul>
+		<ul>
+			<li>initTrace (called as the trace is opened</li>
+		</ul>
+		<ul>
+			<li>seekEvent (go to a position in the trace and create a context)</li>
+		</ul>
+		<ul>
+			<li>getNext (implemented in the base class)</li>
+		</ul>
+		<ul>
+			<li>parseEvent (read the next element in the trace)</li>
+		</ul>
+		<p>Here is an example implementation of the Nexus Trace file</p>
+		<pre>/*******************************************************************************
+ * Copyright (c) 2013 Ericsson
+ *
+ * All rights reserved. This program and the accompanying materials are
+ * made available under the terms of the Eclipse Public License v1.0 which
+ * accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *   Matthew Khouzam - Initial API and implementation
+ *******************************************************************************/
+
+package com.example.nexuslite;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.channels.FileChannel.MapMode;
+
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.linuxtools.tmf.core.event.ITmfEvent;
+import org.eclipse.linuxtools.tmf.core.event.ITmfEventField;
+import org.eclipse.linuxtools.tmf.core.event.TmfEvent;
+import org.eclipse.linuxtools.tmf.core.event.TmfEventField;
+import org.eclipse.linuxtools.tmf.core.event.TmfEventType;
+import org.eclipse.linuxtools.tmf.core.exceptions.TmfTraceException;
+import org.eclipse.linuxtools.tmf.core.timestamp.ITmfTimestamp;
+import org.eclipse.linuxtools.tmf.core.timestamp.TmfTimestamp;
+import org.eclipse.linuxtools.tmf.core.trace.ITmfContext;
+import org.eclipse.linuxtools.tmf.core.trace.ITmfEventParser;
+import org.eclipse.linuxtools.tmf.core.trace.ITmfLocation;
+import org.eclipse.linuxtools.tmf.core.trace.TmfContext;
+import org.eclipse.linuxtools.tmf.core.trace.TmfLongLocation;
+import org.eclipse.linuxtools.tmf.core.trace.TmfTrace;
+
+/**
+ * Nexus trace type
+ *
+ * @author Matthew Khouzam
+ */
+public class NexusTrace extends TmfTrace implements ITmfEventParser {
+
+    private static final int CHUNK_SIZE = 65536; // seems fast on MY system
+    private static final int EVENT_SIZE = 8; // according to spec
+
+    private TmfLongLocation fCurrentLocation;
+    private static final TmfLongLocation NULLLOCATION = new TmfLongLocation(
+            (Long) null);
+    private static final TmfContext NULLCONTEXT = new TmfContext(NULLLOCATION,
+            -1L);
+
+    private long fSize;
+    private long fOffset;
+    private File fFile;
+    private String[] fEventTypes;
+    private FileChannel fFileChannel;
+    private MappedByteBuffer fMappedByteBuffer;
+
+    @Override
+    public IStatus validate(@SuppressWarnings("unused") IProject project,
+            String path) {
+        File f = new File(path);
+        if (!f.exists()) {
+            return new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+                    "File does not exist"); //$NON-NLS-1$
+        }
+        if (!f.isFile()) {
+            return new Status(IStatus.ERROR, Activator.PLUGIN_ID, path
+                    + " is not a file"); //$NON-NLS-1$
+        }
+        String header = readHeader(f);
+        if (header.split(",", 64).length == 64) { //$NON-NLS-1$
+            return Status.OK_STATUS;
+        }
+        return new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+                "File does not start as a CSV"); //$NON-NLS-1$
+    }
+
+    @Override
+    public ITmfLocation getCurrentLocation() {
+        return fCurrentLocation;
+    }
+
+    @Override
+    public void initTrace(IResource resource, String path,
+            Class&lt;? extends ITmfEvent&gt; type) throws TmfTraceException {
+        super.initTrace(resource, path, type);
+        fFile = new File(path);
+        fSize = fFile.length();
+        if (fSize == 0) {
+            throw new TmfTraceException("file is empty"); //$NON-NLS-1$
+        }
+        String header = readHeader(fFile);
+        if (header == null) {
+            throw new TmfTraceException("File does not start as a CSV"); //$NON-NLS-1$
+        }
+        fEventTypes = header.split(",", 64); // 64 values of types according to //$NON-NLS-1$
+                                             // the 'spec'
+        if (fEventTypes.length != 64) {
+            throw new TmfTraceException(
+                    "Trace header does not contain 64 event names"); //$NON-NLS-1$
+        }
+        if (getNbEvents() &lt; 1) {
+            throw new TmfTraceException("Trace does not have any events"); //$NON-NLS-1$
+        }
+        try {
+            fFileChannel = new FileInputStream(fFile).getChannel();
+            seek(0);
+        } catch (FileNotFoundException e) {
+            throw new TmfTraceException(e.getMessage());
+        } catch (IOException e) {
+            throw new TmfTraceException(e.getMessage());
+        }
+    }
+
+    /**
+     * @return
+     */
+    private String readHeader(File file) {
+        String header = new String();
+        BufferedReader br;
+        try {
+            br = new BufferedReader(new FileReader(file));
+            header = br.readLine();
+            br.close();
+        } catch (IOException e) {
+            return null;
+        }
+        fOffset = header.length() + 1;
+        setNbEvents((fSize - fOffset) / EVENT_SIZE);
+        return header;
+    }
+
+    @Override
+    public double getLocationRatio(ITmfLocation location) {
+        return ((TmfLongLocation) location).getLocationInfo().doubleValue()
+                / getNbEvents();
+    }
+
+    @Override
+    public ITmfContext seekEvent(ITmfLocation location) {
+        TmfLongLocation nl = (TmfLongLocation) location;
+        if (location == null) {
+            nl = new TmfLongLocation(0L);
+        }
+        try {
+            seek(nl.getLocationInfo());
+        } catch (IOException e) {
+            return NULLCONTEXT;
+        }
+        return new TmfContext(nl, nl.getLocationInfo());
+    }
+
+    @Override
+    public ITmfContext seekEvent(double ratio) {
+        long rank = (long) (ratio * getNbEvents());
+        try {
+            seek(rank);
+        } catch (IOException e) {
+            return NULLCONTEXT;
+        }
+        return new TmfContext(new TmfLongLocation(rank), rank);
+    }
+
+    private void seek(long rank) throws IOException {
+        final long position = fOffset + (rank * EVENT_SIZE);
+        int size = Math.min((int) (fFileChannel.size() - position), CHUNK_SIZE);
+        fMappedByteBuffer = fFileChannel.map(MapMode.READ_ONLY, position, size);
+    }
+
+    @Override
+    public ITmfEvent parseEvent(ITmfContext context) {
+        if ((context == null) || (context.getRank() == -1)) {
+            return null;
+        }
+        TmfEvent event = null;
+        long ts = -1;
+        int type = -1;
+        int payload = -1;
+        long pos = context.getRank();
+        if (pos &lt; getNbEvents()) {
+            try {
+                // if we are approaching the limit size, move to a new window
+                if ((fMappedByteBuffer.position() + EVENT_SIZE) &gt; fMappedByteBuffer
+                        .limit()) {
+                    seek(context.getRank());
+                }
+                /*
+                 * the trace format, is:
+                 *
+                 * - 32 bits for the time,
+                 * - 6 for the event type,
+                 * - 26 for the data.
+                 *
+                 * all the 0x00 stuff are masks.
+                 */
+
+                /*
+                 * it may be interesting to assume if the ts goes back in time,
+                 * it actually is rolling over we would need to keep the
+                 * previous timestamp for that, keep the high bits and increment
+                 * them if the next int ts read is lesser than the previous one
+                 */
+
+                ts = 0x00000000ffffffffL &amp; fMappedByteBuffer.getInt();
+
+                long data = 0x00000000ffffffffL &amp; fMappedByteBuffer.getInt();
+                type = (int) (data &gt;&gt; 26) &amp; (0x03f); // first 6 bits
+                payload = (int) (data &amp; 0x003FFFFFFL); // last 26 bits
+                // the time is in microseconds.
+                TmfTimestamp timestamp = new TmfTimestamp(ts, ITmfTimestamp.MICROSECOND_SCALE);
+                final String title = fEventTypes[type];
+                // put the value in a field
+                final TmfEventField tmfEventField = new TmfEventField(
+                        "value", payload, null); //$NON-NLS-1$
+                // the field must be in an array
+                final TmfEventField[] fields = new TmfEventField[1];
+                fields[0] = tmfEventField;
+                final TmfEventField content = new TmfEventField(
+                        ITmfEventField.ROOT_FIELD_ID, null, fields);
+                // set the current location
+
+                fCurrentLocation = new TmfLongLocation(pos);
+                // create the event
+                event = new TmfEvent(this, pos, timestamp, null,
+                        new TmfEventType(title, title, null), content, null);
+            } catch (IOException e) {
+                fCurrentLocation = new TmfLongLocation(-1L);
+            }
+        }
+        return event;
+    }
+}
+</pre>
+		<p>In this example the 
+			<b>validate</b> function checks if the file exists and is not a directory.
+		</p>
+		<p>The 
+			<b>initTrace</b> function will read the event names, and find where the data starts. After this, the number of events is known, and since each event is 8 bytes long according to the specs, the seek is then trivial.
+		</p>
+		<p>The 
+			<b>seek</b> here will just reset the reader to the right location.
+		</p>
+		<p>The 
+			<b>parseEvent</b> method needs to parse and return the current event and store the current location.
+		</p>
+		<p>The 
+			<b>getNext</b> method (in base class) will read the next event and update the context. It calls the 
+			<b>parseEvent</b> method to read the event and update the location. It does not need to be overridden and in this example it is not. The sequence of actions necessary are parse the next event from the trace, create an 
+			<b>ITmfEvent</b> with that data, update the current location, call 
+			<b>updateAttributes</b>, update the context then return the event.
+		</p>
+		<h3 id="Trace_Context">Trace Context</h3>
+		<p>The trace context will be a 
+			<b>TmfContext</b>
+		</p>
+		<h3 id="Trace_Location">Trace Location</h3>
+		<p>The trace location will be a long, representing the rank in the file. The 
+			<b>TmfLongLocation</b> will be the used, once again, no code is required.
+		</p>
+		<h3 id=".28Optional_but_recommended.29_The_.27.27org.eclipse.linuxtools.tmf.ui.tracetype.27.27_plug-in_extension_point">(Optional but recommended) The 
+			<i>org.eclipse.linuxtools.tmf.ui.tracetype</i> plug-in extension point
+		</h3>
+		<p>One can implement the 
+			<i>tracetype</i> extension in their own plug-in. In this example, the 
+			<i>com.example.nexuslite</i> plug-in will be modified.
+		</p>
+		<p>The 
+			<b>plugin.xml</b> file in the ui plug-in needs to be updated if one wants users to access the given event type. It can be updated in the Eclipse plug-in editor.
+		</p>
+		<ol>
+			<li>In Extensions tab, add the 
+				<b>org.eclipse.linuxtools.tmf.ui.tracetype</b> extension point.
+			</li>
+		</ol>
+		<p>
+			<img border="0" src="images/NTTExtension.png"/>
+			<br/>
+
+			<img border="0" src="images/NTTTraceType.png"/>
+			<br/>
+
+			<img border="0" src="images/NTTExtensionPoint.png"/>
+			<br/>
+		</p>
+		<ol>
+			<li>Add in the 
+				<b>org.eclipse.linuxtools.tmf.ui.tracetype</b> extension a new type. To do that, 
+				<b>right click</b> on the extension then in the context menu, go to 
+				<b>New &gt;</b>, 
+				<b>type</b>.
+			</li>
+		</ol>
+		<p>
+			<img border="0" src="images/NTTAddType.png"/>
+			<br/>
+		</p>
+		<p>The 
+			<b>id</b> is the unique identifier used to refer to the trace.
+		</p>
+		<p>The 
+			<b>name</b> is the field that shall be displayed when a trace type is selected.
+		</p>
+		<p>The 
+			<b>trace type</b> is the canonical path refering to the class of the trace.
+		</p>
+		<p>The 
+			<b>event type</b> is the canonical path refering to the class of the events of a given trace.
+		</p>
+		<p>The  
+			<b>category</b> (optional) is the container in which this trace type will be stored.
+		</p>
+		<p>The 
+			<b>icon</b> (optional) is the image to associate with that trace type.
+		</p>
+		<p>In the end, the extension menu should look like this.</p>
+		<p>
+			<img border="0" src="images/NTTPluginxmlComplete.png"/>
+			<br/>
+		</p>
+		<h2 id="Best_Practices">Best Practices</h2>
+		<ul>
+			<li>Do not load the whole trace in RAM, it will limit the size of the trace that can be read.</li>
+			<li>Reuse as much code as possible, it makes the trace format much easier to maintain.</li>
+			<li>Use Eclipse's editor instead of editing the xml directly.</li>
+			<li>Do not forget Java supports only signed data types, there may be special care needed to handle unsigned data.</li>
+			<li>Keep all the code in the same plug-in as the 
+				<i>tracetype</i> if it makes sense from a design point of view. It will make integration easier.
+			</li>
+		</ul>
+		<h2 id="Download_the_Code">Download the Code</h2>
+		<p>The plug-in is available 
+			<a href="http://wiki.eclipse.org/images/3/34/Com.example.nexuslite.zip">here</a> with a trace generator and a quick test case.
+		</p>
+		<h2 id="Optional_Trace_Type_Attributes">Optional Trace Type Attributes</h2>
+		<p>After defining the trace type as described in the previous chapters it is possible to define optional attributes for the trace type.</p>
+		<h3 id="Default_Editor">Default Editor</h3>
+		<p>The attribute 
+			<b>defaultEditor</b> allows for configuring the editor to use for displaying the events. If omitted, the 
+			<i>TmfEventsEditor</i> is used as default. To configure an editor, first add the 
+			<b>defaultEditor</b> attribute to the trace type in the extension definition. This can be done by selecting the trace type in the plug-in manifest editor. Then click the right mouse button and select 
+			<b>New -&gt; defaultEditor</b> in the context sensitive menu. Then select the newly added attribute. Now you can specify the editor id to use on the right side of the manifest editor. For example, this attribute could be used to implement an extension of the class 
+			<i>org.eclipse.ui.part.MultiPageEditor</i>. The first page could use the 
+			<i>TmfEventsEditor</i>' to display the events in a table as usual and other pages can display other aspects of the trace.
+		</p>
+		<h3 id="Events_Table_Type">Events Table Type</h3>
+		<p>The attribute 
+			<b>eventsTableType</b> allows for configuring the events table class to use in the default events editor. If omitted, the default events table will be used. To configure a trace type specific events table, first add the 
+			<b>eventsTableType</b> attribute to the trace type in the extension definition. This can be done by selecting the trace type in the plug-in manifest editor. Then click the right mouse button and select 
+			<b>New -&gt; eventsTableType</b> in the context sensitive menu. Then select the newly added attribute and click on 
+			<i>class</i> on the right side of the manifest editor. The new class wizard will open. The 
+			<i>superclass</i> field will be already filled with the class 
+			<i>org.eclipse.linuxtools.tmf.ui.viewers.events.TmfEventsTable</i>. Using this attribute a table with different columns than the default columns can be defined. See class org.eclipse.linuxtools.internal.lttng2.kernel.ui.viewers.events.Lttng2EventsTable for an example implementation.
+		</p>
+		<h3 id="Statistics_Viewer_Type">Statistics Viewer Type</h3>
+		<p>The attribute 
+			<b>statisticsViewerType</b> allows for defining trace type specific statistics. If omitted, only the default statistics will be displayed in the 
+			<i>Statistics</i> view (part of the 
+			<i>Tracing</i> view category). By default this view displays the total number of events and the number of events per event type for the whole trace and for the selected time range. To configure trace type specific statistics, first add the 
+			<b>statisticsViewerType</b> attribute to the trace type in the extension definition. This can be done by selecting the trace type in the plug-in manifest editor. Then click the right mouse button and select 
+			<b>New -&gt; statisticsViewerType</b> in the context sensitive menu. Then select the newly added attribute and click on 
+			<i>class</i> on the right side of the manifest editor. The new class wizard will open. The 
+			<i>superclass</i> field will be already filled with the class 
+			<i>org.eclipse.linuxtools.tmf.ui.viewers.statistics.TmfStatisticsViewer</i>. Now overwrite the relevant methods to provide the trace specific statistics. When executing the plug-in extension in Eclipse and opening the 
+			<i>Statistics</i> view the 
+			<i>Statistics</i> view  will show an additional tab beside the global tab that shows the default statistics. The new tab will display the trace specific statistics provided in the 
+			<i>TmfStatisticsViewer</i> sub-class implementation.
+		</p><hr/>
+		<table class="navigation" style="width: 100%;" border="0" summary="navigation">
+			<tr>
+				<td style="width: 20%" align="left">
+					<a href="Developer-Guide.html" title="Introduction">
+						<img alt="Previous" border="0" src="images/prev.gif"/>
+					</a>
+				</td>
+				<td style="width: 60%" align="center">
+					<a href="Developer-Guide.html" title="TMF Developer Guide">
+						<img alt="TMF Developer Guide" border="0" src="images/home.gif"/>
+					</a>
+				</td>
+				<td style="width: 20%" align="right">
+					<a href="View-Tutorial.html" title="View Tutorial">
+						<img alt="Next" border="0" src="images/next.gif"/>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 20%" align="left" valign="top">Introduction</td>
+				<td style="width: 60%" align="center"></td>
+				<td style="width: 20%" align="right" valign="top">View Tutorial</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="../../styles/carnot.css" charset="ISO-8859-1" type="text/css">
+<title>Managing Documents and Folders</title>
+<script language="JavaScript" src="../../styles/naviLine.js" type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Managing Document Types","../../toc.html",
+        "pg-embed-conf-var.html","pg-embed-doc-types.html",
+		"../handbooks.htm","Developer Handbook",
+		"pg-preface.htm","Programming Guide",
+		"pg-embedded-preface.htm","Embedded Usage");
+ -->
+</script>
+<h1>Managing Documents and Folders</h1>
+<p>The Stardust service 
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/DocumentManagementService.html">
+DocumentManagementService</a> provides functionality for Document Management operations in an
+Stardust runtime environment.
+<ul>
+	<li><a href="#docs">Managing Documents</a></li>
+	<li><a href="#folder">Managing Folders</a></li>
+   <li><a href="#search">Filtering Documents</a></li>
+</ul>
+<h2 id="docs">Managing Documents</h2>
+<p>The following operations on documents are provided via the
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/DocumentManagementService.html">
+DocumentManagementService</a>:</p>
+<ul>
+	<li><a href="#getDoc">Retrieving Documents</a></li>
+	<li><a href="#getDocVers">Retrieving Document Versions</a></li>
+	<li><a href="#getCont">Retrieving the Content of Documents</a></li>
+	<li><a href="#createDoc">Creating a Document</a></li>
+	<li><a href="#createDocVers">Creating a New Document Version</a></li>
+	<li><a href="#updateDoc">Updating a Document</a></li>
+	<li><a href="#delDoc">Deleting a Document</a></li>
+	<li><a href="#delVers">Removing a Document Version</a></li>
+	<li><a href="#moveDoc">Moving a Document to a Target Path</a></li>
+</ul>
+
+<h3 id="getDoc">Retrieving Documents</h3>
+<p>To get a specific document or multiple documents, choose the appropriate
+method depending on which criteria the document search should be performed.</p>
+<ul>
+	<li><a href="#getDocID">Retrieving Documents by ID or Path</a></li>
+	<li><a href="#getMultiDoc">Retrieving Multiple Documents by ID or Path</a></li>
+	<li><a href="#getDocName">Retrieving Documents based on Name Pattern</a></li>
+	<li><a href="#getDocXPath">Retrieving Documents based on the XPath query</a></li>
+</ul>
+<h4 id="getDocID">Retrieving Documents by ID or Path</h4>
+<p>Use the following method to get a document via document ID or path:</p>
+<pre>Document getDocument(String documentId) throws DocumentManagementServiceException;</pre>
+<p>If no document with such an ID or path exists, it returns <tt>null</tt>.</p>
+<h4 id="getMultiDoc">Retrieving Multiple Documents by ID or Path</h4>
+<p>In case you like to retrieve multiple documents, which you
+determine via a list of document IDs, use:</p>
+<pre>List/*&lt;? extends Document&gt;*/ getDocuments(List/*&lt;String&gt;*/ documentIds) throws DocumentManagementServiceException;</pre>
+<h4 id="getDocName">Retrieving Documents based on Name Pattern</h4>
+<p>Retrieving documents based on a given name pattern can be done via the
+following method:</p>
+<pre>List/*&lt;? extends Document&gt;*/ findDocumentsByName(String namePattern) throws DocumentManagementServiceException;</pre>
+<p>This method returns a list of documents matching the name pattern.</p>
+<h4 id="getDocXPath">Retrieving Documents based on the XPath query</h4>
+<p>The following methods returns a list of documents based on 
+a given XPath query:</p>
+<pre>List/*&lt;? extends Document&gt;*/ findDocuments(String xpathQuery) throws DocumentManagementServiceException;</pre>
+<h3 id="getDocVers">Retrieving Document Versions</h3>
+<p>Document versions can be retrieved via the following method:</p>
+<pre>List/*&lt;? extends Document&gt;*/ getDocumentVersions(String documentId) throws DocumentManagementServiceException;</pre>
+<p>All versions of the document with the given document ID are returned in a list.</p>
+
+<h3 id="getCont">Retrieving the Content of Documents</h3>
+<p>To retrieve the content of a document identified by a given
+document ID, use the following method:</p>
+<pre>byte[] retrieveDocumentContent(String documentId) throws DocumentManagementServiceException;</pre>
+<p class="note"><strong>Note:</strong><br>
+This method should only be used for documents of reasonable size as the
+full content will be materialized in memory both on the server as well as on the
+client. It is recommended to us the facilities provided by the
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/api/web/dms/DmsContentServlet.html">
+DmsContentServlet</a> for memory efficient content access.</p>
+<h3 id="createDoc">Creating a Document</h3>
+<ul>
+	<li><a href="#nocontent">Creating an empty Document by document info</a></li>
+	<li><a href="#withcontent">Creating a Document with content by document info</a></li>
+</ul>
+<h4 id="nocontent">Creating an empty Document by document info</h4>
+<p>To create a document in a folder with a specific ID, described by 
+an instance of 
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/DocumentInfo.html">DocumentInfo</a>, use
+the following method:</p>
+<pre>Document createDocument(String folderId, DocumentInfo document) throws DocumentManagementServiceException;</pre>
+<p>The parameter <strong>folderId</strong> specifies the ID or path of 
+the folder to create the document in. The value "/"
+designates the top-level folder. The new document will have no content.</p>
+<h4 id="withcontent">Creating a Document with content by document info</h4>
+<p>In case you like to create a document in a folder with a specific ID,
+described by an instance of
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/DocumentInfo.html">DocumentInfo</a>
+and write a given content to it, use:</p>
+<pre>Document createDocument(String folderId, DocumentInfo document, byte[] content,
+         String encoding) throws DocumentManagementServiceException;</pre>
+<p>The parameter <strong>folderId</strong> specifies the ID or path of 
+the folder to create the document in. The value "/"
+designates the top-level folder. The content of the document
+will be the content of parameter <strong>content</strong>.</p>
+<p class="note"><strong>Note:</strong><br>
+This method should only be used for documents of reasonable size
+as the full content will be materialized in memory both on the server as
+well as on the client. It is recommended to us the facilities provided by the
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/api/web/dms/DmsContentServlet.html">
+DmsContentServlet</a> for memory efficient content access.</p>
+<h3 id="createDocVers">Creating a New Document Version</h3>
+<p>Use the following method to create a new document version
+for a document with a given ID or path:</p>
+<pre>Document versionDocument(String documentId, String versionComment, String versionLabel) throws DocumentManagementServiceException;
+</pre>
+<p>The method returns a document describing the new document version. 
+Parameter <strong>versionLabel</strong> defines the label for the 
+new revision. Note that the label must be unique per document.
+Via <strong>versionCommentcomment</strong> you can add a comment for the new 
+revision.</p>
+<h3 id="updateDoc">Updating a Document</h3>
+<p>You have the option to update a document without updating its content
+or including its content by providing a new content.</p>
+<ul>
+	<li><a href="#updateNoCont">Updating a Document except the content</a></li>
+	<li><a href="#updateContent">Updating a Document and its content</a></li>
+</ul>
+<h4 id="updateNoCont">Updating a Document except the content</h4>
+<p>The following method performs an update on a document without
+updating the content:</p>
+<pre>Document updateDocument(Document document, boolean createNewRevision, 
+   String versionComment, String versionLabel, boolean keepLocked) throws DocumentManagementServiceException;</pre>
+<p>The parameter <strong>createNewRevision</strong> determines if
+a new revision of the document should be created or not.
+If <strong>createNewRevision</strong> is <tt>true</tt>, the new revision will be labeled
+with the label specified via <strong>versionLabel</strong>. Note that the label
+must be unique per document.
+Parameter <strong>keepLocked</strong> determines
+if the document will be kept locked after update.
+A <strong>versionComment</strong> can be specified to comment the version 
+operation.</p>
+<h4 id="updateContent">Updating a Document and its content</h4>
+<p>To update a document including its content, use:</p>
+<pre>Document updateDocument(Document document, byte[] content, String encoding,
+         boolean createNewRevision, String versionComment, String versionLabel, boolean keepLocked) throws DocumentManagementServiceException;</pre>
+<p>The document will be updated with the content provided
+via the <strong>content</strong> parameter by using the encoding 
+specified via the <strong>encoding</strong> parameter.
+Parameter <strong>createNewRevision</strong> determines if
+a new revision of the document should be created or not.
+If <strong>createNewRevision</strong> is <tt>true</tt>, the new revision will be labeled
+with the label specified via <strong>versionLabel</strong>. Note that the label
+must be unique per document.
+Parameter <strong>keepLocked</strong> determines
+if the document will be kept locked after update.
+A <strong>versionComment</strong> can be specified to comment the version 
+operation.</p>
+<p class="note"><strong>Note:</strong><br>
+This method should only be used for documents of reasonable size
+as the full content will be materialized in memory both on the server as
+well as on the client. It is recommended to us the facilities provided by the
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/api/web/dms/DmsContentServlet.html">
+DmsContentServlet</a> for memory efficient content access.</p>
+<h3 id="delDoc">Deleting a Document</h3>
+<p>Deleting a document is possible by ID or Path with
+the following method:</p>
+<pre>void removeDocument(String documentId) throws DocumentManagementServiceException;</pre>
+<h3 id="delVers">Removing a Document Version</h3>
+<p>A version of a document can be removed via the following method:</p>
+<pre>void removeDocumentVersion(String documentId, String documentRevisionId) throws DocumentManagementServiceException;</pre>
+<p>Parameters are the Id of the document and the Id of the document revision.
+Note that at least one version has to remain. A call to remove the last 
+remaining version leads to a <strong>DocumentManagementServiceException</strong>.</p>
+<p>Also, in case the document exists, but the <strong>documentRevisionId</strong>
+cannot be resolved to a version of
+the document, a <strong>DocumentManagementServiceException</strong>
+is thrown.</p>
+<h3 id="moveDoc">Moving a Document to a Target Path</h3>
+<p>Use the following method to move a document to a specified path:</p>
+<pre>Document moveDocument(final String documentId, final String targetPath) throws DocumentManagementServiceException;</pre>
+<p>Parameters are the Id of the document to be moved and
+the path to move the document to. The <strong>targetPath</strong> is given
+as String value. Return value is the moved document.</p>
+<p>In case of Document Management specific errors a
+<strong>DocumentManagementServiceException</strong> is thrown.</p>
+<h2 id="folder">Managing Folders</h2>
+<p>The following operations on folders are possible:</p>
+<ul>
+	<li><a href="#getFolder">Retrieving Folders</a></li>
+	<li><a href="#createFolder">Creating a Folder</a></li>	
+	<li><a href="#updateFold">Updating Folders</a></li>
+	<li><a href="#delFolder">Removing Folders</a></li>
+</ul>
+<h3 id="getFolder">Retrieving Folders</h3>
+<p>Folders can be retrieved in different ways:</p>
+<ul>
+	<li><a href="#getFolderID">Retrieving a Folder by ID</a></li>
+	<li><a href="#getFolderDetail">Retrieving a Folder by ID controlled by level of detail</a></li>
+	<li><a href="#getFolderMulti">Retrieving multiple folders by ID or path</a></li>
+	<li><a href="#getFolderName">Retrieving Folders based on name pattern search</a></li>
+	<li><a href="#getFolderXP">Retrieving Folders based on XPath query</a></li>
+</ul>
+<h4 id="getFolderID">Retrieving a Folder by ID</h4>
+<p>To retrieve a folder by ID or path, use the following method:</p>
+<pre>Folder getFolder(String folderId) throws DocumentManagementServiceException;</pre>
+<h4 id="getFolderDetail">Retrieving a Folder by ID controlled by level of detail</h4>
+<p>In case you like to get a folder  by ID or path that is controlled
+by a given level of details, use:</p>
+<pre>Folder getFolder(String folderId, int levelOfDetail)
+			throws DocumentManagementServiceException;</pre>
+<p>The <strong>levelOfDetail</strong> parameter can be one of the following:</p>
+<ul>
+	<li><tt>Folder.LOD_NO_MEMBERS</tt></li>
+	<li><tt>Folder.LOD_LIST_MEMBERS</tt></li>
+	<li><tt>Folder.LOD_LIST_MEMBERS_OF_MEMBERS</tt></li>
+</ul>
+<p>The method returns the folder to be retrieved or <tt>null</tt>,
+if no folder with such an ID or path exists.</p>
+<h4 id="getFolderMulti">Retrieving multiple folders by ID or path</h4>
+<p>In case you like to get a list of folders that are controlled
+by a given level of details, use:</p>
+<pre>List/*&lt;? extends Folder&gt;*/ getFolders(List/*&lt;String&gt;*/ folderIds, int levelOfDetail) throws DocumentManagementServiceException;</pre>
+<p>Parameter <strong>folderIds</strong> should contain a list of IDs or 
+paths identifying the folders to be retrieved. The <strong>levelOfDetail</strong> parameter 
+can be one of the following:</p>
+<ul>
+	<li><tt>Folder.LOD_NO_MEMBERS</tt></li>
+	<li><tt>Folder.LOD_LIST_MEMBERS</tt></li>
+	<li><tt>Folder.LOD_LIST_MEMBERS_OF_MEMBERS</tt></li>
+</ul>
+<h4 id="getFolderName">Retrieving a Folder based on name pattern search</h4>
+<p>To get folders based on a name pattern search, use the following
+method:</p>
+<pre>List/* &lt;? extends Folder&gt; */findFoldersByName(String namePattern,
+			int levelOfDetail) throws DocumentManagementServiceException;</pre>
+<p>Parameter <strong>namePattern</strong> determines
+the name pattern to search for. The <strong>levelOfDetail</strong> parameter 
+can be one of the following:</p>
+<ul>
+	<li><tt>Folder.LOD_NO_MEMBERS</tt></li>
+	<li><tt>Folder.LOD_LIST_MEMBERS</tt></li>
+	<li><tt>Folder.LOD_LIST_MEMBERS_OF_MEMBERS</tt></li>
+</ul>
+<h4 id="getFolderXP">Retrieving Folders based on XPath query</h4>
+<p>Use the following method to get a list of folders based on
+a specific XPath query:</p>
+<pre>List/*&lt;? extends Folder&gt;*/ findFolders(String xpathQuery, int levelOfDetail) throws DocumentManagementServiceException;</pre>
+<p>Determine the XPath query via parameter <strong>xpathQuery</strong>.
+The <strong>levelOfDetail</strong> parameter 
+can be one of the following:</p>
+<ul>
+	<li><tt>Folder.LOD_NO_MEMBERS</tt></li>
+	<li><tt>Folder.LOD_LIST_MEMBERS</tt></li>
+	<li><tt>Folder.LOD_LIST_MEMBERS_OF_MEMBERS</tt></li>
+</ul>
+
+<h3 id="createFolder">Creating a Folder</h3>
+<p>To create a folder in a specified parent folder, use the
+following method:</p>
+<pre>Folder createFolder(String parentFolderId, FolderInfo folder) throws DocumentManagementServiceException;</pre>
+<p>To describe the folder to be created, use parameter <strong>folder</strong>
+as an instance of 
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/FolderInfo.html">
+FolderInfo</a>. Parameter <strong>parentFolderId</strong> specifies the
+ID or path of the folder to create the folder in. Value "/"
+designates the top-level folder.</p>
+<h3 id="updateFold">Updating a Folder</h3>
+<p>Use the following method to update a specific
+folder:</p>
+<pre>Folder updateFolder(Folder folder) throws DocumentManagementServiceException;</pre>
+
+<h3 id="delFolder">Removing Folders</h3>
+<p>To delete a folder with a given ID or path, use the
+following method:</p>
+<pre>void removeFolder(String folderId, boolean recursive) throws DocumentManagementServiceException;</pre>
+<p>Parameter <strong>recursive</strong> determines if the deletion should
+apply to all children and thus documents and sub-folders 
+in this folder should be removed also (<tt>true</tt>) or if
+only the folder itself should be removed (<tt>false</tt>).</p>
+
+<h2 id="search">Filtering Documents</h2>
+<p>The Stardust 
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/QueryService.html">QueryService</a>
+provides functionality to filter for
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/api/query/DocumentQuery.html">DocumentQuery</a>
+types, which can be used to search for documents.</p>
+<ul>
+   <li><a href="#queryDocId">Filtering on Document IDs</a></li>
+   <li><a href="#queryDocName">Filtering on Document Names</a></li>
+   <li><a href="#querycontenttype">Filtering on Document Content Types</a></li>
+   <li><a href="#querycontent">Filtering on Document Content</a></li>
+   <li><a href="#queryowner">Filtering on Document Owners</a></li>
+   <li><a href="#querydate">Filtering on Document Creation Date</a></li>
+   <li><a href="#querymodidate">Filtering on Last Modification Date of a Document</a></li>
+   <li><a href="#querymeta">Filtering on Document Meta Data Attributes</a></li>
+   <li><a href="#queryall">Finding all existing Documents</a></li>
+</ul>
+<p>For details on filtering Document Types, refer to section 
+<a href="pg-embed-doc-types.html#search">Searching for Document Types</a> of 
+chapter
+<a href="pg-embed-doc-types.html">Managing Document Types</a>.</p>
+<h3 id="queryDocId">Filtering on Document IDs</h3>
+<p>To define a filter on the document ID (ID) use the document Id as a predicate
+in a Document Query.</p>
+<pre>public static final FilterableAttribute ID = new Attribute("id");</pre>
+<h3 id="queryDocName">Filtering on Document Names</h3>
+<p>To define a filter on the document name (NAME) use the document name as a predicate
+in a Document Query.</p>
+<pre>public static final FilterableAttribute NAME = new Attribute("name");</pre>
+<h3 id="querycontenttype">Filtering on Document Content Types</h3>
+<p>To define a filter on the document's content type (CONTENT_TYPE) use the 
+document content type as a predicate in a Document Query.</p>
+<pre>public static final FilterableAttribute CONTENT_TYPE = new Attribute("contentType");</pre>
+<h4>Example</h4>
+<p>The following example uses the <tt>DocumentQuery</tt> for finding
+documents with a specific content type by using the <tt>CONTENT_TYPE</tt> filter:</p>
+<pre>
+   private ServiceFactory sf = ServiceFactoryLocator.get("motu", "motu");
+
+   private static final String CONTENT_TYPE1 = "text/plain";
+   
+   public void demoFindByContentType()
+   {
+      DocumentQuery query = DocumentQuery.findAll();
+      query.where(DocumentQuery.CONTENT_TYPE.isEqual(CONTENT_TYPE1));
+
+      Documents docs = sf.getQueryService().getAllDocuments(query);
+   }
+</pre>
+<h3 id="querycontent">Filtering on Document Content</h3>
+<p>To define a filter on the document's content itself (CONTENT) use the 
+document content as a predicate in a Document Query. Note note that only some 
+document types (like plain text, PDF, Microsoft Office
+documents) support content indexing. Which document types are supported is implied
+by the concrete Document Management Service.</p>
+<pre>public static final FilterableAttribute CONTENT = new Attribute("content");</pre>
+<h3 id="queryowner">Filtering on Document Owners</h3>
+<p>To define a filter on the document's owner (OWNER) use the owner of the
+document as a predicate in a Document Query.</p>
+<pre>public static final FilterableAttribute OWNER = new Attribute("owner");</pre>
+<h3 id="querydate">Filtering on Document Creation Date</h3>
+<p>To define a filter on the creation date of the document (DATE_CREATED) use this date
+as a predicate in a Document Query.</p>
+<pre>public static final FilterableAttribute DATE_CREATED = new Attribute("dateCreated");</pre>
+<h3 id="querymodidate">Filtering on Last Modification Date of a Document</h3>
+<p>To define a filter on the last modification date of the document (DATE_LAST_MODIFIED) use this date
+as a predicate in a Document Query.</p>
+<pre>public static final FilterableAttribute DATE_LAST_MODIFIED = new Attribute(
+         "dateLastModified");</pre>
+<h3 id="querymeta">Filtering on Document Meta Data Attributes</h3>
+<p>To define a filter on the meta-data attributes of the document (META_DATA) 
+use the following method:</p>
+<pre>public static final MetadataFilterBuilder META_DATA = new MetadataFilterBuilder();</pre>
+<p>This method supports filters on any attribute (e.g. searching if there is any
+attribute containing a certain text fragment) or specific attributes (e.g. 
+searching if there is an attribute with a given name,
+containing a certain text fragment).</p>
+<h4>Example with any attribute</h4>
+<p>In the following example, all documents containing any meta-data like a 
+specified string are searched. Hereby the filter <tt>META_DATA</tt> is used.</p>
+<pre>
+   private ServiceFactory sf = ServiceFactoryLocator.get("motu", "motu");
+
+   private static final String META_VALUE1 = "someMetaString";
+
+   public void demoFindMetaDataAnyLike()
+   {
+      DocumentQuery query = DocumentQuery.findAll();
+
+      query.where(DocumentQuery.META_DATA.any().like(META_VALUE1+"*"));
+      
+      Documents docs = sf.getQueryService().getAllDocuments(query);
+
+   }
+</pre>
+<h4>Example with a given name</h4>
+<p>In the following example, all documents containing meta-data with an attribute
+with a given name containing a text like a specified string are searched. 
+Hereby the filter <tt>META_DATA</tt> is used.</p>
+<pre>
+   private ServiceFactory sf = ServiceFactoryLocator.get("motu", "motu");
+
+   private static final String META_VALUE1 = "someMetaString";
+   private static final String META_KEY1 = "name";
+
+   public void demoFindMetaDataNamedStringLike()
+   {
+      DocumentQuery query = DocumentQuery.findAll();
+      query.where(DocumentQuery.META_DATA.withName(META_KEY1).like(META_VALUE1+"*"));
+      
+      Documents docs = sf.getQueryService().getAllDocuments(query);
+      printDocuments(docs);
+      assertEquals("Documents", 1, docs.size());
+   }
+</pre>   
+<h3 id="queryall">Finding all existing Documents</h3>
+<p>Use the method <tt>findAll()</tt> to create a query for finding all documents
+that currently exist.</p>
+<pre>
+   public static DocumentQuery findAll()
+   {
+      return new DocumentQuery();
+   }
+</pre>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

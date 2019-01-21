@@ -1,0 +1,81 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-SymbolicName: org.eclipse.xtend.doc;singleton:=true
+Eclipse-LazyStart: true
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/tmf/or
+ g.eclipse.xtext.git
+Require-Bundle: org.eclipse.help;bundle-version="[3.4.0,4.0.0)"
+Bundle-Version: 2.4.3.v201309030823
+Ant-Version: Apache Ant 1.8.3
+Bundle-Vendor: %providerName
+Bundle-ActivationPolicy: lazy
+Bundle-Name: %pluginName
+Created-By: 1.6.0_21-b06 (Sun Microsystems Inc.)
+Bundle-ManifestVersion: 2
+
+Name: contents/14-movies.html
+SHA1-Digest: f87bN9X7M/zk4rvtq8ls+F+VTgc=
+
+Name: about.ini
+SHA1-Digest: So6w3BOLjDxdL3xtKUBiKuOB/Gc=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: 09gN05tobgS/MdtqyTNQhOhB73M=
+
+Name: about.mappings
+SHA1-Digest: VeUpbg5MZBrKXBl8eQFxt/S5eZc=
+
+Name: contents/10-introduction.html
+SHA1-Digest: 3Fp5lBPqEINysnctSMDAvs9Wx64=
+
+Name: about.html
+SHA1-Digest: mLkmRLtG3amkcY0I7KSYZX6qKhs=
+
+Name: plugin.properties
+SHA1-Digest: ih4ObbzE68gAtf/NTf1mpGRWrFI=
+
+Name: contents/Xtend.html
+SHA1-Digest: vdjmc0szIjddO2uk7Hg7jIFCl3w=
+
+Name: contents/40-annotations.html
+SHA1-Digest: Vggoo7luRgDC5+4fbqp46PWSr0w=
+
+Name: modeling32.png
+SHA1-Digest: ADlLWFV0eQ74YnLvHnPFkYLeLrs=
+
+Name: contents/book.css
+SHA1-Digest: cp8tW7kfcjwkSIrA0Em3k+GyoBU=
+
+Name: about.properties
+SHA1-Digest: CfZUhkNmpXBmDHE5OdhiuL3obBM=
+
+Name: contents/15-types.html
+SHA1-Digest: y9HevDNd4Lb0YL1zwgDew24o6gg=
+
+Name: contents/20-classes-and-functions.html
+SHA1-Digest: xEM4wQ6YquDGOTnRTxLzhxbFnOM=
+
+Name: contents/code.css
+SHA1-Digest: QYSU6a3BlaP8qOc2X0QMXyHND7A=
+
+Name: contents/13-hello-world.html
+SHA1-Digest: NY2CaZWPwmi9gSCvhjbOcUXhqJg=
+
+Name: contents/Xtend_5.html
+SHA1-Digest: KLMQpx2YmrD920G87B+LYBLwY8k=
+
+Name: contents/30-expressions.html
+SHA1-Digest: m7fC4V7gMprFeKuy5e/JkAhKGtQ=
+
+Name: contents/Xtend_4.html
+SHA1-Digest: c0DT2CaN/sDiX0xcSnso6dJpVTc=
+
+Name: plugin.xml
+SHA1-Digest: kWq2kop7SbB6yscXG0pj48DOGPI=
+
+Name: contents/toc.xml
+SHA1-Digest: yfL7tD7WgE85fgat6LkwNXQSfb0=
+
+Name: contents/images/Xtend_template_coloring.png
+SHA1-Digest: nJJVPTSlHKruteks9J2XTB2nkjQ=
+

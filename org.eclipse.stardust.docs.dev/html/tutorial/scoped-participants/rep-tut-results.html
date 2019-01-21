@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="STYLESHEET" href="../../styles/carnot.css" charset="ISO-8859-1" type="text/css">
+  <title>Viewing the Results in the Predefined Report Monitoring Overview</title>
+<script language="JavaScript" src="../../styles/naviLine.js" type="text/javascript"></script>  
+</head>
+<body>
+<script language="JavaScript">
+<!--
+	writeNavigation("","../../toc.html",
+	        "rep-tut-portal.html","",
+			
+			"../tut-preface.htm","Tutorials",
+			"tut-scoped-main.html","Scoped Participants Tutorials",
+			"rep-tut-preface.html","Using Declarative Security in Report Viewing");
+ -->
+</script>
+
+<h1>Viewing the Results in the Predefined Report Monitoring Overview</h1>
+<p>In this chapter we will demonstrate how the security restriction set in the
+activity <strong>Activity by Scoped NationalDirector</strong>
+for reading activity instance data is reflected when monitoring
+the activity instances.</p>
+<h2>Open the Monitoring View</h2>
+<p>To view activity instance data in the <strong>Monitoring</strong>
+part of the <strong>Predefined Report Templates</strong>:</p>
+<ol>
+	<li>Switch to the <strong>Business Control Center</strong>
+	perspective.</li>
+	<li>Select <strong>All Management Views</strong>.</li>
+	<li>In the view tree, select
+	<strong>Report Templates &gt; Predefined Reports &gt; Definition Overview</strong>.</li>
+	<li>The <strong>Definition Overview</strong> opens as a separate view.</li>
+	<li>Select the tab <strong>Monitoring</strong>
+	<p class ="image"><img src="images/rep-monitoring.png" 
+	alt=""></p></li>
+	<li>In the <strong>Monitoring</strong> part, click on
+	<strong>Monitor Active Activity Instances</strong> in the
+	<strong>Activity Instances</strong> part.
+	<p class ="image"><img src="images/rep-monitor-ais.png" 
+	alt=""></p></li>
+	<li>Click the <strong>Run Report</strong> icon in the
+	toolbar:
+	<p class ="image"><img src="images/rep-run-report.png" 
+	alt=""></p></li>
+	<li>The parameter dialog opens. Here you have to adjust
+	the <strong>EndTimeStamp</strong> entry to a date later than
+	the current.
+	<p class ="image"><img src="images/rep-def-overview-params.png" 
+	alt=""></p></li>
+	<li>Now the <strong>Monitoring - Active Activity Instances</strong> view
+	is updated displaying information on completed activity instances.</li>
+</ol>
+<h2>Viewing the Results</h2>
+<p>To see the difference of the displayed activities depending on the authorization set
+for the logged-in user, you have to login with the two users and with the administrator
+role (<strong>motu/motu</strong>). You should see the following results:</p>
+<ul>
+	<li>The administrator sees both activity instances
+	for <strong>Activity by Scoped NationalDirector</strong>, as
+	he always has the grant for seeing all activity instances:
+	<p class ="image"><a href="images/rep-result-admin_orgSize.png" target="_blank">
+	<img src="images/rep-result-admin.png" 
+	alt=""></a><br>
+	<strong>Figure:</strong> </p></li>
+	<li>The user <strong>Carnot, Leonard</strong> only sees the
+	activity <strong>Activity by Scoped NationalDirector</strong>
+	performed as <strong>NationalDirector</strong> in
+	department <strong>USA</strong>:
+	<p class ="image"><img src="images/rep-result-1.png" 
+	alt=""><br>
+	<strong>Figure:</strong> Activity Instances completed in Department USA</p></li>
+	<li>The user <strong>Cityman, Frank</strong> only sees the
+	activity <strong>Activity by Scoped NationalDirector</strong>
+	performed as <strong>NationalDirector</strong> in
+	department <strong>Germany</strong>:
+	<p class ="image"><a href="images/rep-result-2_orgSize.png" target="_blank">
+	<img src="images/rep-result-2.png" alt=""></a><br>
+	<strong>Figure:</strong> Activity Instances completed in Department Germany</p></li>
+</ul>
+
+<script language="JavaScript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

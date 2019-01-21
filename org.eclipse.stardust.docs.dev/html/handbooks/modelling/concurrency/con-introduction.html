@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../../styles/carnot.css" charset="ISO-8859-1"
+    type="text/css">
+<title>Introduction</title>
+<script language="JavaScript" src="../../../styles/naviLine.js"
+    type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Concurrency Control","../../../toc.html",
+        "","con-control.html",
+        "../../handbooks.htm","Developer Handbook",
+        "../mg-preface.htm","Modeling Guide",
+        "con-preface.html","Collaborative Modeling");
+ -->
+</script>
+<h1>Introduction</h1>
+<p>Stardust supports concurrent work on process models
+stored in a central repository.</p>
+<ul>
+    <li><a href="#modes">Collaborative Modeling Modes</a></li>
+    <li><a href="#concept">Concurrency Management Mode Locking Concept</a></li>
+    <li><a href="#vcs">Version Control System Support</a></li>
+    <li><a href="#scope">Scope</a></li>
+</ul>
+<p>To make collaborative modeling work, you need to install plug-ins required for
+version control system support. Refer to section 
+<a href="#vcs">Version Control System Support</a> for details.</p>
+<h2 id="modes">Collaborative Modeling Modes</h2>
+<p>You may work on a Stardust model file in three different modes:</p>
+<ul>
+    <li><a href="#local">Local File Mode</a></li>
+    <li><a href="#version">Version Management Mode</a></li>
+    <li><a href="#con">Concurrency Management Mode</a></li>
+</ul>
+<p>In a modeling environment, a model always knows about its state regarding the
+above modes and behaves differently depending on this state, for example concerning
+editing.</p>
+<h3 id="local">Local File Mode</h3>
+<p>Working in <strong>Local File Mode</strong> means working on a plain XPDL file.</p>
+<h3 id="version">Version Management Mode</h3>
+<p>When working in <strong>Version Management Mode</strong>, the XPDL file is
+checked into SVN and managed as any other programming artefact. The following diagram
+illustrates the structure of a development project in 
+<strong>Version Management Mode</strong>:</p>
+<p class="image"><img src="images/version-control-mode.png" 
+    alt="Diagram - Version Management Mode"><br>
+<strong>Figure:</strong> Development Project Structure in Version Management Mode.</p>
+<h3 id="con">Concurrency Management Mode</h3>
+<p>When working in <strong>Concurrency Management Mode</strong>, the XPDL file is
+checked into SVN and concurrent modeling is managed via auxiliary lock files. The following
+diagram illustrates the structure of a development project in 
+<strong>Concurrency Management Mode</strong>:</p>
+<p class="image"><img src="images/collaborative-modeling-mode.png" 
+    alt="Diagram - Concurrency Management Mode"><br>
+<strong>Figure:</strong> Development Project Structure in Concurrency Management Mode</p>
+
+<h2 id="concept">Concurrency Management Mode Locking Concept</h2>
+<p>The <strong>Concurrency Management Mode</strong> adds the concept of locking
+specific model elements for update in addition to the regular version management.
+Obtaining a lock enables the lock owner to update a model element and write these changes back.</p>
+
+<h2 id="vcs">Version Control System Support</h2>
+<p>Stardust supports the open source version
+control system <a href="http://subversion.tigris.org/">Subversion</a> for 
+concurrency control. 
+Make sure to install the <strong>Stardust Modeling VCS-Connector</strong> plug-in.
+For installation details, please refer to the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.installation/html/installation/ig-toc.html">Installation Guide</a>.</p>
+<p>The plug-ins should be listed in your Eclipse 
+plug-in details after restarting Eclipse with the <tt>-clean</tt> option.</p>
+
+<h2 id="scope">Scope</h2>
+<p>Please note that the concurrency mode only changes user operations in the modeling environment. 
+The Stardust Portals and command line utilities are not affected.</p>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

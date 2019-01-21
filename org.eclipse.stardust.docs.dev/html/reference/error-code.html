@@ -1,0 +1,707 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+<title>List of Error Codes</title>
+<link rel="STYLESHEET" href="../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<script language="JavaScript" src="../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("","../toc.html",
+	    "api/toc.html","",
+        "toc.html","Reference");
+ -->
+</script>
+<h1>List of Error Codes</h1>
+<p>This chapter describes the predefined error codes provided by the
+Stardust.</p>
+<ul>
+	<li><a href="#model">Model</a></li>
+	<li><a href="#auditTr">Audit Trail</a></li>
+	<li><a href="#dms">Document Management Service</a></li>
+	<li><a href="#auth">Authentication / Authorization</a></li>
+	<li><a href="#runtime">Runtime Data</a></li>
+	<li><a href="#portal">Portal</a></li>
+	<li><a href="#config">License</a></li>
+</ul>
+
+<h2 id="model">Model</h2>
+<table>
+	<tr>
+		<th>Error Code</th>
+		<th>Default Error Message</th>
+	</tr>
+	<tr>
+		<td>MDL01000</td>
+		<td>Cannot find current model manager</td>
+	</tr>
+
+	<tr>
+		<td>MDL01001</td>
+		<td>No model deployed</td>
+	</tr>
+	<tr>
+		<td>MDL01002</td>
+		<td>No active model found</td>
+	</tr>
+	<tr>
+		<td>MDL01003</td>
+		<td>The Audit Trail Database does not contain a model with the
+		OID {0}</td>
+	</tr>
+	<tr>
+		<td>MDL01004</td>
+		<td>No active model with id ''{0}'' found</td>
+	</tr>
+	<tr>
+		<td>MDL01005</td>
+		<td>No matching model with id ''{0}'' found</td>
+	</tr>
+	<tr>
+		<td>MDL01006</td>
+		<td>Unknown Stardust version: ''{0}'' for model ''{1}''.</td>
+	</tr>	<tr>
+		<td>MDL01007</td>
+		<td>Unsupported Stardust version: ''{0}'' for model ''{{1}}''.</td>
+	</tr>
+	<tr>
+		<td>MDL01100</td>
+		<td>(Unknown model element.)</td>
+	</tr>
+
+	<tr>
+		<td>MDL01101</td>
+		<td>No matching process definition.</td>
+	</tr>
+	<tr>
+		<td>MDL_01102</td>
+		<td>Cannot find process definition ''{0}''</td>
+	</tr>
+	<tr>
+		<td>MDL_01103</td>
+		<td>Cannot find process definition {0} for process instance {1}</td>
+	</tr>
+	<tr>
+		<td>MDL_01104</td>
+		<td>Cannot find data mapped to formal parameter {0} for process
+		definition {1}</td>
+	</tr>
+	<tr>
+		<td>MDL01105</td>
+		<td>Cannot find implementation of ''{0}'' in model ''{1}''</td>
+	</tr>
+
+	<tr>
+		<td>MDL01111</td>
+		<td>(No matching activity definition)</td>
+	</tr>
+	<tr>
+		<td>MDL_01112</td>
+		<td>Cannot find activity definition ''{0}''</td>
+	</tr>
+	<tr>
+		<td>MDL_01113</td>
+		<td>Cannot find activity definition {0} for activity instance {1}</td>
+	</tr>
+	<tr>
+		<td>MDL_01114</td>
+		<td>Cannot find activity definition {0} for work item {1}</td>
+	</tr>
+
+	<tr>
+		<td>MDL01122</td>
+		<td>Cannot find data ''{0}''</td>
+	</tr>
+
+	<tr>
+		<td>MDL01132</td>
+		<td>Cannot find data path ''{0}''</td>
+	</tr>
+	<tr>
+		<td>MDL01134</td>
+		<td>Cannot find IN data path ''{0}''</td>
+	</tr>
+	<tr>
+		<td>MDL01136</td>
+		<td>Cannot find OUT data path ''{0}''</td>
+	</tr>
+
+	<tr>
+		<td>MDL01142</td>
+		<td>Cannot find data mapping ''{0}'' for context ''{1}''</td>
+	</tr>
+	<tr>
+		<td>MDL01144</td>
+		<td>Cannot find IN data mapping ''{0}'' for context ''{1}''</td>
+	</tr>
+	<tr>
+		<td>MDL01146</td>
+		<td>Cannot find OUT data mapping ''{0}'' for context ''{1}''</td>
+	</tr>
+
+	<tr>
+		<td>MDL01152</td>
+		<td>Undefined context ''{0}''</td>
+	</tr>
+
+	<tr>
+		<td>MDL01161</td>
+		<td>Cannot find model participant with runtime oid ''{0}''</td>
+	</tr>
+	<tr>
+		<td>MDL01162</td>
+		<td>Cannot find model participant ''{0}''</td>
+	</tr>
+
+	<tr>
+		<td>MDL01172</td>
+		<td>Cannot find event handler ''{0}''</td>
+	</tr>
+
+	<tr>
+		<td>MDL01182</td>
+		<td>Cannot find type declaration ''{0}''</td>
+	</tr>
+	<tr>
+		<td>MDL01183</td>
+		<td>Unsupported dataTypeId: ''{0}''.</td>
+	</tr>
+	<tr>
+		<td>MDL02021</td>
+		<td>The data path ''{0}'' contains an invalid data reference</td>
+	</tr>
+	<tr>
+		<td>MDL02022</td>
+		<td>The IN data path ''{0}'' contains an invalid data reference</td>
+	</tr>
+	<tr>
+		<td>MDL02023</td>
+		<td>The OUT data path ''{0}'' contains an invalid data reference</td>
+	</tr>
+</table>
+<h2 id="auditTr">Audit Trail</h2>
+<table>
+	<tr>
+		<th>Error Code</th>
+		<th>Default Error Message</th>
+	</tr>
+
+	<tr>
+		<td>ATDB00001</td>
+		<td>(Audit trail unavailable)</td>
+	</tr>
+
+	<tr>
+		<td>ATDB00011</td>
+		<td>Archive audit trails must not be modified</td>
+	</tr>
+
+	<tr>
+		<td>ATDB00021</td>
+		<td>The operation ''{0}'' is not allowed in a production runtime
+		environment</td>
+	</tr>
+
+	<tr>
+		<td>ATDB00011</td>
+		<td>Partition not found</td>
+	</tr>
+	<tr>
+		<td>ATDB00012</td>
+		<td>Partition with OID {0} not found</td>
+	</tr>
+	<tr>
+		<td>ATDB00013</td>
+		<td>Partition with ID ''{0}'' not found</td>
+	</tr>
+
+	<tr>
+		<td>ATDB01000</td>
+		<td>(Unknown audit trail record.)</td>
+	</tr>
+
+
+	<tr>
+		<td>ATDB01101</td>
+		<td>Process instance not found</td>
+	</tr>
+	<tr>
+		<td>ATDB01102</td>
+		<td>Process instance with OID {0} not found</td>
+	</tr>
+	<tr>
+		<td>ATDB01103</td>
+		<td>Process instance with OID {0} is not terminated</td>
+	</tr>
+
+	<tr>
+		<td>ATDB01111</td>
+		<td>Activity instance not found</td>
+	</tr>
+	<tr>
+		<td>ATDB01112</td>
+		<td>Activity instance with OID {0} not found</td>
+	</tr>
+
+	<tr>
+		<td>ATDB01121</td>
+		<td>No matching log entry found</td>
+	</tr>
+
+	<tr>
+		<td>ATDB01131</td>
+		<td>Work item not found</td>
+	</tr>
+	<tr>
+		<td>ATDB01132</td>
+		<td>Work item with OID {0} not found</td>
+	</tr>
+	<tr>
+		<td>ATDB02101</td>
+		<td>No matching realm found</td>
+	</tr>
+	<tr>
+		<td>ATDB02102</td>
+		<td>User realm with OID ''{0}'' not found</td>
+	</tr>
+	<tr>
+		<td>ATDB02103</td>
+		<td>User realm ''{0}'' for partition with oid ''{1}'' not found</td>
+	</tr>
+	<tr>
+		<td>ATDB02111</td>
+		<td>No matching user found</td>
+	</tr>
+	<tr>
+		<td>ATDB02112</td>
+		<td>User with OID ''{0}'' not found</td>
+	</tr>
+	<tr>
+		<td>ATDB02113</td>
+		<td>User with ID ''{0}'' not found for realm ''{1}''</td>
+	</tr>
+	<tr>
+		<td>ATDB02121</td>
+		<td>No matching user domain found</td>
+	</tr>
+	<tr>
+		<td>ATDB02122</td>
+		<td>User domain with OID ''{0}'' not found</td>
+	</tr>
+	<tr>
+		<td>ATDB02123</td>
+		<td>User domain with ID ''{0}'' not found</td>
+	</tr>
+	<tr>
+		<td>ATDB02124</td>
+		<td>Default domain for partition ''{1}'' not found</td>
+	</tr>
+	<tr>
+		<td>ATDB02131</td>
+		<td>No matching domain hierarchy found</td>
+	</tr>
+	<tr>
+		<td>ATDB02132</td>
+		<td>Domain hierarchy with OID ''{0}'' not found</td>
+	</tr>
+
+	<tr>
+		<td>ATDB02141</td>
+		<td>No matching domain association found</td>
+	</tr>
+	<tr>
+		<td>ATDB02142</td>
+		<td>Domain association with OID ''{0}'' not found</td>
+	</tr>
+
+	<tr>
+		<td>ATDB02151</td>
+		<td>No matching user group found</td>
+	</tr>
+	<tr>
+		<td>ATDB02152</td>
+		<td>User group with OID {0} not found</td>
+	</tr>
+	<tr>
+		<td>ATDB02153</td>
+		<td>User group with ID ''{0}'' not found</td>
+	</tr>
+	<tr>
+		<td>ATDB02191</td>
+		<td>No matching session</td>
+	</tr>
+	<tr>
+		<td>ATDB02192</td>
+		<td>Session with OID ''{0}'' not found</td>
+	</tr>
+	<tr>
+		<td>ATDB02201</td>
+		<td>Department with OID ''{0}'' not found</td>
+	</tr>
+	<tr>
+		<td>ATDB02202</td>
+		<td>Department with ID ''{0}'' not found for parent with OID
+		''{1}''</td>
+	</tr>
+	<tr>
+		<td>ATDB02203</td>
+		<td>Department with ID ''{0}'' already exists</td>
+	</tr>
+	<tr>
+		<td>ATDB02204</td>
+		<td>Department with ID ''{0}'' not found for parent with ID
+		''{1}''</td>
+	</tr>
+	<tr>
+		<td>ATDB02211</td>
+		<td>Department hierarchy with OID ''{0}'' not found</td>
+	</tr>
+</table>
+<h2 id="dms">Document Management Service</h2>
+<table>
+	<tr>
+		<th>Error Code</th>
+		<th>Default Error Message</th>
+	</tr>
+	<tr>
+		<td>DMS00000</td>
+		<td>Generic DMS error, see stacktrace for details</td>
+	</tr>
+	<tr>
+		<td>DMS00001</td>
+		<td>No JCR document repository service is set. Check the
+		configuration</td>
+	</tr>
+	<tr>
+		<td>DMS01103</td>
+		<td>Folder with ID ''{0}'' not found</td>
+	</tr>
+	<tr>
+		<td>DMS01110</td>
+		<td>Creating a folder with empty name is not possible. Folder name must be supplied.</td>
+	</tr>
+	<tr>
+		<td>DMS01111</td>
+		<td>Creating a document with empty name is not possible. Document name must be supplied.</td>
+	</tr>
+	<tr>
+		<td>DMS01113</td>
+		<td>File with ID ''{0}'' not found</td>
+	</tr>
+	<tr>
+		<td>DMS01123</td>
+		<td>Resource item already exists</td>
+	</tr>
+	<tr>
+		<td>DMS01303</td>
+		<td>DocumentType with DocumentTypeID ''{0}'' is invalid</td>
+	</tr>
+	<tr>
+		<td>DMS01313</td>
+		<td>Error synchronizing DocumentType with DMS, see stacktrace for
+		details.</td>
+	</tr>
+	<tr>
+		<td>DMS02000</td>
+		<td>Generic DMS security error, see stacktrace for details</td>
+	</tr>
+	<tr>
+		<td>DMS03001</td>
+		<td>An element with Id ''{0}'' is already present.</td>
+	</tr>
+</table>
+<h2 id="auth">Authentication / Authorization</h2>
+<table>
+	<tr>
+		<th>Error Code</th>
+		<th>Default Error Message</th>
+	</tr>
+	<tr>
+		<td>AUTHx00101</td>
+		<td>Not logged in</td>
+	</tr>
+	<tr>
+		<td>AUTHx00121</td>
+		<td>The user with OID {0} is not valid</td>
+	</tr>
+	<tr>
+		<td>AUTHx00122</td>
+		<td>Password expired for user with OID {0}</td>
+	</tr>
+	<tr>
+		<td>AUTHx00123</td>
+		<td>User {0} does not exist or invalid password submitted.</td>
+	</tr>
+	<tr>
+		<td>AUTHx00201</td>
+		<td>The maximum number of active users supported with your
+		license ({0}) is exceeded.\n\nPlease contact your Stardust sales
+		representative</td>
+	</tr>
+	<tr>
+		<td>AUTHx00501</td>
+		<td>Missing dynamic participant synchronization provider</td>
+	</tr>
+	<tr>
+		<td>AUTHx00542</td>
+		<td>User ''{0}'' not available in external registry</td>
+	</tr>
+	<tr>
+		<td>AUTHx00545</td>
+		<td>Failed to initially synchronize external user ''{0}''.
+		Exceeded maximum number of retries</td>
+	</tr>
+	<tr>
+		<td>AUTHx00548</td>
+		<td>Importing external users is not enabled</td>
+	</tr>
+	<tr>
+		<td>AUTHx00562</td>
+		<td>User group ''{0}'' not available in external registry</td>
+	</tr>
+	<tr>
+		<td>AUTHx00565</td>
+		<td>Failed to initially synchronize external user group ''{0}''.
+		Exceeded maximum number of retries</td>
+	</tr>
+	<tr>
+		<td>AUTHx00585</td>
+		<td>Failed to initially synchronize external department ''{0}''
+		for parent ''{1}''. Exceeded maximum number of retries</td>
+	</tr>
+	<tr>
+		<td>AUTHx01000</td>
+		<td>The user with OID {0} does not have the permission ''{1}''</td>
+	</tr>
+</table>
+<h2 id="runtime">Runtime</h2>
+<table>
+	<tr>
+		<th>Error Code</th>
+		<th>Default Error Message</th>
+	</tr>
+	<tr>
+		<td>BPMRT01000</td>
+		<td>An unknown error occurred</td>
+	</tr>
+	<tr>
+		<td>BPMRT01501</td>
+		<td>No Daemon of type ''{0}'' registered</td>
+	</tr>
+	<tr>
+		<td>BPMRT02121</td>
+		<td>Failed to create data value for data ID ''{0}''. Exceeded
+		maximum number of retries</td>
+	</tr>
+	<tr>
+		<td>CONC03100</td>
+		<td>The daemon {0} is already running</td>
+	</tr>
+	<tr>
+		<td>BPMRT03101</td>
+		<td>The Activity instance with OID {0} is activated by the
+		current user</td>
+	</tr>
+	<tr>
+		<td>CONC03102</td>
+		<td>The Activity instance with OID {0} is activated by the user
+		with OID {1}</td>
+	</tr>
+	<tr>
+		<td>BPMRT03103</td>
+		<td>Activity instance with OID {0} is terminated</td>
+	</tr>
+	<tr>
+		<td>BPMRT03104</td>
+		<td>Access to activity instance with OID {0} is not granted to
+		user {1}</td>
+	</tr>
+	<tr>
+		<td>BPMRT03105</td>
+		<td>The activity instance with OID {0} is a subprocess activity,
+		thus allowing no direct manipulation</td>
+	</tr>
+	<tr>
+		<td>BPMRT03106</td>
+		<td>The activity instance with OID {0} is not allowed to be
+		aborted</td>
+	</tr>
+	<tr>
+		<td>BPMRT03107</td>
+		<td>The user with OID {0} is not authorized to perform the
+		activity instance with OID {1}</td>
+	</tr>
+	<tr>
+		<td>BPMRT03108</td>
+		<td>The model participant with ID ''{0}'' is not authorized to
+		perform the activity instance with OID {1}</td>
+	</tr>
+	<tr>
+		<td>BPMRT03109</td>
+		<td>The user group with OID {0} is not authorized to perform the
+		activity instance with OID {1}</td>
+	</tr>
+	<tr>
+		<td>BPMRT03110</td>
+		<td>The activity instance with OID {0} cannot be delegated
+		because it is not in suspended or hibernated state</td>
+	</tr>
+	<tr>
+		<td>BPMRT03111</td>
+		<td>The activity instance with OID {0} is on a different users
+		worklist, thus not allowed to be activated by user ''{1}''</td>
+	</tr>
+	<tr>
+		<td>BPMRT03112</td>
+		<td>The user with OID {0} is excluded to perform the activity
+		instance with OID {1}</td>
+	</tr>
+	<tr>
+		<td>BPMRT03113</td>
+		<td>Activity instance with OID {0} is in process of aborting</td>
+	</tr>
+	<tr>
+		<td>BPMRT03114</td>
+		<td>The activity instance with OID {0} cannot be delegated because
+		it is non interactive.</td>
+	</tr>
+	<tr>
+		<td>BPMRT03115</td>
+		<td>The activity instance with OID {0} cannot be forced to completion
+		because it is interactive.</td>
+	</tr>
+   <tr>
+      <td>BPMRT03116</td>
+      <td>The activity instance with OID {0} cannot be delegated to participant 
+      not in user group.</td>
+   </tr>
+	<tr>
+		<td>BPMRT03501</td>
+		<td>Received a timeout while counting instances of {0}</td>
+	</tr>
+	<tr>
+		<td>BPMRT03601</td>
+		<td>Concurrent attempt to lock object of type {1} with OID {0},
+		row not selected</td>
+	</tr>
+	<tr>
+		<td>BPMRT03701</td>
+		<td>Rolling back activity thread</td>
+	</tr>
+	<tr>
+		<td>BPMRT03810</td>
+		<td>Argument must not be null: ''{0}''</td>
+	</tr>
+	<tr>
+		<td>BPMRT03811</td>
+		<td>Argument ''{0}'' must not be of type ''{1}''</td>
+	</tr>
+	<tr>
+		<td>BPMRT03812</td>
+		<td>Argument ''{0}'' must have ''{1}'' attribute set</td>
+	</tr>
+	<tr>
+		<td>BPMRT03813</td>
+		<td>Invalid organization hierarchy</td>
+	</tr>
+	<tr>
+		<td>BPMRT03814</td>
+		<td>There are active activity instances in the scope of
+		department with OID {0}</td>
+	</tr>
+	<tr>
+		<td>BPMRT03815</td>
+		<td>The Process Instance with OID {0} has not been completed yet</td>
+	</tr>
+   <tr>
+      <td>BPMRT03840</td>
+      <td>Process instance with OID {0} is a transient process instance.</td>
+   </tr>
+</table>
+<h2 id="portal">Portal</h2>
+<table>
+	<tr>
+		<th>Error Code</th>
+		<th>Default Error Message</th>
+	</tr>
+	<tr>
+		<td>CWP01000</td>
+		<td>Unable to convert data mapping value</td>
+	</tr>
+	<tr>
+		<td>CWP01001</td>
+		<td>Unable to initialize new session</td>
+	</tr>
+	<tr>
+		<td>CWP01002</td>
+		<td>You have no permission to delegate the activity</td>
+	</tr>
+	<tr>
+		<td>CWP01003</td>
+		<td>Unable to delegate the activity</td>
+	</tr>
+	<tr>
+		<td>CWP01004</td>
+		<td>Unable to recover the current session, because it has possibly expired. Please login again!</td>
+	</tr>
+	<tr>
+		<td>CWP01005</td>
+		<td>An unknown error occurred during login</td>
+	</tr>
+	<tr>
+		<td>CWP01006</td>
+		<td>The audit trail contains no model.</td>
+	</tr>
+	<tr>
+		<td>CWP01007</td>
+		<td>Unable to delegate the activity, because it is no longer available in the worklist.</td>
+	</tr>
+	<tr><td>PP01000</td><td>Unable to activate the activity.</td>
+   </tr>
+	<tr><td>PP01001</td><td>Unable to abort the current activity.</td>
+   </tr>
+	<tr><td>PP01002</td><td>Current activity does not allow abort by performer.</td>
+   </tr>
+	<tr><td>PP01003</td><td>Unable to suspend the current activity.</td>
+   </tr>
+	<tr><td>PP01004</td><td>Unable to start the activity.</td>
+   </tr>
+	<tr><td>PP01005</td><td>Unable to complete the current activity.</td>
+   </tr>
+	<tr><td>PP01006</td><td>Failed invoking completion method.</td>
+   </tr>
+	<tr><td>PP01007</td><td>No suitable application context found for method invocation.</td>
+   </tr>
+	<tr><td>PP01008</td><td>Failed evaluating out data mapping.</td>
+   </tr>
+</table>
+<h2 id="config">License</h2>
+<table>
+	<tr>
+		<th>Error Code</th>
+		<th>Default Error Message</th>
+	</tr>
+	<tr>
+		<td>LIC00001</td>
+		<td>License is not valid for this release.</td>
+	</tr>
+	<tr>
+		<td>LIC00002</td>
+		<td>Your license for running the component of the Stardust (TM)
+		Process Workbench<br>
+		has expired.<br>
+		Please contact your Stardust sales representative to renew it.</td>
+	</tr>
+</table>
+<script language="JavaScript" type="text/javascript">
+<!--	
+writeFooter(); 
+-->
+</script>
+
+</body>
+</html>

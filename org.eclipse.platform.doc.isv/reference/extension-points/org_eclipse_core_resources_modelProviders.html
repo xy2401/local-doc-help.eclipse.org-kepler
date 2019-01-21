@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Model Providers</title>
+<style type="text/css">@import url("../../book.css");</style>
+<style type="text/css">@import url("../../schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">Model Providers</H1>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>org.eclipse.core.resources.modelProviders<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Since: </h6>3.2
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6>A model provider serves two purposes. Firstly, it is a means of grouping the resource mappings of a single model together for the purposes of performing operations, display, etc. Also, it provides a means of mapping a set of file system resources to the resource mappings that describe how a model maps to resources.<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.modelProvider">modelProvider</a> , <a href="#e.extends-model">extends-model</a>* , <a href="#e.enablement">enablement</a>?)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p>
+<p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.modelProvider">modelProvider</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST modelProvider</p>
+<p class="code SchemaDtdAttlist">class&nbsp;CDATA #REQUIRED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>class</b> - </li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extends-model">extends-model</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extends-model</p>
+<p class="code SchemaDtdAttlist">id&nbsp;IDREF #REQUIRED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>id</b> - </li>
+</ul>
+<br><h6 class="CaptionFigColumn SchemaHeader">Examples: </h6>The following is an example of using the modelProvider extension point. 
+(in file plugin.xml)
+<pre class="Example"><span class="code SchemaTag">
+   &lt;extension
+         id=</span><span class="code SchemaCstring">&quot;modelProvider&quot;</span><span class="code SchemaTag">
+         name=</span><span class="code SchemaCstring">&quot;Library Model Provider&quot;</span><span class="code SchemaTag">
+         point=</span><span class="code SchemaCstring">&quot;org.eclipse.core.resources.modelProviders&quot;</span><span class="code SchemaTag">&gt;
+      &lt;modelProvider
+            class=</span><span class="code SchemaCstring">&quot;org.eclipse.examples.library.LibraryModelProvider&quot;</span><span class="code SchemaTag">
+            name=</span><span class="code SchemaCstring">&quot;Library Model Provider&quot;</span><span class="code SchemaTag">/&gt;
+      &lt;extends-model id=</span><span class="code SchemaCstring">&quot;org.eclipse.core.resources.modelProvider&quot;</span><span class="code SchemaTag">/&gt;
+      &lt;enablement&gt;
+           &lt;with variable=</span><span class="code SchemaCstring">&quot;affectedNatures&quot;</span><span class="code SchemaTag">&gt;
+             &lt;iterate operator=</span><span class="code SchemaCstring">&quot;or&quot;</span><span class="code SchemaTag">&gt;
+               &lt;equals value=</span><span class="code SchemaCstring">&quot;org.eclipse.team.examples.library.nature&quot;</span><span class="code SchemaTag">/&gt;
+             &lt;/iterate&gt;
+           &lt;/with&gt;
+           &lt;with variable=</span><span class="code SchemaCstring">&quot;element&quot;</span><span class="code SchemaTag">&gt;
+             &lt;instanceof value=</span><span class="code SchemaCstring">&quot;org.eclipse.core.resources.IFile&quot;</span><span class="code SchemaTag">/&gt;
+           &lt;/with&gt;
+       &lt;/enablement&gt;
+   &lt;/extension&gt;
+</span></pre>
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">API Information: </h6>The value of the class attribute must represent an implementation of <tt>org.eclipse.core.resources.mapping.ModelProvider</tt>.
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Supplied Implementation: </h6>The platform itself does not have any predefined 
+model providers. Particular product installs may include 
+model providers as required.
+<p></p>
+
+<br>
+<p class="note SchemaCopyright">
+Copyright (c) 2005, 2010 IBM Corporation and others.<br>
+All rights reserved. This program and the accompanying materials are made 
+available under the terms of the Eclipse Public License v1.0 which 
+accompanies 
+this distribution, and is available at 
+<a 
+href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>
+
+</p>
+</BODY>
+</HTML>

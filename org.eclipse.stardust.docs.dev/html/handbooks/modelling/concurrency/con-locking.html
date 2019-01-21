@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../../styles/carnot.css" charset="ISO-8859-1"
+    type="text/css">
+<title>Locking and Unlocking Elements</title>
+<script language="JavaScript" src="../../../styles/naviLine.js"
+    type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Committing Changes","../../../toc.html",
+        "con-control.html","con-commit.html",
+        "../../handbooks.htm","Developer Handbook",
+        "../mg-preface.htm","Modeling Guide",
+        "con-preface.html","Collaborative Modeling");
+ -->
+</script>
+
+<h1>Locking and Unlocking Elements</h1>
+<p>In the <strong>Concurrency Management Mode</strong> specific model
+elements can be locked for editing. Obtaining a lock enables the lock owner to
+perform changes on a model element and write these changes back.</p>
+
+<ul>
+    <li><a href="#separat">Separately Lockable Model Elements</a></li>
+    <li><a href="#editOption">Locking Elements for Editing</a></li>
+    <li><a href="#lockAll">Locking all Lockable Elements</a></li>
+    <li><a href="#release">Releasing Locks</a></li>
+    <li><a href="#force">Force Unlock on Existing Foreign Locks</a></li>
+    <li><a href="#problem">Lock Failed Error - Item is out of date</a></li>
+</ul>
+<h2 id="separat">Separately Lockable Model Elements</h2>
+<p>The following elements of a process model can be locked separately:</p>
+<ul>
+    <li>the model itself</li>
+    <li>structured type definitions</li>
+    <li>process definitions</li>
+    <li>model diagrams</li>
+    <li>data</li>
+    <li>applications</li>
+    <li>participants</li>
+    <li>link types</li>
+</ul>
+
+<h2 id="editOption">Locking Elements for Editing</h2>
+<p>Before an element can be locked, it will be checked, if remote changes exist. In 
+that case, the element has to be updated first. Please refer to the chapter
+<a href="con-update.html">Updating Model and Model Elements</a> for detailed
+information on updating elements. Newly created model elements
+have no locks per default. According lock files are created during a commit.</p>
+<p>All nodes in the model Outline view representing lockable elements as listed in
+the section
+<a href="#separat">Separately Lockable Model Elements</a>,
+provide the <strong>Lock for Editing</strong> option in their context-menu. This option is
+enabled if the model element is not already locked. To lock an
+element, right-click the according node in the Outline view and select 
+<strong>Lock for Editing</strong>.</p>
+<p class="image"><img src="images/edit-element.png" alt="Select Edit."><br>
+<strong>Figure:</strong> Lock Element for Editing.</p>
+<p>In cases changes have been performed on this model element and committed
+meanwhile by another user,
+a warning dialog opens, indicating that an update is necessary first:</p>
+<p class="image"><img src="images/update-first.png" alt="Update First Dialog"><br>
+<strong>Figure:</strong> Warning Dialog for updating first.</p>
+<p>If a model element is locked for editing, this is indicated via an overlay icon
+presenting a checkmark, in the right
+lower corner of the element icon in the Outline view.</p>
+<p class="image"><img src="images/edit-icon.png" alt="Edit Icon"><br>
+<strong>Figure:</strong> Icon to indicate Edit Mode for a Process Definition.</p>
+<p>Please note that locking the model itself will not lock all lockable
+model elements implicitly. Please refer to
+the section <a href="#lockAll">Locking all Lockable Elements</a> in case you want
+to lock all lockable elements in a model.</p>
+<h2 id="lockAll">Locking all Lockable Elements</h2>
+<p>Locking a model itself will not lock all lockable
+model elements implicitly. It only locks model specific properties. In case
+you like to lock all lockable elements in a model, right-click
+the model in the Outline view and choose the
+option <strong>Lock All For Editing</strong>.</p>
+<p class="image"><img src="images/lock-all-for-editing.png" alt="Lock All"><br>
+<strong>Figure:</strong> Lock All for Editing Option.</p>
+<p class="note"><strong>Note</strong><br>
+Model upgrades require a lock on all model elements. For model upgrade, the lock
+on all model elements is obtained implicitly.</p>
+<p class="note"><strong>Note</strong><br>
+In case of the referenced model elements,
+external model information (like File Connection) and External Model References can be added, 
+removed and modified only if the Model Node is locked.
+
+
+<h3 id="implUpdate">Implicit Update Operations Requiring A Global Lock</h3>
+<p>The following actions require all model elements to be locked:</p>
+<ul>
+    <li>modifying organizational hierarchies in model diagrams</li>
+    <li>model upgrades</li>
+</ul>
+<h2 id="release">Releasing Locks</h2>
+<h3 id="implicit">Implicit Lock Release</h3>
+<p>Locks are implicitly released if changes on a model element are committed and the option 
+<strong>Keep Locks</strong> is disabled in the commit dialog.
+Please refer to the section <a href="con-commit.html#dialog">The Commit Dialog</a>
+of the chapter <a href="con-commit.html">Committing Changes</a> for
+information on this option.</p>
+<h3 id="explicit">Explicit Lock Release</h3>
+<p>Locked elements can be unlocked explicitly without committing,
+in case you like to revert your local changes. 
+In this case right-click the according node
+in the Outline view and select <strong>Revert Changes</strong>.
+Please refer to the chapter <a href="con-revert.html">Reverting Changes</a>
+for detailed information.</p>
+
+<h2 id="force">Force Unlock on Existing Foreign Locks</h2>
+<p>In case a foreign lock is not released by a user, it can be explicitly
+released by a user, who has the permission to force unlocks. By default, all
+users have the permission to force unlocks. To change this behavior, administrators
+have the option to prohibit the permission for specific users. Please refer to
+section <a href="#prohibit">Prohibiting Force Unlock for Specific Users</a>
+for details.</p>
+<p>Having the permission, you can force unlocking
+existing foreign locks to other users by
+selecting <strong>Force Unlock All</strong> in the model 
+context-menu in the Outline view:</p>
+<p class="image"><img src="images/force-unlock-all.png"
+alt="Force Unlock All"><br>
+<strong>Figure:</strong> Force Unlock All</p> 
+<p>The following dialog opens before the unlock
+is performed to confirm the unlock and give you information about the option:</p>
+<p class="image"><img src="images/force-unlock-warning.png"
+alt="Force Unlock Warning"><br>
+<strong>Figure:</strong> Force Unlock Warning</p> 
+<p>After selecting <strong>OK</strong>, another dialog opens where you can
+explicitly select the 
+model elements, where an unlock on all foreign locks should be performed on:</p>
+<p class="image"><img src="images/force-unlock-dialog.png"
+alt="Force Unlock Dialog"><br>
+<strong>Figure:</strong> Force Unlock Dialog</p>
+<p>In case a force unlock operation is tried from a user not having the 
+permission to, an according error message opens.</p>
+<!--<p class="image"><img src="images/unlock-error-dialog.png"
+alt="Force Unlock Error Dialog"><br>
+<strong>Figure:</strong> Force Unlock Error Dialog</p>-->
+
+<h3 id="prohibit">Prohibiting Force Unlock for Specific Users</h3>
+<p>By default, all users have the permission to perform an unlock all. Administrators
+have the possibility to prohibit force unlock for specific users by creating 
+SVN hooks. Thus it can be decided when lock creation and lock
+releases are allowed to happen. This can be performed via SVN repository hooks. 
+In case you are an administrator and like to use this functionality, please refer to the
+<a href="http://svnbook.red-bean.com/nightly/en/svn-book.html#svn.reposadmin.create.hooks">
+Implementing Repository Hooks</a> section of the SVN documentation 
+for detailed information on creating hooks.</p>
+<p>The <tt>pre-lock</tt> and <tt>pre-unlock</tt> hooks allow administrators to 
+decide when lock creation and lock releases are allowed to happen. 
+Depending on whether or not a lock already exists, these two hooks can 
+decide whether or not to allow a certain user to break or steal a lock. 
+The <tt>post-lock</tt> and <tt>post-unlock</tt> hooks are also available, and can be used to 
+send email after locking actions.</p>
+<h2 id="problem">Lock Failed Error - Item is out of date</h2>
+<p>When trying to lock an element, it might happen that you get an exception
+indicating that the item is out of date, as in the following screenshot:</p>
+<p class="image"><a href="images/lock-problem_orgSize.png" target="_blank">
+<img src="images/lock-problem.png" alt="Lock Error"></a><br>
+<strong>Figure:</strong> Lock Failed Message</p>
+<p>The lock file might be out of date, 
+if another user just released a lock on this element and the refresh
+job is not running during your locking process.
+As a workaround, you can either:</p>
+<ul>
+	<li>close and reopen your model, or</li>
+	<li>set another refresh rate in the 
+	<strong>Concurrency Management Preferences</strong>.<br>Please refer to the
+	section <a href="con-control.html#prefs">Setting Concurrency Preferences</a>
+	of the chapter <a href="con-control.html">Concurrency Control</a> for detailed
+	information on setting concurrency preferences.</li>
+</ul>
+<p>However, after the lock folder is refreshed, locking is working without problems again.</p>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="../../styles/carnot.css" charset="ISO-8859-1" type="text/css">
+<title>Control Flow</title>
+
+<script language="JavaScript" src="../../styles/naviLine.js" type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Applications","../../toc.html","mg-basics-5.htm","mg-basics-7.htm",
+		"../key-concepts.html","Concepts","mg-basics-preface.htm","Workflow Basics");
+ -->
+</script>
+</body>
+<body>
+<h1>Control Flow</h1>
+<p>Control flow between activities at runtime is determined by transitions.</p>
+
+<h2>Transitions</h2>
+
+<p>A transition always connects two activities and is visualized by a blue arrow
+between activities.</p>
+<p>At runtime, after the source activity instance is completed the transition is
+instantiated and, if available, a transition condition is evaluated (see below). If the
+condition evaluates to TRUE the subsequent activity instance is instantiated.</p>
+<p class="image"><img src="images/mg-basics-11.jpg" alt=""></p>
+<p>Transitions are displayed by an icon showing a small line with labeled ends. In
+diagrams transitions are rendered as a blue line with an arrow indicating the transition
+direction.</p>
+
+<h3>Splits</h3>
+<p>Splits are modeling constructs for choices or parallel activities.</p>
+
+<h4>AND-Split</h4>
+<p>An AND-split indicates the start of a parallel workflow processing. Each transition is 
+evaluated and followed if the evaluation results to true. An AND-split is marked by a square
+with a plus sign in the middle.</p>
+<p class="image"><img src="images/mg-basics-AND-split.png" alt=""></p>
+<h4>XOR-Split</h4>
+<p>An XOR-split indicates a decision point where only the first transition
+is instantiated that condition evaluates to true. The evaluation order corresponds
+to the order of transitions listed in the XOR split properties. XOR splits are
+marked by an empty square.</p>
+<p class="image"><img src="images/mg-basics-OR-split.png" alt=""></p>
+
+<h3>Joins</h3>
+<p>Joins are modeling constructs to merge parallel parts of the flow.</p>
+
+<h4>AND-Join</h4>
+<p>An AND-join waits for all incoming transitions before the join activity instance
+is instantiated. It is drawn as a square with a plus sign in the middle.</p>
+<p class="image"><img src="images/mg-basics-AND-join.png" alt=""></p>
+
+<h4>XOR-Join</h4>
+<p>An XOR-join waits and instantiates a new join activity instance on every single
+incoming transition. It is drawn as an empty square. If multiple incoming transitions are
+instantiated at runtime the join activity is instantiated multiple times.</p>
+
+<p class="image"><img src="images/mg-basics-OR-join.png" alt=""></p>
+
+<h3>Gateways</h3>
+<p>The square in the transition, which represents AND-Split, OR-Split, AND-Join or
+XOR-Join is called <strong>gateway</strong>. In some cases you do not see the type of the
+gateway from the diagram alone, for example if a gateway is a split gateway of the
+preceding or the join gateway of the next activity. Then use the gateways tooltip. Move
+the mouse over the gateway to display the name of the activity and the type of control
+flow.</p>
+<p class="image"><img src="images/mg-gateway.png" alt=""></p>
+<h2 id="transcond">Transition Conditions</h2>
+
+<p>Transition conditions are specified if the successor activity is to be performed
+under particular circumstances only. If a transition condition is set to 
+<strong>true</strong>, the
+transition will always be traversed and the successor activity executed.</p>
+<p>A JavaScript based condition expression editor is provided in the properties
+page of transitions, where you can add for example arithmetic, relational and
+logical operators as well as string matching operators. You can combine operators
+and values retrieved via dereferencing paths with
+JavaScript language.</p>
+
+
+<!--  <p>The precedence of the operators is the same as the precedence of the equivalent
+Java operators. Parentheses '(' and ')' can be used to override the normal precedence,
+equivalent to Java expression syntax.</p>
+<h3>Literals</h3>
+<p>The predicate string accepts literals of the following types:</p>
+<ul>
+    <li>A character literal, which is a single-quoted 8-bit character, e.g. 'c' or
+    'R'.</li>
+    <li>A string literal which is a double-quoted string (for example, <tt>"John
+    Doe"</tt>). When you include a string literal within a Java String that contains your
+    predicate, you must use the backslash character (&#92;) before the double-quote
+    characters (&quot;) that delimit the string literal.</li>
+    <li>A numeric or floating-point literal which is a literal with the same syntax
+    as in Java, e.g. 654 or 14356.987. No spaces are allowed in front of a negative number
+    e.g. -3.</li>
+    <li>Boolean constants TRUE and FALSE</li>
+    <li>Null constant in non-case-sensitive form: NULL or null</li>
+</ul>
+
+<h3>Variables</h3>
+<p>Stardust stores all workflow data defined in the model in a
+so-called symbol table. Therefore, these data can be used in the predicate as variables,
+if necessary with the appropriate dereferentiation path,<br>
+e.g.: <tt>streetname or customer.getAddress().getStreetName()</tt>.</p>
+<p>You cannot use the boolean values returned by such variables as a comparison
+result, which means you cannot define your comparison like this:</p>
+<pre>customer.getListOfLicenses().isEmpty</pre>
+<p>Instead, you define it as:</p>
+<pre>customer.getListOfLicenses().isEmpty = TRUE</pre>
+
+<h3>Arithmetic Operators</h3>
+<p>Arithmetic operators produce numeric values; their operands can be numeric
+literals and fields defined as variables in the model represented by numeric types.</p>
+<table>
+    <tr>
+        <td rowspan="1" colspan="1">+</td>
+        <td rowspan="1" colspan="1">Addition, unary plus</td>
+    </tr>
+    <tr>
+        <td rowspan="1" colspan="1">-</td>
+        <td rowspan="1" colspan="1">Subtraction, unary minus</td>
+    </tr>
+    <tr>
+        <td rowspan="1" colspan="1">*</td>
+        <td rowspan="1" colspan="1">Multiplication</td>
+    </tr>
+    <tr>
+        <td rowspan="1" colspan="1">/</td>
+        <td rowspan="1" colspan="1">Division</td>
+    </tr>
+    <tr>
+        <td rowspan="1" colspan="1">%</td>
+        <td rowspan="1" colspan="1">Modulo (remainder)</td>
+    </tr>
+</table>
+
+
+<h3>Relational Operators</h3>
+<p>Relational operators produce boolean values. Equality and inequality operators
+can compare two expressions of the same supported type. The other operators can compare
+numeric, character and string types only.</p>
+<table>
+    <tr>
+        <td rowspan="1" colspan="1">=</td>
+        <td rowspan="1" colspan="1">Equality</td>
+    </tr>
+    <tr>
+        <td rowspan="1" colspan="1">!=</td>
+        <td rowspan="1" colspan="1">Inequality</td>
+    </tr>
+    <tr>
+        <td rowspan="1" colspan="1">&gt;</td>
+        <td rowspan="1" colspan="1">Greater than</td>
+    </tr>
+    <tr>
+        <td rowspan="1" colspan="1">&lt;</td>
+        <td rowspan="1" colspan="1">Less than</td>
+    </tr>
+    <tr>
+        <td rowspan="1" colspan="1">&gt;=</td>
+        <td rowspan="1" colspan="1">Greater than or equal to</td>
+    </tr>
+    <tr>
+        <td rowspan="1" colspan="1">&lt;=</td>
+        <td rowspan="1" colspan="1">Less than or equal to</td>
+    </tr>
+</table>
+<p>Equality and inequality operators are also used to compare strings. In this case
+comparisons are case-sensitive and consider entire strings.</p>
+
+
+<h3>Logical Operators</h3>
+<p>Logical operators take boolean operands and return boolean values. Typical
+operands are expressions that use relational operators.</p>
+<table>
+    <tr>
+        <td rowspan="1" colspan="1">AND</td>
+        <td rowspan="1" colspan="1">Conjunction</td>
+    </tr>
+    <tr>
+        <td rowspan="1" colspan="1">OR</td>
+        <td rowspan="1" colspan="1">Disjunction</td>
+    </tr>
+    <tr>
+        <td>OTHERWISE</td>
+        <td>Disjunction - takes the first operand if it evaluates to a true value,
+        and the second operand otherwise.</td>
+    </tr>
+</table>
+<p>The words AND, OR and OTHERWISE are reserved words in the language. In complex
+predicates, including multiple logical operators, use parentheses to define the precedence
+of each of these operators. There is no NOT operator provided but instead of <tt>NOT
+nameArray.isEmpty()</tt> you may use <tt>nameArray.isEmpty() = FALSE</tt>.</p>-->
+<h2>Process Start and Process Completion</h2>
+<p>In Stardust there are no explicit model elements to specify a process start
+activity or process completion activity. Instead, the runtime behavior is as follows:</p>
+
+<h3>Start Activity</h3>
+<p>After a process instance is created, the unique activity, which has no incoming
+transitions, is instantiated. This is called the start activity. The Stardust deployment
+process guarantees that no process can be deployed which has no unique start activity.</p>
+<h3>Implicit Process Completion</h3>
+<p>A process instance is completed when all activity instances are completed and no
+new activity instances can be created. This is called implicit process completion.</p>
+<p>See also the next section for more details on triggering a process.</p>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

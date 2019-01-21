@@ -1,0 +1,110 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.6.0_21
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Name: %Bundle-Name
+Built-By: hudsonbuild
+Bundle-SymbolicName: org.eclipse.koneki.ldt.doc.user;singleton:=true
+Require-Bundle: org.eclipse.mylyn.wikitext.core;bundle-version="[1.3.0
+ ,2.0.0)";resolution:=optional,org.eclipse.mylyn.wikitext.mediawiki.co
+ re;bundle-version="[1.3.0,2.0.0)";resolution:=optional
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Bundle-Version: 0.9.0.201401211430
+Bundle-ManifestVersion: 2
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/images
+ /AddFolderToSourcePath0.9.png
+SHA1-Digest: gaw8+xf9Tdwuh/qhMCeuAWTrijc=
+
+Name: META-INF/maven/org.eclipse.koneki.ldt/org.eclipse.koneki.ldt.doc
+ .user/pom.properties
+SHA1-Digest: 11UsNHthFxv+M6GaTsIPFqQ90SE=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/Tasks.
+ html
+SHA1-Digest: lcK1OIkabajtU33wEr4RxceJ6kU=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/images
+ /ConfigureDebuggerPort0.9.png
+SHA1-Digest: v6bUvB7vRzLdl92mHLLmuxcGMtw=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA1-Digest: W8x/2fpaMunMG4s+GBIDCeHSmrw=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/images
+ /CreateConnexion.png
+SHA1-Digest: d4DWoK0YnLzCUSpvKo/b4D3c8fs=
+
+Name: help/images/topiclabel/git48.png
+SHA1-Digest: wU322aLjV3BnRpmwlyDYubaUokY=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/Concep
+ ts.html
+SHA1-Digest: 7eJhbXPKoJuepC4KBg06hFQJUTg=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/images
+ /BuildPath.png
+SHA1-Digest: kZodfEVJLLvfkXVfJTr9M+AXFh8=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/images
+ /Dbg-expressions.png
+SHA1-Digest: fRh8u7Dr+eZTniMkfeMBWqSAMmc=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/images
+ /Console0.9.png
+SHA1-Digest: 0T0MXZ7M9U6h1ohFOS0dtBP1euk=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/images
+ /AddProjectDependency0.9.png
+SHA1-Digest: 9IXTPzweK0hEYn3B+oYIBvKhTGo=
+
+Name: plugin.xml
+SHA1-Digest: dPMTh6WrnZjZ3aoZw8aN4VQWpQk=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/Gettin
+ g-started.html
+SHA1-Digest: ZIdaiPPeTnWNUE3i2bX/S3ibs3w=
+
+Name: help/images/home.gif
+SHA1-Digest: 6ZkfXx5mGrHfp+Vr+YCQGGUsRIQ=
+
+Name: help/Koneki-LDT-Developer-Area-User-Guides-User-Guide-1-0-toc.xm
+ l
+SHA1-Digest: vcNvKRa6ADrTWrQgIOmZsCBLTy8=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/images
+ /AddInterpreter_1.0.png
+SHA1-Digest: /piEHYOqBvN9UnUXme4p1EjdQOo=
+
+Name: META-INF/maven/org.eclipse.koneki.ldt/org.eclipse.koneki.ldt.doc
+ .user/pom.xml
+SHA1-Digest: ohFQsUIq+gsu4NQfeuEyO8xWGTo=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: 09gN05tobgS/MdtqyTNQhOhB73M=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/images
+ /CreateConnexionEnterIP.png
+SHA1-Digest: gmiK/v0MwcCDXNFm5u9h1rLJfzw=
+
+Name: about.html
+SHA1-Digest: sAXgWZYB7tT9O9w6pl6VraWFVhk=
+
+Name: help/images/prev.gif
+SHA1-Digest: qx89HZcOfCNP8URrsbXsnJSbNro=
+
+Name: help/images/next.gif
+SHA1-Digest: lmLlDPE2WjVohevt+GNU13MFL5w=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/Updati
+ ng-This-Document.html
+SHA1-Digest: dNgmRcnTdA75ya3tMJm+3baAj8c=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/User-G
+ uide-1.0.html
+SHA1-Digest: fsArqkFL8WKPqYuUyB7KF9RfdlE=
+
+Name: help/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.0/images
+ /ArgumentsLocalLaunchConfig.png
+SHA1-Digest: R/ayZWpp18ZahRTcavHI+IDQ6Yo=
+

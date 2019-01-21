@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<!--
+    Copyright (c) 2011, 2013 SunGard CSA LLC and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    _http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+       SunGard CSA LLC - initial API and implementation and/or initial documentation
+ -->
+
+<toc label="Developer Handbook" link_to="toc.xml#additional_handbooks">
+
+   <anchor id="modeler"/>
+	<anchor id="analyst" />
+
+	<topic label="Developer Handbook" href="html/handbooks/handbooks.htm">
+		<topic label="Modeling Guide" href="html/handbooks/modelling/mg-preface.htm">
+			<topic label="The Process Workbench" href="html/handbooks/modelling/mg-modeler-preface.html">
+				<topic label="Setting Process Manager Preferences" href="html/handbooks/modelling/mg-preferences.html" />
+				<topic label="The Development Perspective" href="html/handbooks/modelling/mg-modeler-views.html">
+					<topic label="Outline view"
+						href="html/handbooks/modelling/model-views/views-outline.html" />
+					<topic label="Working with Diagrams"
+						href="html/handbooks/modelling/model-views/views-diagrams.html" />
+					<topic label="Cheat Sheet View"
+						href="html/handbooks/modelling/model-views/views-cheat.html" />
+					<topic label="Process Model Repository"
+						href="html/handbooks/modelling/model-views/views-repository.html" />
+					<topic label="Process Model Bookmarks"
+						href="html/handbooks/modelling/model-views/views-bookmark.html" />
+					<topic label="Process Model Traversal"
+						href="html/handbooks/modelling/model-views/views-traversal.html" />
+				</topic>
+				<topic label="Working with Models"
+					href="html/handbooks/modelling/models/model-preface.html">
+					<topic label="Creating and Deleting Models"
+						href="html/handbooks/modelling/models/model-handling.html" />
+					<topic label="Model Properties"
+						href="html/handbooks/modelling/models/model-props.html" />
+					<topic label="Workflow Model Validation"
+						href="html/handbooks/modelling/models/model-validation.html" />
+					<topic label="Importing and Exporting Models"
+						href="html/handbooks/modelling/models/model-import.html" />
+					<topic label="Element References"
+						href="html/handbooks/modelling/models/model-element-refs.html" />
+					<topic label="Cleaning Up Models"
+						href="html/handbooks/modelling/models/model-clean.html" />
+				</topic>
+				<topic label="Working with Process Definitions" href="html/handbooks/modelling/mg-defdesk-3.htm" />
+				<topic href="html/handbooks/modelling/mg-process-interface.htm"
+					label="Working with Process Interface" />
+
+				<topic label="Working with Activities"
+					href="html/handbooks/modelling/activities/activities-preface.html">
+					<topic label="Specifying Activities"
+						href="html/handbooks/modelling/activities/mg-defdesk-4.htm" />
+					<topic label="Configuring Subprocess Activities"
+						href="html/handbooks/modelling/activities/mg-subprocesses.html" />
+					<topic label="Manual Activities"
+						href="html/handbooks/modelling/activities/manual-activities.html" />
+					<topic label="Converting Manual Activities to JSF Application Activities"
+						href="html/handbooks/modelling/activities/mg-convert-activities.html" />
+					<topic label="Quality Assurance on interactive Activities"
+						href="html/handbooks/modelling/activities/quality-assurance.html" />
+				</topic>
+            <topic label="Working with Transitions" href="html/handbooks/modelling/mg-defdesk-5.htm" />
+            <topic label="Converting Gateways to a Business Modeler-compliant Format" href="html/handbooks/modelling/convert-gateways.html" />
+				<topic label="Specifying Applications" href="html/handbooks/modelling/mg-defdesk-6.htm" />
+				<topic label="Specifying Data" href="html/handbooks/modelling/mg-defdesk-7.htm" />
+				<topic label="Specifying Data Mappings" href="html/handbooks/modelling/mg-defdesk-8.htm" />
+				<topic label="Working with Data Paths" href="html/handbooks/modelling/mg-defdesk-9.htm" />
+				<topic label="Modeling the Organizational Structure" href="html/handbooks/modelling/mg-defdesk-10.htm" />
+				<topic label="Working with Triggers" href="html/handbooks/modelling/mg-defdesk-11.htm" />
+				<topic label="Using Configuration Variables" href="html/handbooks/modelling/model-variables.html" />
+				<topic href="html/handbooks/modelling/activity-criticality.html"
+					label="Defining Activity Criticality" />
+
+				<topic label="Working with Process Definition Event Handlers"
+					href="html/handbooks/modelling/mg-defdesk-12.htm" />
+				<topic label="Working with Activity Event Handlers" href="html/handbooks/modelling/mg-defdesk-13.htm" />
+				<topic label="Specifying Arbitrary Link Types" href="html/handbooks/modelling/mg-defdesk-14.htm" />
+				<topic label="Pools and Lanes Usage" href="html/handbooks/modelling/mg-pools-lanes.htm" />
+				<topic label="Using Annotations" href="html/handbooks/modelling/mg-defdesk-15.htm" />
+				<topic label="Copying and Pasting Modeled Elements"
+					href="html/handbooks/modelling/mg-copy-paste-elements.html" />
+				<topic label="Authorization"
+					href="html/handbooks/modelling/property-page-authorization.html" />
+				<topic label="Project Effort Calculation"
+					href="html/handbooks/modelling/process-effort-calculation.html" />
+				<topic label="Modeling Pattern Support" href="html/handbooks/modelling/pattern-support.html" />
+				<topic label="Retrieving Diagrams from Model Information"
+					href="html/handbooks/modelling/mg-defdesk-16.htm" />
+				<topic label="Process Model Report" href="html/handbooks/modelling/mg-modelreport.htm" />
+				<topic label="Loading Models from Audit Trail" href="html/handbooks/modelling/mg-defdesk-17.htm" />
+				<topic label="External Model Resources" href="html/handbooks/modelling/mg-registry.html" />
+				<topic label="Deploying a Workflow Model" href="html/handbooks/modelling/mg-deploy-model.html" />
+				<topic label="Debugging Process Definitions" href="html/handbooks/modelling/mg-defdesk-18.htm" />
+				<topic label="Native Language Support"
+					href="html/handbooks/modelling/mg-internationalization.html" />
+			</topic>
+			<topic label="Data Integration"
+				href="html/handbooks/modelling/data-integration/data-int-preface.html">
+				<topic label="Java Style Data Types"
+					href="html/handbooks/modelling/data-integration/mg-integration-2.htm">
+					<topic
+						href="html/handbooks/modelling/data-integration/java-style-data/primitive-data.html"
+						label="Primitive Data" />
+					<topic
+						href="html/handbooks/modelling/data-integration/java-style-data/serializable-data.html"
+						label="Serializable Data" />
+					<topic
+						href="html/handbooks/modelling/data-integration/java-style-data/entity-bean-data.html"
+						label="Entity Bean Data" />
+				</topic>
+                <topic label="Structured Data Types"
+                    href="html/handbooks/modelling/data-integration/struct-data-preface.html" >
+                    <topic href="html/handbooks/modelling/data-integration/structured-data/struct-type-def.html"
+                     label="Defining Structured Data Types" />
+                    <topic href="html/handbooks/modelling/data-integration/structured-data/struct-proc-data.html"
+                     label="Using Structured Types in Process Data" />
+                    <topic href="html/handbooks/modelling/data-integration/structured-data/struct-type-portal.html"
+                     label="Using Structured Types in the Stardust Portal" />
+                    <topic href="html/handbooks/modelling/data-integration/structured-data/struct-field-level.html"
+                     label="Structured Data Annotation Properties" />
+                    <topic href="html/handbooks/modelling/data-integration/structured-data/struct-type-xpdl.html"
+                     label="XPDL Representation of Structured Data" />
+                </topic>
+				<topic label="Integrating XML Data"
+					href="html/handbooks/modelling/data-integration/mg-integration-3.htm" />
+				<anchor id="intdatatoc" />
+			</topic>
+			<topic label="System Integration"
+				href="PLUGINS_ROOT/org.eclipse.stardust.docs.misc/html/integration/mg-integration-preface.htm">
+				<topic label="Integrating Plain Java Classes and Session Beans"
+					href="html/handbooks/modelling/mg-integration-5.htm" />
+				<topic label="Integrating JMS" href="html/handbooks/modelling/mg-integration-6.htm" />
+				<topic label="Mail Application Type"
+					href="html/handbooks/modelling/integration/mail-application-type.html" />
+				<topic label="Message Application Types"
+					href="html/handbooks/modelling/integration/message-appl-preface.html">
+					<topic label="Message Processing"
+						href="html/handbooks/modelling/integration/messages/message-processing.html" />
+					<topic label="Message Parsing Application Type"
+						href="html/handbooks/modelling/integration/messages/message-parsing-appl.html" />
+					<topic label="Message Serialization Application Type"
+						href="html/handbooks/modelling/integration/messages/message-serialization-appl.html" />
+					<topic label="Message Transformation Application Type"
+						href="html/handbooks/modelling/integration/messages/message-transformation-appl.html" />
+					<topic label="XSL Message Transformation Application Type"
+						href="html/handbooks/modelling/integration/messages/xsl-message-transformation-appl.html" />
+					<topic label="Launching Message Transformations"
+						href="html/handbooks/modelling/integration/messages/launch-message-transformations.html" />
+					<topic label="Debugging Message Transformations"
+						href="html/handbooks/modelling/integration/messages/debug-message-transformations.html" />
+				</topic>
+				<topic label="Integrating JFC Applications" href="html/handbooks/modelling/mg-integration-7.htm" />
+				<topic label="Integrating JSF Applications"
+					href="html/handbooks/modelling/mg-integration-jsf.html" />
+				<topic label="Camel Producer Application Type"
+					href="html/handbooks/modelling/integration/camel-application-type.html" />
+				<topic label="Synchronous Web Services" href="html/handbooks/modelling/mg-integration-8.htm" />
+				<topic label="Integrating Web via JSPs"
+					href="html/handbooks/modelling/mg-integration-jsp.html" />
+				<topic label="Process-based UI Mashups - External Web Applications"
+					href="html/handbooks/modelling/integration/activity-panel-integration.html" />
+				<anchor id="intappltoc" />
+			</topic>
+			<topic label="The Model File Format" href="html/handbooks/modelling/mg-xml-1.htm" />
+			<topic label="Collaborative Modeling"
+				href="html/handbooks/modelling/concurrency/con-preface.html">
+				<topic label="Introduction"
+					href="html/handbooks/modelling/concurrency/con-introduction.html" />
+				<topic label="Concurrency Control"
+					href="html/handbooks/modelling/concurrency/con-control.html" />
+				<topic label="Locking and Unlocking Model Elements"
+					href="html/handbooks/modelling/concurrency/con-locking.html" />
+				<topic label="Committing Changes"
+					href="html/handbooks/modelling/concurrency/con-commit.html" />
+				<topic label="Reverting Changes"
+					href="html/handbooks/modelling/concurrency/con-revert.html" />
+				<topic label="Updating Model and Model Elements"
+					href="html/handbooks/modelling/concurrency/con-update.html" />
+				<topic label="Working with Model Elements in Concurrency Mode"
+					href="html/handbooks/modelling/concurrency/con-editing.html" />
+				<topic label="Watching Collaborative Modeling Activities"
+					href="html/handbooks/modelling/concurrency/con-vcs-view.html" />
+			</topic>
+		</topic>
+		<anchor id="tocoperation" />
+		<topic label="Programming Guide" href="html/handbooks/programming/pg-preface.htm">
+			<topic label="Embedded Usage"
+				href="html/handbooks/programming/pg-embedded-preface.htm">
+				<topic label="Embedded Usage Concepts" href="html/handbooks/programming/pg-embedded-2.htm" />
+				<topic label="Stardust Services" href="html/handbooks/programming/pg-embedded-3.htm" />
+				<topic label="Stardust Web Services API"
+					href="html/handbooks/programming/pg-webservice-api.html">
+					<topic label="Stardust Web Services"
+						href="html/handbooks/programming/pg-webservice-classes.html" />
+					<topic label="Endpoints"
+						href="html/handbooks/programming/pg-webservice-endpoints.html" />
+					<topic label="Building Web Services Queries"
+						href="html/handbooks/programming/pg-webservice-queries.html" />
+					<topic label="Deployment"
+						href="html/handbooks/programming/pg-webservice-deployment.html" />
+				</topic>
+				<topic label="Declarative Security Usage in Stardust Services API"
+					href="html/handbooks/programming/pg-declarative-security.html" />
+            <topic label="State Changes of Process and Activity Instances"
+               href="html/handbooks/programming/pg-state-changes.html" />
+				<topic label="Model States"
+					href="html/handbooks/programming/pg-embed-model-states.html" />
+				<topic label="Objects and Model Elements"
+					href="html/handbooks/programming/pg-embed-objects.html" />
+            <topic label="API Visibility of Transient Workflow Objects"
+               href="html/handbooks/programming/pg-embed-trans-procs.html" />
+				<topic label="Filter Criteria" href="html/handbooks/programming/pg-embed-filter.html" />
+				<topic label="Exceptions"
+					href="html/handbooks/programming/pg-embed-exceptions.html" />
+				<topic label="Transactional Behavior"
+					href="html/handbooks/programming/pg-embed-transactional.html" />
+				<topic label="Leveraging Query Evaluation Profiles"
+					href="html/handbooks/programming/pg-embed-performance.html" />
+				<topic label="Runtime Extension Management"
+					href="html/handbooks/programming/pg-embed-runtime-ext.html" />
+				<topic label="Logging Custom Log Entries"
+					href="html/handbooks/programming/pg-embed-logging.html" />
+				<topic label="Retrieving and Using Permission States"
+					href="html/handbooks/programming/pg-embed-permission.html" />
+				<topic label="Setting and Retrieving Runtime Permissions"
+					href="html/handbooks/programming/pg-embed-runtime-perms.html" />
+				<topic label="Retrieving Runtime Environment Information"
+					href="html/handbooks/programming/pg-embed-runtime-info.html" />
+				<topic label="Retrieving Model Descriptions"
+					href="html/handbooks/programming/pg-embed-depl-model-descr.html" />
+				<topic label="Retrieving Model Version Tree Information"
+					href="html/handbooks/programming/pg-embed-model-version.html" />
+				<topic label="Deployment Unit Support"
+					href="html/handbooks/programming/pg-embed-deployment-unit.html" />
+				<topic label="Working with Process Interfaces"
+					href="html/handbooks/programming/pg-embed-proc-interfaces.html" />
+				<topic label="Configuring Password Rules" href="html/handbooks/programming/pg-embed-rules.html" />
+				<topic label="Managing Department Structures"
+					href="html/handbooks/programming/pg-embed-department.html" />
+            <topic label="Managing Audit Trail Partitions"
+               href="html/handbooks/programming/pg-embed-partitions.html" />
+            <topic label="Retrieving and Changing Preferences"
+               href="html/handbooks/programming/pg-embed-preferences.html" />
+				<topic label="Retrieving Configuration Variables"
+					href="html/handbooks/programming/pg-embed-conf-var.html" />
+				<topic href="html/handbooks/programming/pg-embed-doc-ops.html"
+					label="Managing Documents and Folders" />
+				<topic href="html/handbooks/programming/pg-embed-doc-types.html"
+					label="Managing Document Types" />
+				<topic href="html/handbooks/programming/pg-embed-documents.html"
+					label="Changing Document Settings and Annotations" />
+				<topic label="Controlling Daemon Execution"
+					href="html/handbooks/programming/pg-embed-daemons.html" />
+				<topic label="Adding Notes to Process Instances" href="html/handbooks/programming/pg-embed-notes.html" />
+				<topic href="html/handbooks/programming/pg-embed-next-act.html"
+					label="Activating the Next Activity Instance" />
+				<topic label="Changing Process Instance Priorities" href="html/handbooks/programming/pg-embed-prio.html" />
+				<topic label="Querying and Recalculating Activity Criticality"
+					href="html/handbooks/programming/pg-embed-criticality.html" />
+				<topic label="Retrieving Activity Quality Assurance Information"
+					href="html/handbooks/programming/pg-embed-qa.html" />
+				<topic href="html/handbooks/programming/pg-embed-migrate.html"
+					label="Migrating Repository Resources" />
+				<topic
+					label="Receiving Parent Process Instance OID for Details Policy Option"
+					href="html/handbooks/programming/pg-receive-par-oid.html" />
+				<topic href="html/handbooks/programming/pg-workflow-spawn.htm"
+					label="Workflow Processing for Spawn Subprocess" />
+				<topic href="html/handbooks/programming/pg-workflow-switch.htm"
+					label="Workflow Processing to Abort and Start Subprocess" />
+				<topic label="Relocating Activities"
+					href="html/handbooks/programming/pg-embed-relocation.html" />
+				<topic href="html/handbooks/programming/pg-workflow-join.htm"
+					label="Workflow Processing to Abort and Join Processes" />
+				<topic href="html/handbooks/programming/pg-embed-cases.html"
+					label="Workflow Processing for Cases" />
+			</topic>
+			<topic label="Querying Workflow" href="html/handbooks/programming/pg-query-1.htm" />
+			<topic href="html/handbooks/programming/pg-data-query.htm"
+				label="Data Query" />
+         <topic label="Extending the Stardust Portal Framework" href="PLUGINS_ROOT/org.eclipse.stardust.docs.misc/html/programming/using-portal-framework.htm" />
+			<topic label="Integrating External User Repositories" href="html/handbooks/programming/pg-security-1.htm" />
+			<topic label="Retrieving Diagrams" href="html/handbooks/programming/diagram-retrieval.htm" />
+			<topic label="Structured Data and Java Type Applications"
+				href="html/handbooks/programming/pg-structured-data.html" />
+			<topic href="html/handbooks/programming/pg-embed-entitlements.html"
+				label="Changing Authorization of Stardust Process Portal Elements" />
+			<topic label="Tutorial - Stardust SPI Programming" href="html/handbooks/programming/pg-spi.htm" />
+			<topic label="Tutorial - LDAP Synchronization Provider Example"
+				href="html/handbooks/programming/pg-ldap.html" />
+			<topic label="Monitoring Worklists"
+				href="html/handbooks/programming/pg-worklist-monitoring.html" />
+         <topic label="Monitoring Model Deployment"
+            href="html/handbooks/programming/pg-part-monitoring.html" />
+			<topic label="Implementing a Repository Connection Extension Point"
+				href="html/handbooks/programming/pg-repository-extension.html" />
+			<topic label="Implementing Interfaces for Portal Configurations"
+				href="html/handbooks/programming/portal/pg-portal-config.html" >
+            <topic label="Implementing an Interface for Portal Delegation Configurations"
+               href="html/handbooks/programming/portal/portal-config-dele.html"/>
+            <topic label="Implementing an Assembly Line Activity Provider"
+               href="html/handbooks/programming/portal/portal-config-assembly.html"/>
+            <topic label="Implementing a Service Provider to indicate a Skin as default Skin"
+               href="html/handbooks/programming/portal/portal-config-skin.html"/>
+			</topic>
+			<topic
+				label="Implementing a Static Configuration Provider for Default Preferences"
+				href="html/handbooks/programming/pg-config-provider-spi.html" />
+			<topic
+				href="html/handbooks/programming/pg-process-interface-invocation.htm"
+				label="Process Interface - External Invocation Mechanism" />
+		</topic>
+
+		<anchor id="furtherProductGuides" />
+
+		<topic label="Stardust Schema" href="html/tocschema.html">
+			<anchor id="schema" />
+		</topic>
+		<topic label="How To Section" href="html/handbooks/others/howto.html">
+			<topic label="Deploy on JBoss Application Server with Oracle Database"
+				href="html/handbooks/others/howto/jboss-with-oracle.html" />
+		</topic>
+	</topic>
+
+	<anchor id="usertoc" />
+
+</toc>

@@ -1,0 +1,1204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Structured Data Types</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../styles/carnot.css" TITLE="Style">
+<script language="JavaScript" src="../../../styles/naviLine.js" type="text/javascript"></script>  
+</head>
+<script language="JavaScript">
+<!--
+	writeNavigation("Integrating XML Data","../../../toc.html",
+    	"mg-integration-2.htm","mg-integration-3.htm",
+		"../../handbooks.htm","Developer Handbook",
+		"../mg-preface.htm","Modeling Guide",
+		"data-int-preface.html","Data Integration");
+ -->
+</script>
+<body>
+<h1>Structured Data Types</h1>
+<ul>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#defining">Defining Structured Data Types</a></li>
+    <li><a href="#comp">Composite Types</a></li>
+    <li><a href="#refStruct">Using Referenced Structured Data Definition</a></li>
+    <li><a href="#enum">Type Definition for Enumeration</a></li>
+    <li><a href="#pattern">Type Definition for Patterned</a></li>
+    <li><a href="#import">Importing Types</a></li>
+    <li><a href="#exportTypes">Exporting Types</a></li>
+    <li><a href="#copy">Copying Structured Data Types</a></li>
+    <li><a href="#del">Deleting Structured Types</a></li>
+    <li><a href="#xpdl">XPDL Representation of Structured Data</a></li>
+    <li><a href="#processData">Using Structured Data For Process Data</a></li>
+    <li><a href="#xsdMapping">Mapping XSD Types</a></li>
+    <li><a href="#datamappings">Data Mappings for Structured Data</a></li>
+    <li><a href="#webservice">Using Structured Data in WebService Applications</a></li>
+    <li><a href="#javaAppl">Structured Data and Java Type Applications</a></li>
+    <li><a href="#annotations">Data Structure Annotations and Field Annotations</a></li>
+    <li><a href="#descriptors">Using Structured Data as Descriptors</a></li>
+    <li><a href="#storage">Structure Data Storage</a></li>
+    <li><a href="#xsdValidation">XSD Schema Validation</a></li>
+    <li><a href="#gui">Structured Types and GUI Generation</a></li>
+    <li><a href="#transition">Setting Up Transition Conditions for Structured Data</a></li>
+</ul>
+<h2 id="background">Background</h2>
+<p>The Stardust Workflow Execution Perspective supports a variety of data technologies such as</p>
+<ol>
+  <li>Primitive data,</li>
+  <li>Serializable Java classes,</li>
+  <li>Entity Beans,</li>
+  <li>Classes persisted via the Hibernate O/R mapper or</li>
+  <li>XML data.</li>
+</ol>
+<p>All the above are encapsulating &quot;dereferentiation behavior&quot; - how 
+  to obtain specific details from data represented in these technologies and also 
+  how these data are stored and loaded during the execution of business processes.</p>
+<p>To describe structured data - e.g. a person with a first name, a last name 
+  and an address, while the address has a street name, a number a city and a ZIP 
+  code -, a data technology out of 2. to 5. can be used. However all these technologies 
+  require additional programming skills in Java or XML.</p>
+<p>Structured data types provide mechanisms to define and work with structured 
+  data without programming skills in Stardust.</p>
+<p>Having defined such data types in the modeling environment of Stardust,
+ these can be used for data definitions and Stardust will take care of their 
+ persistence in and their efficient retrieval 
+  from the Audit Trail database.</p>
+<h2 id="defining">Defining Structured Data Types</h2>
+<p>Structured data are defined on the <strong>Structured Types</strong> 
+  element in the outline view of the model.</p>
+<p class="image"><img src="images/structured-types.png" 
+alt="Structured Types in the Outline View"><br>
+<strong>Figure:</strong> Structured Types in the Outline View</p>
+<p>Two categories of structured data types can be defined</p>
+<ul>
+  <li><a href="#comp">Composite Types</a> and</li>
+  <li><a href="#enum">Enumeration Types</a>.</li>
+</ul>
+<p>Additionally you can import Types, see section <a href="#import">Importing Types</a>.</p>
+<p>The Structured Types tree contains a table tree structure with all defined 
+  structured types:</p>
+<p class="image"><img src="images/struct-data-in-tree.png" alt="Subtree"><br>
+<strong>Figure:</strong> Structured Types Subtree</p>
+<h2 id="comp">Composite Types</h2>
+<p>Composite types are data types with fields of the following types</p>
+<ul>
+  <li>primitive data (integer, string, boolean),</li>
+  <li>enumerations (see below),</li>
+  <li>other composite types and</li>
+  <li>lists of all of the above.</li>
+</ul>
+<p>for example to describe a person or order data.</p>
+<p>To create a new composite type:</p>
+<ul>
+    <li>In the outline view right-click the <strong>Structured Types</strong> entry.</li>
+    <li>Choose <strong>New Composite</strong>.</li>
+</ul> 
+<p class="image"><img src="images/struct-data-new-composite.png" 
+alt="Create a New Composite Type."><br>
+<strong>Figure:</strong> Create a New Composite Type.</p>
+
+<p>The name of the new composite type can be specified in the <strong>General</strong> 
+properties settings.</p> 
+
+<p>Using the Visibility Public option, you can
+    specify whether you want to import type definition by reference when referenced 
+    in another model. By default, the Visibility Public checkbox is selected.
+    For more information, please refer to <a href="../mg-preferences.html#multipackage">
+   Multi Package Modeling Preferences</a> section of <a href="../mg-preferences.html">Setting 
+   Process Manager Preferences</a> chapter.</p>
+   
+<p class="image"><img src="images/typevisiblity.png" alt="General Properties"></img>
+<br>
+<strong>Figure:</strong> Composite Type - Visibility Public</p>
+
+<p>The target namespace of the schema contained by a type declaration
+is selected by default. This namespace is used in creating and parsing XML documents based on this
+type declaration schema. A type declaration uses two fields, 
+the location which specifies the id of the other model and the Xref which specifies the id of the 
+type declaration in the other model.</p> 
+
+ 
+
+<p>To edit the new composite type, open its properties page with a double-click
+on its entry in the Structured Types tree.</p>
+<p class="image"><a href="images/new-composite-type-page_orgSize.png" target="_blank">
+<img src="images/new-composite-type-page.png" alt="New Composite Type"></a><br>
+<strong>Figure:</strong> Structured Type tree</p>
+
+<p>Data fields can be specified in the 
+<strong>Structured Type Definition</strong> field.</p>
+
+<p>To create a new data field, select the <strong>&lt;new&gt;</strong> table 
+  cell, type in a name for the data field to be created and press the <strong>TAB</strong> 
+  key. An entire row representing the new data field will be displayed and can 
+  be edited by selecting the corresponding table cells:</p>
+<p class="image">
+<img src="images/new-data-field-row.png" alt="New Data Field Row"><br>
+<strong>Figure:</strong> Structured Type Definition</p>
+
+<p>Note that when using structured data that has cardinality zero or more in scoped data, 
+the data path must be set accordingly. If the data path of structured data is not 
+set according to cardinality a validation warning is displayed. 
+For example, if the cardinality is defined as Zero or more then the
+data path should be set as structured data[0]. The following screenshot displays the
+warning message:</p>
+
+<p class="image">
+<img src="images/cardnalitywarning.png" alt="Structured Data with Cardinality - Validation Warning"></img>
+<br>
+<strong>Figure:</strong> Structured Data with Cardinality - Validation Warning</p>
+
+<h3>Types</h3>
+<p>In the <strong>Type</strong> column you can select xsd types
+as well as all other composite and enumeration types - except 
+  the current composite type to avoid recursion.</p>
+<p class="image"><img src="images/struct-data-type-selection.png" 
+alt="Choose a Type."><br>
+<strong>Figure:</strong> Choose a Type.</p>
+<h4>Choice</h4>
+<p>Embedded Unions </p>
+<p class="image"><img src="images/struct-data-choice-selection.png" 
+alt="Setting a Choice Type."><br>
+<strong>Figure:</strong> Setting a Choice Type.</p>
+<h4>Anonymous substructures</h4>
+<p>Anonymous substructures can be defined within a structure in order to fully
+support XSD composite structures without defining the substructures as separate
+data structure definitions.</p>
+<p>For example:</p>
+<pre>
+&lt;xs:complexType name="PaymentTypeInformation1"&gt;
+   &lt;xs:sequence&gt;
+      &lt;xs:element name="InstrPrty" type="Priority2Code"/&gt;
+         &lt;xs:choice&gt;
+          &lt;xs:element name="SvcLvl" type="ServiceLevel2Choice"/&gt;
+        &lt;xs:element name="ClrChanl" type="ClearingChannel2Code"/&gt;
+      &lt;/xs:choice&gt;
+      &lt;xs:element name="LclInstrm" type="LocalInstrument1Choice"/&gt;
+      &lt;xs:element name="CtgyPurp" type="PaymentCategoryPurpose1Code"/&gt;
+   &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+</pre>
+<p>Selecting the <tt>&lt;xsd:anonymous&gt;</tt> type sets the type of the new 
+field to <tt>&lt;New Composition&gt;</tt> and creates an indented line to enter
+subfields for this composition.</p>
+<p>The <tt>&lt;new&gt;</tt> entry appears as the last node whenever the node is expanded.</p>
+<p class="image"><img src="images/struct-data-anonymous-type.png" 
+alt="Anonymous Type"><br>
+<strong>Figure:</strong> Selecting the Anonymous Type.</p>
+<p class="image"><img src="images/struct-data-anonymous-example.png" 
+alt="Anonymous Type - Subtree"><br>
+<strong>Figure:</strong> Subtree of Anonymous Type.</p>
+<p>If the type of the field of the anonymous composition is changed to another type
+later, the subfields are deleted.</p>
+<!--  TODO not implemented yet: A confirmation dialog will ask the user to confirm
+this operation.</p>-->
+<h4>Attribute type</h4>
+<p>In case you intend to export a schema file containing XML attribute
+types, use the <tt>&lt;attribute&gt;</tt> type, e.g.:</p>
+<p class="image"><img src="images/struct-data-attribute-selection.png" 
+alt="Attribute Type"><br>
+<strong>Figure:</strong> Selecting the Attribute Type.</p>
+<p>An attribute type is displayed with an attribute icon on the left side
+of the name:</p>
+<p class="image"><img src="images/attribute-type-imported.png" 
+alt="Attribute Type"><br>
+<strong>Figure:</strong> Attribute Type displayed in Structured Type Definition.</p>
+
+<p>If you import a schema file containing XML attribute types, these types will
+be mapped as <tt>&lt;attribute&gt;</tt> type. Note that attribute types can have
+the cardinality <tt>Optional</tt>, <tt>Prohibited</tt> or <tt>Required</tt> as shown 
+in the above figure.</p>
+
+<p>For example importing a schema file containing:</p>
+<pre>
+...
+  &lt;xsd:complexType name="Product"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element name="Name" type="xsd:string"/&gt;
+      &lt;xsd:element name="Synopsis" type="xsd:string"/&gt;
+      &lt;xsd:element name="State" type="xsd:string"/&gt;
+    &lt;/xsd:sequence&gt;
+    &lt;xsd:attribute name="Analysis" type="xsd:string" use="required"/&gt;
+  &lt;/xsd:complexType&gt;
+  &lt;xsd:element name="Product" type="pro:Product"/&gt;
+...
+</pre>
+<p>will result in the following structured data definition:</p>
+<p class="image"><img src="images/attribute-type-import-example.png" 
+alt="Imported Attribute Type"><br>
+<strong>Figure:</strong> Imported Type Example.</p>
+
+<h3>Cardinality</h3>
+<p>In the <strong>Cardinality</strong> column, you can specify, how many times the 
+selected type should occur. The following cardinalities can be selected:</p>
+<ul>
+    <li>Exactly One</li>
+    <li>Zero or One</li>
+    <li>Zero or More</li>
+    <li>One or More</li>
+</ul>
+<p class="image"><img src="images/struct-data-cardinality.png" 
+alt="Choose Cardinality."><br>
+<strong>Figure:</strong> Choose Cardinality.</p>
+<p>The <strong>One or More</strong> cardinality provides a list-like behavior.</p>
+<p>
+For <tt>Attribute Type</tt>, following cardinalities can be selected:</p>
+<ul>
+    <li>Optional</li>
+    <li>Prohibited</li>
+    <li>Required</li>
+</ul>
+<p class="image"><img src="images/struct-data-cardinality_attribute_type.png" 
+alt="Choose Cardinality for attribute type."><br></p>
+
+
+<h3>Order of keys</h3>
+<p>You can change the order of the keys by using the <strong>Move 
+  Up</strong> and <strong>Move Down</strong> buttons.</p>
+<p><strong><span class="tip">! </span>Tip:</strong> </p>
+<p>You can create your entire structure just by using the TAB key, 
+typing in names and selecting types and cardinalities with the <strong>UP/DOWN</strong>
+keys.</p>
+<h3>Annotation Field</h3>
+<p>At the bottom of the composite property page, a table tree view is added to modify 
+predefined annotations. Please refer to the section <a href="#annotations">
+Data Structure Annotations and Field Annotations</a> for more information
+on the usage of annotations.</p>
+
+<h4>Storage</h4>
+ <p>Optionally set the values for <strong>Indexing</strong>
+and <strong>Persistence</strong> in the <strong>Property</strong> column.
+By default all data fields in the structure are persisted and indexed.
+</p>
+<p><strong>Indexing</strong>: choose between <tt>Indexed</tt> and <tt>Not Indexed</tt>.</p>
+<p class="image"><img src="images/struct-data-indexing.png" alt="Indexing Property"></p>
+<p>A field being indexed results in the creation of a corresponding row for the
+field's value in the table <tt>STRUCTURED_DATA_VALUE</tt> in the audit trail database.
+By setting some fields to <tt>Not Indexed</tt> the
+size of the table can be kept effectively smaller. Thus, to keep the table size small, only fields
+that are the basis for descriptors or are
+candidates for <tt>DataFilters</tt> in queries should be indexed.</p>
+
+<p><strong>Persistence</strong>: choose between <tt>Persistent</tt> and <tt>Transient</tt>.
+</p>
+<p class="image"><img src="images/struct-data-persistence.png" alt="Persistence Property"></p>
+<p>Please note that setting <strong>Persistence</strong> to <tt>Transient</tt> overrules the 
+<strong>Indexing</strong> setting. A field that is transient is never indexed and never saved.
+It allows your 
+structured data to conform to existing XSDs while optimizing the footprint of the
+structure in the audit trail database.</p>
+ <p>To delete values set for <strong>Indexing</strong> or <strong>Persistence</strong>,
+right-click on the field and select <strong>Delete</strong>, as shown in the 
+following screenshot:</p>
+<p class="image"><img src="images/struct-data-pers-delete.png" 
+alt="Delete"><br>
+<strong>Figure:</strong> Clearing a Value.</p>
+<h4>Edit in Structure</h4>
+<p>To add an additional column <strong>Indexing</strong> in
+the structured table with indexing information to
+the attributes pane, enable the checkbox in the 
+<strong>Edit in Structure</strong> column
+as shown in the following screenshot:</p>
+<p class="image"><img src="images/edit-in-structure.png" 
+alt="Edit in Structure"><br>
+<strong>Figure:</strong> Enable Indexing for Edit in Structure.</p>
+<p>The additional column vanishes as soon as the checkbox is disabled
+or a field is selected which does not have the property set.</p>
+<p>To add an additional column <strong>Persistence</strong> in
+the structured table with persistence information to
+the attributes pane, enable the checkbox in the 
+<strong>Edit in Structure</strong> column
+as shown in the following screenshot:</p>
+<p class="image"><img src="images/edit-in-structure-2.png" 
+alt="Edit in Structure"><br>
+<strong>Figure:</strong> Enable Persistence for Edit in Structure.</p>
+<p>The additional column vanishes as soon as the checkbox is disabled
+or a field is selected which does not have the property set.</p>
+<h4>Change all</h4>
+<p>In case <strong>Change all</strong> is selected, changing one entry for
+<strong>Persistence</strong> or <strong>Indexing</strong>
+either in the <strong>Value</strong> column or in the according structured
+table columns, will change the value for all fields.</p>
+<p class="image"><img src="images/change-all.png" 
+alt="Change All"><br>
+<strong>Figure:</strong> Enable Change all to reflect value on all entries.</p>
+
+<h3 id="field">Defining Field Level Presentation for Structure Data</h3>
+<p>You can define certain properties to control each field of structured data. For example, if you 
+define a Read Only property for a the field Customer ID then in the Stardust Portal 
+the user cannot edit the Customer ID field.</p>
+<p class="image"><img src="images/properties-struct-type.png" 
+alt="Structured Data - Field Level Properties"><br>
+<strong>Figure:</strong> Structured Data - Field Level Properties</p>
+<p>You can define following field level properties for a structured data:</p>
+<table>
+	<tr>
+		<th>Property</th>
+		<th>Value</th>
+		<th>Description</th>	
+	</tr>
+	<!-- <tr>
+		<td>Show Structure Description</td>
+		<td>Yes or No</td>
+		<td>Displays description of structure data, if specified and Yes is selected. </td>	
+	</tr> -->
+	<tr>
+		<td>Read Only</td>
+		<td>Yes or No</td>
+		<td>If you select Yes, the field becomes read only.  If In-Out data mapping is provided for that
+		field it gets overridden and field remains read only.</td>	
+	</tr>
+	<tr>
+		<td>Mandatory</td>
+		<td>Yes or No</td>
+		<td>If you select Yes, activity cannot be completed until you specify value for that field.</td>	
+	</tr>
+	<tr>
+		<td>CSS Style</td>
+		<td>Specify CSS style.</td>
+		<td>For example, if you specify Color:Red for the field last name. The value for last name 
+		is taken in red color.</td>	
+	</tr>
+	<tr>
+		<td>CSS Style Class</td>
+		<td>Specify the class name from .css file.</td>
+		<td>Specify the name of the class from .css file. Include the css file in the <strong>skin</strong> 
+		folder of <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/admin-portal/admin-portal-resource.html">
+    Resource Management View</a> of the 
+    <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/carnot-clients.html">Stardust Portal</a>.</td>	
+	</tr>
+	<tr>
+		<td>Prefix i18 Key</td>
+		<td>-</td>
+		<td>Specify the key and its value in the according language bundle properties file in the modeler. The format should be
+		StructuredType.&lt;FullXPath&gt;.&lt;Field Name&gt;= &lt;specify value&gt;. The value for the key is read from 
+		properties file and displayed in Stardust Portal in specified language.
+		For example, enter <tt>StructuredType.Customer.Firstname.Prefix=Welcome</tt> in the modeler language bundle properties file
+		 and save it.</td>	
+	</tr>
+	<tr>
+		<td>Prefix</td>
+		<td>Specify any string as prefix</td>
+		<td>The specified text is displayed before the input box in the Stardust Portal. 
+		If the prefix i18key is provided, then the prefix is overridden.</td>	
+	</tr>
+	<tr>
+		<td>Suffix i18 Key</td>
+		<td>-</td>
+		<td>Specify the key in the according language bundle properties file. The format should be
+		StructuredType.&lt;FullXPath&gt;.&lt;Field Name&gt; = &lt;specify value&gt;. The value for the key will be read from 
+		properties file and displayed in Stardust Portal in specified language.
+		For example, enter <tt>StructuredType.Customer.Lastname.Suffix=Visit Again</tt> in the modeler language bundle properties file
+		 and save it.
+		</td>	
+	</tr>
+	<tr>
+		<td>Suffix</td>
+		<td>Specify any string as suffix</td>
+		<td>The specified text is displayed after the input box in the Stardust Portal. 
+		If the suffix i18key is provided, then the suffix is overridden.</td>	
+	</tr>
+	<tr>
+		<td>String Input Type</td>
+		<td>Select Text Input or Text Area</td>
+		<td>If the Text Input is selected, then the following <strong>Rows</strong> and 
+		<strong>Columns</strong> fields become invalid. If Text Area is selected, you can specify 
+		more characters. For example, in the Text Area, you can specify complete address of home and office.</td>	
+	</tr>
+	<tr>
+		<td>Rows</td>
+		<td>Specify the number of rows to be displayed in the Stardust</td>
+		<td>Specified rows get displayed. If String Input Type is Text Area then only the specified number of rows are displayed.</td>	
+	</tr>
+	<tr>
+		<td>Columns</td>
+		<td>Specify the number of columns to be displayed in the Stardust</td>
+		<td>Specified columns get displayed. If String Input Type is Text Area then only the columns are displayed. </td>	
+	</tr>
+	<tr>
+		<td>Boolean Readonly Input Type</td>
+		<td>Checkbox or Text Output</td>
+		<td>The type of the field should be xsd:boolean. If Checkbox is selected, you need to select or clear the checkbox. 
+		If Text Output is selected, the values True or False are displayed. For Text Output, you need to provide
+		Out data mapping for first activity and In data mapping should be provided to second activity.</td>	
+	</tr>
+	
+</table>
+<p>For more information, please refer to the section  
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/pp_renovated/activity-interactive.html#prop">
+Manual Activity Panel for Structured Data with Field Level Properties</a> of chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/pp_renovated/activity-interactive.html">
+Working with interactive Activity Panels</a>.</p>
+
+<h2 id="refStruct">Using Referenced Structured Data Definition</h2>
+
+<p>Once the file connection is established, the referenced structured data definition can be referred in another model.
+Note that the structured types from the referenced model are read only. You cannot edit the referenced structured types.
+To refer the structure data in the referencing model:</p>
+
+<p>In the referencing model, drag and drop the structure data from the <strong>Outline view</strong> &gt; <strong>
+External Model Information</strong> &gt; <strong>File Connection</strong></p>
+<p class="image"><img src="images/refstructdata.png" alt="Drag Referenced Structured Data"></img>
+<br>
+<strong>Figure:</strong> Drag Referenced Structured Data</p>
+<p>Double-click on the dragged structured data in the diagram canvas. The structured data properties get displayed.</p>
+<p> Click on the <strong>Structured Data Definition</strong>. 
+The declared types are displayed. If you select the check box <strong>Display Imported Model Elements as Groups</strong> then the 
+references for the declared types are also displayed.</p>
+<p class="image"><img src="images/refdeclaredtype.png" alt="Referenced Declared Type"></img>
+<br>
+<strong>Figure:</strong> Referenced Declared Type</p>
+
+<h2 id="enum"> Type Definition for Enumeration</h2>
+<p>The Stardust Structured data type supports two flavors of the xsd simple types 
+that are enumerations and patterned. 
+The Enumeration type means that the data object will be of type string and it will accept
+values from the list of values defined in the enumeration.  
+Enumeration types are lists of enumeration keys, e.g. to describe salutations, 
+titles or countries.</p>
+<p>To create a new enumeration type:</p>
+<ul>
+    <li>In the outline view right-click the <strong>Structured Types</strong> entry.</li>
+    <li>Choose <strong>New Enumeration</strong>.</li>
+</ul> 
+<p class="image"><img src="images/struct-data-new-enumeration.png" 
+alt="Create a New Enumeration Type."><br>
+<strong>Figure:</strong> Create a New Enumeration Type.</p>
+<p>To edit the properties of the enumeration type, double-click its entry in
+the structured types tree.</p>
+<p class="image"><img src="images/new-enumeration-type-page.png" alt="New Enumeration Type"></p>
+<p>Select the <strong>&lt;new&gt;</strong> cell, type in an enumeration key and press the <strong>TAB</strong> 
+  key.</p>
+<p class="image"><img src="images/enumeration-keys.png" alt="Enumeration Key"></p>
+<p>Optionally you can enter a <strong>Minimum Length</strong> and a <strong>Maximum Length</strong>
+for the enumeration field.</p>
+<p>To change the order of enumeration keys use the <strong>Move 
+  Up</strong> and <strong>Move Down</strong> buttons.</p>
+
+
+<h2 id="pattern">Type Definition for Patterned</h2>
+
+<p>The Patterned type means that the data object is of type string and it accepts values 
+conforming to the defined pattern. Patterned types are series of values. You can define exact 
+sequence of characters that are acceptable. For example,
+you can define series of numbers [0 - 9] and letters [a - z], gender [male - feamale] where you can 
+give choice.</p>
+
+<p>To create a new patterened type:</p>
+<ul>
+    <li>In the outline view right-click the <strong>Structured Types</strong> entry.</li>
+    <li>Choose <strong>New Enumeration</strong>.</li>
+    <li>Select Patterned from the Structured Type Definition</li>
+</ul> 
+<p class="image"><img src="images/struct-data-new-pattern.png" 
+alt="Patterened Type"><br>
+<strong>Figure:</strong> Patterened Type</p>
+<p>Select the <strong>&lt;new&gt;</strong> cell, type in an enumeration key and press the <strong>TAB</strong> 
+  key.</p>
+  
+<p class="image"><img src="images/patterened.jpg" 
+alt="Patterened Type Values"><br>
+<strong>Figure:</strong> Patterened Type Values</p>  
+  
+<p>Optionally you can enter a <strong>Minimum Length</strong> and a <strong>Maximum Length</strong>
+for the enumeration field.</p>
+<p>To change the order of enumeration keys use the <strong>Move 
+  Up</strong> and <strong>Move Down</strong> buttons.</p>
+
+
+
+
+<h2 id="import">Importing Types</h2>
+<p>XSD files describing one or more data structure definition can be imported. 
+The corresponding data structure definitions will be created.</p>
+<p>To import an xsd file select <strong>Structured Types &gt; Import Types</strong>
+in the Outline view:</p>
+<p class="image"><img src="images/struct-data-import-types.png" 
+alt="Import Types"><br>
+<strong>Figure:</strong> Import Types</p>
+<p>A dialog opens where you can choose if you want to select the schema from:</p>
+<ul>
+    <li>Workbench projects or</li>
+    <li>HTTP</li>
+</ul>
+<p class="image"><img src="images/struct-data-import-types-1.png" 
+alt="Choose where to select the Schema from."><br>
+<strong>Figure:</strong> Choose where to select the Schema from.</p>
+<h3>Selecting from Workbench Projects</h3>
+<p>In case you chose to select from workbench project, the next dialog offers
+to import appropriate files. Select <strong>Import Files...</strong> to open
+the file import dialog.</p>
+<p class="image"><img src="images/struct-data-import-types-2.png" 
+alt="Import Files"><br>
+<strong>Figure:</strong> Import Files</p>
+<p>Now browse to the import resource in your local file system.</p>
+<p class="image"><img src="images/import-types-select-resource.png" 
+alt="Browse to File."><br>
+<strong>Figure:</strong> Browse to File.</p>
+<p>Now select <strong>Finish</strong> to accept the files you selected.
+Select the schema file from the projects and click <strong>Next</strong>.</p>
+<p class="image"><img src="images/import-types-next.png" 
+alt="Select an XML Schema File."><br>
+<strong>Figure:</strong> Select an XML Schema File.</p>
+<p>Choose the types you want to import and select <strong>Finish</strong> to close
+the dialog.</p>
+<p class="image"><img src="images/import-types-finish.png" 
+alt="Choose the Types to be imported."><br>
+<strong>Figure:</strong> Choose the Types to be imported.</p>
+<h3>Selecting from HTTP</h3>
+<p>To select the schema from HTTP:</p>
+<ol>
+	<li>Choose <strong>HTTP</strong> and click <strong>Next</strong>.</li>
+	<li>In the <strong>Select an XML schema file from HTTP</strong> dialog,
+		type in the URL for your XML schema and select <strong>Load</strong> to 
+		load this URL, e.g.:</li>
+</ol>
+<p class="image"><img src="images/import-types-http-load.png" 
+alt="Enter a URL."><br>
+<strong>Figure:</strong> Enter a URL for your schema.</p>
+<ol start="3">
+	<li>After a successful load of the URL, select <strong>Next</strong>.</li>
+	<li>You can optionally save the resource in your current project.</li>
+</ol>
+<p class="image"><img src="images/import-types-http-1.png" 
+alt="Using the loaded schema"><br>
+<strong>Figure:</strong> Using the Loaded Schema</p>
+<ol start="5">
+	<li>In the next dialog select the types you like to import.</li>
+	<li>You can optionally save the original schema in the model to make
+	the imported structured data editable.</li>
+</ol>
+<p class="image"><img src="images/import-types-http-2.png" 
+alt="Select the Types"><br>
+<strong>Figure:</strong> Select the Types to be imported.</p>
+<ol start="7">
+	<li><strong>Finish</strong> the dialog.</li>
+</ol>
+<p>Now the imported type is added to your model. You can see it in the structured types tree of
+the Outline view, e.g.:</p>
+<p class="image"><img src="images/import-types-http-3.png" 
+alt="Imported Structured Type"><br>
+<strong>Figure:</strong> Imported Structured Type</p>
+<p class="note"><strong>Note</strong><br>
+Please note that there will be no warning in case the imported types have
+the same name or Id like existing structured types. You need to rename them explicitly.</p>
+<h2 id="exportTypes">Exporting Types</h2>
+<p>Data structure definitions can be exported to XSD for single data structures
+or for all data structure definitions in a process model. To export a structured
+data type:</p>
+<ol>
+    <li>In the Outline view right-click the data and select 
+        <strong>Export Schema</strong>.</li>
+</ol>
+<p class="image"><img src="images/export-struct-data.png" 
+alt="Export Schema"></p>
+<ol start="2">
+    <li>The <strong>Export XML schema</strong> dialog opens.</li>
+    <li>In case the type depends on other structured types, you
+        have to select in a list the types to be exported.</li>
+</ol>
+<p class="image"><img src="images/export-schema-type-dependencies.png" 
+alt="Export Schema"></p>
+<ol start="4">
+    <li>Select folder where you like your schema to be located.</li>
+</ol>
+<p class="image"><img src="images/export-schema-location.png" 
+alt="Export Schema"></p>
+<p>Now the exported types appear as xsd files in the selected folder, e.g.:</p>
+<p class="image"><img src="images/export-schema-location-result.png" 
+alt="Exported Schema Files"><br>
+<strong>Figure:</strong> Exported Schema Files</p>
+
+<h2 id="copy">Copying Structured Data Types</h2>
+<p>When copying a structured data to another model or project,
+the structured type is created automatically. In case a structured type with this
+name already exists, a dialog opens to enter a new name:</p>
+<!-- TODO: example -->
+<!-- <p>To create a new composite or enumeration type based on an existing type, press 
+  the <strong>Copy</strong> button.</p> -->
+<p class="image"><img src="images/copy-struct-data-new-name.png" 
+alt="Enter a New Name"><br>
+<strong>Figure:</strong> Enter a New Name</p>
+<h3>Copying structured data with imported XSD files</h3>
+<p>Note that in case you copy structured data types, which use an imported XSD file,
+between different projects, you have to
+copy the according XSD file to the target project first.
+Otherwise a warning dialog opens to remind you to copy this file, e.g.:</p>
+<p class="image"><img src="images/copy-struct-xsd-warning.png" 
+alt="XSD Copy Warning Dialog"><br>
+<strong>Figure:</strong> XSD Copy Warning Dialog</p>
+  
+<h2 id="del">Deleting Structured Types</h2>
+<p>To delete a type, right-click it in the Outline view and select
+ <strong>Delete Element</strong>.
+When a structured data type is deleted, which is used in process data, appropriate
+validation warnings are created, but entries concerning the type are left unchanged.</p>
+<h2 id="xpdl">XPDL Representation of Structured Data</h2>
+<p>Structured data are stored in the <tt>TypeDeclarations</tt> section of an XPDL 
+  file according to the XPDL standard. </p>
+<pre>
+&lt;xpdl:TypeDeclaration Id="Address" Name="Address"&gt;
+   &lt;xpdl:SchemaType&gt;
+        &lt;xsd:schema xmlns:Cou="http://www.infinity.com/bpm/model/NewWorkflowModel/Country"
+            xmlns:tns="http://www.infinity.com/bpm/model/NewWorkflowModel/Address" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                targetNamespace="http://www.infinity.com/bpm/model/NewWorkflowModel/Address"&gt;
+            &lt;xsd:complexType name="Address"&gt;
+                &lt;xsd:sequence&gt;
+                    &lt;xsd:element name="Street" type="xsd:string"/&gt;
+                    &lt;xsd:element name="Number" type="xsd:string"/&gt;
+                    &lt;xsd:element name="City" type="xsd:string"/&gt;
+                    &lt;xsd:element name="Country" type="xsd:string"/&gt;
+                &lt;/xsd:sequence&gt;
+            &lt;/xsd:complexType&gt;
+            &lt;xsd:element name="Address" type="tns:Address"/&gt;
+        &lt;/xsd:schema&gt;
+    &lt;/xpdl:SchemaType&gt;
+&lt;/xpdl:TypeDeclaration&gt;
+</pre>
+<h2 id="processData">Using Structured Data For Process Data</h2>
+<p>Select <strong>Structured Data</strong> as the data type for process data from 
+  the modeler palette or from the New Data option for the pop-up menu for the 
+  model node in the outline and select one of the structured data types defined 
+  for the process model as described above on the <strong>Structured Data Definition</strong> 
+  property page.</p>
+<p class="image"><img src="images/struct-data-create.png" 
+alt="Create a Data with Type Structured Data."><br>
+<strong>Figure:</strong> Create a Data with Type Structured Data.</p>
+<p class="image"><img src="images/data-property-page.png" 
+alt="Property Page of Data Type Structured Data."><br>
+<strong>Figure:</strong> Property Page of Data Type Structured Data.</p>
+<h2 id="xsdMapping">Mapping XSD Types</h2>
+<p>Some XSD types specified in structured data will be converted
+to JavaScript types when used for 
+<a href="../integration/messages/message-transformation-appl.html">Message Transformation applications</a>
+or in <a href="#transition">transition conditions</a>. For Java representations like Map, List or Object,
+they have to be converted to Java types. The following table displays the mapping performed
+for the XSD types:</p>
+
+<table class="autoWidth" id='id'>
+<tr><th>XSD Type</th><th>Java type</th><th>JavaScript type</th></tr>
+<tr><td>anySimpleType</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>anyURI</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>anyType</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>base64Binary</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>boolean</td><td>java.lang.Long</td><td>Number</td></tr>
+<tr><td>byte</td><td>java.lang.Byte</td><td>Number</td></tr>
+<tr><td>date</td><td>java.lang.Long</td><td>Number</td></tr>
+<tr><td>dateTime</td><td>java.lang.Long</td><td>Number</td></tr>
+<tr><td>decimal</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>double</td><td>java.lang.Double</td><td>Number</td></tr>
+<tr><td>duration</td><td>org.eclipse.stardust.common.Period</td><td>String</td></tr>
+<tr><td>ENTITIES</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>ENTITY</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>float</td><td>java.lang.Float</td><td>Number</td></tr>
+<tr><td>gDay</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>gMonth</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>gMonthDay</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>gYear</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>gYearMonth</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>hexBinary</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>ID</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>IDREF</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>IDREFS</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>int</td><td>java.lang.Integer</td><td>Number</td></tr>
+<tr><td>integer</td><td>java.lang.Integer</td><td>Number</td></tr>
+<tr><td>language</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>long</td><td>java.lang.Long</td><td>Number</td></tr>
+<tr><td>Name</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>NCName</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>negativeInteger</td><td>java.lang.Integer</td><td>Number</td></tr>
+<tr><td>NMTOKEN</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>NMTOKENS</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>nonNegativeInteger</td><td>java.lang.Integer</td><td>Number</td></tr>
+<tr><td>nonPositiveInteger</td><td>java.lang.Integer</td><td>Number</td></tr>
+<tr><td>normalizedString</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>NOTATION</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>positiveInteger</td><td>java.lang.Integer</td><td>Number</td></tr>
+<tr><td>QName</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>short</td><td>java.lang.Short</td><td>Number</td></tr>
+<tr><td>string</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>time</td><td>java.lang.Long</td><td>Number</td></tr>
+<tr><td>token</td><td>java.lang.String</td><td>String</td></tr>
+<tr><td>unsignedByte</td><td>java.lang.Byte</td><td>Number</td></tr>
+<tr><td>unsignedInt</td><td>java.lang.Integer</td><td>Number</td></tr>
+<tr><td>unsignedLong</td><td>java.lang.Long</td><td>Number</td></tr>
+<tr><td>unsignedShort</td><td>java.lang.Short</td><td>Number</td></tr>
+</table>
+
+<h3>XSD:anyType</h3>
+
+<p>When the actual type is not defined for any element or attribute, 
+the xsd:anyType is the default type for that. The values for elements or attributes of 
+type xsd:anyType are persisted with the Java type String. If the value of an xsd:anyType 
+element is another element, the persisted value is the corresponding xml fragment as String. For example,
+&lt;some_element&gt;...content (can be mixed - complex element)...&lt;/some_element&gt;.
+ Serialization of a structured data containing xsd:anyType elements 
+ via MessageSerializationApplication creates a valid xml with the xml 
+ fragment correctly embedded in the document.
+ 
+
+</p>
+
+
+<h3>Behavior of XSD:date Field</h3>
+<p>The <tt>XSD:date</tt> fields are not localized. Because the 
+Server Time Zone and Client Time Zone may not match.  It means, if you map the <tt>XSD:date</tt> field and
+ try to view it in Stardust Portal, the date value is displayed irrespective of Client Time Zone.
+ To view date and time, use <tt>XSD:dateTime</tt> field.
+ </p>
+
+<h3>Comparing Decimal XSD Types</h3> 
+<p>Please note that decimal xsd types are mapped as String values and thus are compared
+like Strings in transition conditions. To avoid this, use a Number typecast,
+e.g.:</p>
+<pre>Number(<i>StructData1.decimal</i>)&nbsp;&gt;&nbsp;Number(<i>StructData2.decimal</i>)</pre>
+<p class="image"><img src="images/data-mapping-casting.png" alt=""></p>
+<h2 id="datamappings">Data Mappings for Structured Data</h2>
+<p>Data in process data of structured type can be obtained or modified via XPath-like 
+dereferentiation paths. However, defining such dereferentiation paths does 
+not require any XPath skills.</p>
+<ul>
+	<li><a href="#dataMap">Defining the Data Mappings</a></li>
+	<li><a href="#XOM-DOM">Transform Structured Data to DOM object</a></li>
+	<li><a href="#xom">XOM Conversion Not Supported</a></li>
+	<li><a href="#mapBeh">Behavior for IN and OUT Data Mappings</a></li>
+</ul>
+<h3 id="dataMap">Defining the Data Mappings</h3>
+<p>Create IN/OUT data mappings between an activity and a data of structured 
+type as described in chapter
+<a href="../mg-defdesk-8.htm">Specifying Data Mappings</a>:</p>
+<p class="image"><img src="images/data-mapping.png" alt=""></p>
+<p>After opening the data mapping dialog</p>
+<p class="image"><img src="images/data-mapping-dialog.png" alt=""></p>
+<p>and selecting the <strong>Browse</strong> button, the data path browser will open and 
+  show the top level of the data structure, e.g.</p>
+<p class="image"><img src="images/path-brower-start.png" alt=""></p>
+<p>By selecting one cell in the <strong>Next Element</strong> column, you navigate to this 
+  element:</p>
+<p class="image"><img src="images/path-browser-structure.png" alt=""></p>
+<p>until you have reached an atomic data as shown in the following figure: </p>
+<p>Please refer to the section
+<a href="#XOM-DOM">Transform Structured Data to DOM Objects</a>
+for a detailed description of the <tt>DOM</tt> option 
+visible in the above screenshot.</p>
+<p class="image"><img src="images/path-browser-field.png" alt=""></p>
+<p>If the selected field has a list type, you need to specify, whether you intend 
+  to retrieve the entire list, e.g.:</p>
+<p class="image"><img src="images/path-browser-list-all.png" alt=""></p>
+<p>or a single element, e.g.:</p>
+<p class="image"><img src="images/path-browser-list-index.png" alt=""></p>
+<p>Note, that you can access lists of lists as results of the dereferentiation 
+  this way.</p>
+<p>The <strong>Back</strong> and <strong>Next</strong> buttons allow you to step back and forth in 
+  the dereferentiation path. </p>
+<p>The path created in the path browser can be stored in the data mapping via 
+  the <strong>Finish</strong> button.</p>
+<p class="image"><img src="images/data-mapping-dialog-populated.png" alt=""></p>
+<h3 id="XOM-DOM">Transform Structured Data to DOM object</h3>
+<p>The <tt>DOM</tt> options, which you can set in the data path dialog, allow you to
+transform the structured data type to <tt>DOM</tt> objects.  
+Using <tt>DOM()</tt> converts the Structured Data into a data of type
+<tt>org.w3c.dom.Element</tt>.</p>
+<p>If you have an activity and you have connected a data of type structured 
+data to it, you can set these options in the <tt>Access path browser</tt> on the corresponding 
+property page of the activity (datamappings). For application activities,
+take care to add the correct
+return type to your application class methods depending on the used object. 
+The following application class gives an example class,
+which is called in an application activity using <tt>DOM()</tt> in a data path:</p>
+<pre>
+import org.w3c.dom.Element;
+
+public class DOMApplication {
+
+	private Element myElement;
+	
+	public Element complete(Element aEle) {
+		System.out.println(aEle);
+		return aEle;
+	}
+
+	public void setMyElement(Element myElement) {
+		this.myElement = myElement;
+	}
+
+	public Element getMyElement() {
+		return myElement;
+	}
+	
+</pre>
+<p>In the application, you can use the methods from this class in
+as access points. E.g.:</p>
+<p class="image"><img src="images/dom-example.png" alt=""><br>
+<strong>Figure:</strong> Using DOM in data path</p>
+<h3 id="mapBeh">Behavior for IN and OUT Data Mappings</h3>
+<p>The semantics of IN and OUT data mappings defined on structured data differ 
+  for different dereferentiation paths. The following table describes possible 
+  IN- and OUT- data mapping expressions for example schema:</p>
+<table width="100%" border="1" id='id_1'>
+  <tr> 
+    <th width="7%">Direction</th>
+    <th width="17%">Purpose</th>
+    <th width="22%">Example(s)</th>
+    <th width="9%">Java Type</th>
+    <th width="45%">Value contents</th>
+  </tr>
+  <tr> 
+    <td width="7%">READ + WRITE</td>
+    <td width="17%">Retrieve/set a value of primitive type</td>
+    <td width="22%"><tt>order[1]/qty</tt></td>
+    <td width="9%"><tt>int</tt></td>
+    <td width="45%">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="7%">READ + WRITE</td>
+    <td width="17%">&nbsp;</td>
+    <td width="22%"><tt>date</tt></td>
+    <td width="9%"><tt>java.util.Date</tt></td>
+    <td width="45%">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="7%">READ + WRITE</td>
+    <td width="17%">retrieve/set the complete complexType </td>
+    <td width="22%"><tt>order[2], order[2]/customer/address[1] </tt></td>
+    <td width="9%"><tt>java.util.Map </tt></td>
+    <td width="45%">Contains all fields of order[2], incl. subelements like customer, 
+      map key is always the field name. For subelements allowing multiple instances, 
+      map value is java.util.List </td>
+  </tr>
+  <tr> 
+    <td width="7%">READ + WRITE </td>
+    <td width="17%">retrieve a list of complexTypes </td>
+    <td width="22%"><tt>order, order[1]/customer/address </tt></td>
+    <td width="9%"><tt>java.util.List </tt></td>
+    <td width="45%">Contains all hits satisfying the expression (all orders/all 
+      addresses of the customer from the first order), List elements are instances 
+      of java.util.Map. Only the last component of the XPath expression is allowed 
+      to have multiple occurrences (maxOccurs&gt;1) </td>
+  </tr> 
+  <tr> 
+    <td width="7%">READ only </td>
+    <td width="17%">retrieve a list of arbitrary complexTypes </td>
+    <td width="22%"><tt>order/customer/address<br>
+      </tt> other complex expressions allowed </td>
+    <td width="9%"><tt>java.util.List </tt></td>
+    <td width="45%">Contains all hits satisfying the expression (all addresses 
+      of the customer from all orders), List elements are instances of java.util.Map. 
+      Only the last component of the XPath expression is allowed to have multiple 
+      occurrences (maxOccurs&gt;1) </td>
+  </tr>
+</table>
+<p> Note, that the rule to decide if <tt>java.util.List</tt> or <tt>java.util.Map</tt> 
+  should be used: if all XPath parts can only return one element, <tt>java.util.Map</tt> 
+  will be used as Java type, otherwise <tt>java.util.List</tt>. The term &quot;can 
+  only return one element&quot; is true, if the element per definition has a maxOccurs=1 
+  or a unique index is used ([last()], ([first()], [NUMBER]).</p>
+<h2 id="webservice">Using Structured Data in WebService Applications</h2>
+<p>To use structured data as input or output for WebService Applications, please refer
+to the section <a href="../mg-integration-8.htm#struct">Structured Data as Input and Output</a>
+of the chapter <a href="../mg-integration-8.htm">Integrating Synchronous Web Services</a>
+for detailed information.</p>
+<h2 id="javaAppl">Structured Data and Java Type Applications</h2>
+<p>Details on how to use structured data types with Java application types (Java 
+  classes, Session Beans) can be obtained from the chapter
+  <a href="../../programming/pg-structured-data.html">Structured Data and Java Type Applications</a> of the
+  <a href="../../programming/pg-preface.htm">Programming Guide</a>.</p>
+<h2 id="annotations">Data Structure Annotations and Field Annotations</h2>
+<p>Primitive fields of composite data structures and composite data structures 
+themselves can have annotations.</p>
+<!-- These annotations can be used by other parts of Stardust, e.g.
+    <li>Persistence or indexing mechanisms for Lego data structures or
+<li>SWIFT parsing and serialization. -->
+<p>Annotations are grouped in categories. The following categories are supported
+for leaf fields of composite data structures:</p>
+<!-- TODO: extend when implemented -->
+<table id='id_2'>
+<tr>
+<th>Category</th>
+<th>ID/Name</th>
+<th>Type</th>
+<th>Content</th>
+</tr>
+         
+<tr>
+    <td>Global</td>
+    <td>Persistence</td>
+    <td></td>
+    <td>Indicates whether the field will be persisted.</td>
+</tr>
+<tr>
+    <td>Global</td>
+    <td>Indexing</td>
+    <td></td>
+    <td>Indicates, whether the field will be indexed and hence can be used for 
+    queries, filtering and sorting of process instances etc.</td>
+<!-- TODO not yet implemented  
+</tr><tr>
+    <td>Global</td>
+    <td>Minimum Length</td>
+    <td></td>
+    <td>The minimum length of the field content. (For String fields only)</td>
+</tr> -->
+<!-- TODO not yet implemented  
+<tr>
+    <td>Global</td>
+    <td>Maximum Length</td>
+    <td></td>
+    <td>The minimum length of the field content. (For String fields only)</td>
+</tr>-->
+<!-- TODO not yet implemented  
+<tr>
+    <td>Global</td>
+    <td>Choice Element</td>
+    <td></td>
+    <td>Specifies whether the element has the union character of an &lt;xsd:choice&gt;.</td>
+</tr>-->
+<!-- TODO not yet implemented  
+<tr>
+    <td>Global</td>
+    <td>Pattern</td>
+    <td></td>
+    <td>Regular expression for field content. Reflects the XSD pattern attribute.</td>
+</tr>-->
+<!-- TODO not yet implemented  
+<tr>
+    <td>Global</td>
+    <td>Default Value</td>
+    <td></td>
+    <td>Default value, the field is initialized with in the GUI or during parsing.</td>
+</tr>-->
+<!-- TODO not yet implemented  
+<tr>
+    <td>Global</td>
+    <td>Constant</td>
+    <td></td>
+    <td>Indicates, whether the field carries a constant value.</td>
+</tr>-->
+<!-- TODO not yet implemented  
+<tr>
+    <td>Global</td>
+    <td>Ordering</td>
+    <td>Boolean</td>
+    <td>Indicates, whether a list structure is ordered.</td>
+</tr>-->
+<!-- TODO not yet implemented  
+<tr>
+    <td>SWIFT</td>
+    <td>Tag</td>
+    <td></td>
+    <td>SWIFT tag of the element.</td>
+</tr>-->
+</table>
+
+<h3>Annotation Editor</h3>
+<p>At the bottom of the composite property page, a table tree view is added to
+modify predefined annotations for all elements of the composite type:</p>
+<!-- TODO: add screenshot -->
+<p>For enumerations this table tree remains empty.</p>
+<h3>XPDL/XSD Representation</h3>
+<p>Global annotations are stored as XSD annotations in the following structure:</p>
+<pre>
+&lt;xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema xmlns:infinity="..."&gt;
+   &lt;xsd:element name="customer" type="Customer"&gt; &lt;xsd:annotation&gt;
+   &lt;xsd:complexType&gt;
+    &lt;xsd:sequence minOccurs="0"&gt;
+     &lt;xsd:element name="someString" type="xsd:string" maxOccurs="unbounded"&gt;
+      &lt;xsd:annotation&gt;
+       &lt;xsd:appinfo&gt;
+        &lt;infinity:storage&gt;
+         &lt;infinity:indexed&gt;false/infinity:indexed&gt;
+         &lt;infinity:persistent&gt;false&lt;/infinity:persistent&gt;
+        &lt;/infinity:storage&gt;
+       &lt;/xsd:appinfo&gt;
+      &lt;/xsd:annotation&gt;
+     &lt;/xsd:element&gt;
+    &lt;/xsd:sequence&gt;
+   &lt;/xsd:complexType&gt;
+  &lt;/xsd:element&gt;
+&lt;/xsd:schema&gt;
+</pre>
+<p>Other formats may specify how to store their annotations in a corresponding 
+<!-- commented out not yet existing link
+ XSD structure in the implementation of the <a href="">Message Format extension point</a>. -->
+XSD structure in the implementation of the Message Format extension point. 
+For example combining upcoming SWIFT standards and global annotations from the
+Process Workbench, an XSD representation of a data structure definition would look like:</p>
+<pre>
+&lt;xs:annotation&gt;
+   &lt;xs:appinfo&gt;
+      &lt;info:FinFormat value="16c"/&gt;
+   &lt;/xs:appinfo&gt;
+&lt;/xs:annotation&gt;
+
+&lt;xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema xmlns:infinity="http://www.carnot.ag/xpdl/3.1"&gt;
+   &lt;xsd:element name="customer" type="Customer"&gt;
+   &lt;xsd:complexType&gt;
+    &lt;xsd:sequence minOccurs="0"&gt;
+     &lt;xsd:element name="someString" type="xsd:string" maxOccurs="unbounded"&gt;
+      &lt;xsd:annotation&gt;
+       &lt;xsd:appinfo&gt;
+
+     &lt;!--Stardust global annotations--&gt;
+        &lt;infinity:storage&gt; 
+         &lt;infinity:indexed&gt;false&lt;/infinity:indexed&gt;
+         &lt;infinity:persistent&gt;false&lt;/infinity:persistent&gt;
+        &lt;/infinity:storage&gt;
+       &lt;/xsd:appinfo&gt;
+      &lt;/xsd:annotation&gt;
+     &lt;/xsd:element&gt;
+    &lt;/xsd:sequence&gt;
+   &lt;/xsd:complexType&gt;
+  &lt;/xsd:element&gt;
+&lt;/xsd:schema&gt;
+</pre>
+<!-- TODO: implemented? -->
+<h3>Extension Point</h3>
+<p>Annotations and categories can be dynamically added to the modeling environment
+with an Eclipse extension point, which:</p>
+<ul>
+    <li>defines a category for the annotation editor (e.g. SWIFT),</li>
+    <li>parses annotations for all relevant nodes of an XSD tree 
+    and creates annotation objects for the internal data structure model.</li>
+    <li>generates annotations for all relevant nodes of an XSD
+    tree based on the internal data structure model.</li>
+    <li>defines label providers and optionally in-place editors for all 
+    annotations in the category specified by the extension type.</li>
+</ul>
+<p>Select the following link to view the schema description of the 
+<strong>applicationInfo</strong> extension 
+point:
+<a href="../../../reference/extensions/ag_carnot_bpm_modeling_data_structured_applicationInfo.html">
+	applicationInfo schema</a></p>
+
+<h2 id="descriptors">Using Structured Data as Descriptors</h2>
+<p>Primitive data retrieved from structured data can be used as 
+descriptors for process definitions:</p>
+<p class="image"><img src="images/descriptor-page.png" alt=""></p>
+<p>with the same dereferentiation path mechanisms as for <a href="#datamappings">Data Mappings 
+of Structured Data</a>: </p>
+<p class="image"><img src="images/descriptor-path.png" alt=""></p>
+<p>Please refer to the section
+<a href="../../modelling/mg-defdesk-9.htm#descriptors">Descriptors</a>
+of the chapter
+<a href="../../modelling/mg-defdesk-9.htm">Working with Data Paths</a>
+for general information on the usage of descriptors.</p>
+<h2 id="storage">Structure Data Storage</h2>
+<p>Process data of structured type are stored in the tables in the Stardust Audit 
+  Trail Database. The storage layout is optimized for efficient access in queries. 
+</p>
+<h3></h3>
+<p>See details about structured data storage in the chapter
+<a href="../../operation/audit-trail/ag-struct-data.html">Structured Data Storage</a> of the
+<a href="../../operation/ag-preface.htm">Operation Guide</a>.</p>
+<h2 id="xsdValidation">XSD Schema Validation</h2>
+<p>Per default, a strict xpath validation will be performed on XSD schemas. To change
+the validation behavior, you can set 
+the property <tt>XPath.StrictEvaluation</tt> in your <tt>carnot.properties</tt> file.</p>
+<p>If this property is set to <tt>true</tt>, which is the default value, strict XPath
+evaluation will be performed.
+Set to <tt>false</tt>, dereferentiation paths on structured data are invoked, even if the XSD schema
+has changed, provided the path is still compatible with the new schema. Otherwise invocation
+fails.</p>
+<h2 id="gui">Structured Types and GUI Generation</h2>
+<p>The Stardust Workflow Execution Perspective supports the automatic generation of GUI forms 
+  to display and modify data of structured data types.</p>
+<h3>Manual Activities in the Stardust Portal</h3>
+<p>If <a href="../activities/manual-activities.html">Manual activities</a> are activated in the JSF-based 
+<strong>Workflow Execution Perspective</strong> a 
+  form is created at runtime for all data mappings whose endpoints return</p>
+<ul>
+  <li>primitive</li>
+  <li>and structured </li>
+</ul>
+<p>data types. </p>
+<p>For the primitive and structured data the following mapping rules are used</p>
+<table width="100%" border="1" id='id_3'>
+  <tr> 
+    <th>Data Mapping Endpoint Type</th>
+    <th>GUI Element</th>
+  </tr>
+  <tr> 
+    <td>Integer, float or string type</td>
+    <td>Entry fields with corresponding validation rules. Readonly, when the data 
+      mapping is an IN path only.</td>
+  </tr>
+  <tr> 
+    <td>Boolean type</td>
+    <td>Checkbox. Readonly, when the data mapping is an IN path only.</td>
+  </tr>
+  <tr> 
+    <td>Enumeration type</td>
+    <td>Combo box with enumeration keys. Readonly, when the data mapping is an 
+      IN path only.</td>
+  </tr>
+  <tr> 
+    <td>Composite data type</td>
+    <td>Titled boxes with GUI elements for all fields of the composite type</td>
+  </tr>
+  <tr>
+    <td valign="top">List of the above</td>
+    <td> Tables displaying the corresponding GUI elements for all list entries 
+      and GUI controls to add and remove list elements as well as collapse and 
+      expand the displayed GUI elements according to the following list
+      <table width="100%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+          <td width="2%"><img src="images/collapse.png"></td>
+          <td width="98%">collapse all list elements</td>
+        </tr>
+        <tr>
+          <td width="2%"><img src="images/expand.png"></td>
+          <td width="98%">expand all list elements</td>
+        </tr>
+        
+        <tr>
+          <td width="2%"><img src="images/new-element.png"></td>
+          <td width="98%">add new list element</td>
+        </tr>
+      </table>
+      The add and delete button are missing when the data mapping is an IN 
+      path only.</td>
+  </tr>
+</table>
+<p>For example, for the structure</p>
+<p class="image"><img src="images/person-data-structure.png" alt=""></p>
+<p>and the following data mapping</p>
+<p class="image"><img src="images/data-mapping.png" alt=""></p>
+<p>whereby customer is of structured type <strong>Person</strong>, the following GUI form is generated:</p>
+<p class="image"><img src="images/manual-activity-form.png" alt=""></p>
+ 
+<h4>Mapping of Enumerations</h4>
+<p>The combobox is created if direct mapping of enumeration is provided into activities 
+or enumeration field is inside a composite type.</p>
+<p class="image"><img src="images/enumeration-form.png" alt=""></p>
+
+<h2 id="transition">Setting Up Transition Conditions for Structured Data</h2>
+<p>To set up transition conditions with structured data expressions the Data ID has to be followed 
+the XPATH expression. For example:</p>
+<pre>&lt;DataID&gt;.a.b.c == &lt;value&gt;</pre>
+<p>references the element denoted by XPath "a.b.c" in data "DataID".</p>
+<pre>&lt;DataID&gt;.a.b.c[1] == &lt;value&gt;</pre>
+<p>references the fist element of the list denoted by XPath "a.b.c" in data "DataID".</p>
+<p class="image"><img src="images/struct-data-transition-condition.png" alt="Transition Condition"></p>
+<h4>Note - Viewing Structured Data with XPATH in the Stardust Portal</h4>
+
+<p>When working with XPATH enabled sturctured data in the Stardust Portal, make sure that the correct input is provided in the field.
+If no value is provided or XPATH is null or inappropriate, then at the time of instantiation of the process or activity 
+in the Stardust Portal, a warning message is displayed after expanding the data. To expand the data, click on the 
+plus <img src="images/plus.png"></img> sign. </p>
+<p>The warning message looks like as shown in the following screenshot:</p>
+
+<p class="image"><img src="images/warning.png" alt="Stardust Portal - XPATH Warning"></img></p>
+
+
+
+
+<p>For detailed information on setting transition conditions please refer to the
+section <a href="../mg-defdesk-5.htm#conditions">Setting Transition Conditions</a>
+in the chapter <a href="../mg-defdesk-5.htm">Working with Transitions</a>.</p>
+<script language="JavaScript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

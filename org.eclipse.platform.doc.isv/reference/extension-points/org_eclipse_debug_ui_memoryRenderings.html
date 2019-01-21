@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Memory Renderings</title>
+<style type="text/css">@import url("../../book.css");</style>
+<style type="text/css">@import url("../../schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">Memory Renderings</H1>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>org.eclipse.debug.ui.memoryRenderings<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Since: </h6>3.1 - replacement for memoryRenderingTypes extension point which was considered experimental in 3.0
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6>Allows plug-ins to contribute arbitrary renderings for memory blocks and bind memory blocks to renderings. For example, a rendering may translate raw bytes of a memory block into ASCII characters.<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.renderingType">renderingType</a>* | <a href="#e.renderingBindings">renderingBindings</a>*)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p>
+<p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>point</b> - a fully qualified identifier of the target extension point</li>
+<li><b>id</b> - an optional identifier of the extension instance</li>
+<li><b>name</b> - an optional name of the extension instance</li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.renderingType">renderingType</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST renderingType</p>
+<p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">class&nbsp;CDATA #REQUIRED&gt;</p>
+<p></p>
+<p class="ConfigMarkupElementDesc">
+This element defines a rendering type.</p>
+<br>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>name</b> - human-readable name of this rendering type</li>
+<li><b>id</b> - unique identifier for this rendering</li>
+<li><b>class</b> - fully qualified name of the Java class that implements <code>org.eclipse.debug.ui.memory.IMemoryRenderingTypeDelegate</code></li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.renderingBindings">renderingBindings</a> (<a href="#e.enablement">enablement</a>*)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST renderingBindings</p>
+<p class="code SchemaDtdAttlist">renderingIds&nbsp;CDATA #IMPLIED</p>
+<p class="code SchemaDtdAttlist">primaryId&nbsp;&nbsp;&nbsp;&nbsp;IDREF #IMPLIED</p>
+<p class="code SchemaDtdAttlist">class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p>
+<p class="code SchemaDtdAttlist">defaultIds&nbsp;&nbsp;&nbsp;CDATA #IMPLIED&gt;</p>
+<p></p>
+<p class="ConfigMarkupElementDesc">
+Binds memory blocks with available renderings.</p>
+<br>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>renderingIds</b> - comma delimited list of memory rendering type identifiers, specifying available rendering types for memory blocks this binding is enabled for. Must not be specified when <code>class</code> is provided.</li>
+<li><b>primaryId</b> - memory rendering type identifier, specifying the default rendering type to be considered primary for memory blocks this binding is enabled for. When there is more than one default rendering type bound to a memory block, the UI may use the information to determine which rendering should be made visible (i.e the primrary one). Must not be specified when <code>class</code> is provided. Clients should be careful to specify only one primary rendering type per memory block.</li>
+<li><b>class</b> - fully qualified name of the Java class that implements <code>org.eclipse.debug.ui.memory.IMemoryRenderingBindingsProvider</code>, allowing for dynamic rendering bindings. When specified, <code>renderingIds</code>, <code>defaultIds</code>, and <code>primaryId</code> must not be specified.</li>
+<li><b>defaultIds</b> - comma delimited list of memory rendering type identifiers, specifying default rendering types for memory blocks this binding is enabled for. Must not be specified when <code>class</code> is provided.</li>
+</ul>
+<br><h6 class="CaptionFigColumn SchemaHeader">Examples: </h6>The following is an example for defining a new rendering type and binding. 
+
+<p>
+<pre class="Example"><span class="code SchemaTag">
+&lt;extension point=</span><span class="code SchemaCstring">&quot;org.eclipse.debug.ui.memoryRenderings&quot;</span><span class="code SchemaTag">&gt;
+    &lt;renderingType 
+        name=</span><span class="code SchemaCstring">&quot;Sample Rendering&quot;</span><span class="code SchemaTag">
+        id=</span><span class="code SchemaCstring">&quot;com.example.sampleRendering&quot;</span><span class="code SchemaTag">
+        class=</span><span class="code SchemaCstring">&quot;com.example.SampleRenderingTypeDelegate&quot;</span><span class="code SchemaTag">&gt;
+    &lt;/renderingType&gt;
+    &lt;renderingBindings
+        renderingIds=</span><span class="code SchemaCstring">&quot;com.example.sampleRendering&quot;</span><span class="code SchemaTag">&gt;
+        &lt;enablement&gt;
+            &lt;instanceof value=</span><span class="code SchemaCstring">&quot;com.example.SampleMemoryBlock&quot;</span><span class="code SchemaTag">/&gt;
+        &lt;/enablement&gt;    
+    &lt;/renderingBindings&gt;          
+&lt;/extension&gt;        
+</span></pre>
+</p>
+
+In the above example, a new rendering type, Sample Rendering, is defined. The class <code>com.example.SampleRenderingTypeDelegate</code> implements <code>org.eclipse.debug.ui.memory.IMemoryRenderingTypeDelegate</code> and will be used to create new renderings of this type. The rendering is bound to instances of <code>com.exmaple.SampleMemoryBlock</code>.
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">API Information: </h6><p>
+<li>Value of the attribute <b>class</b> in a <b>renderingType</b> element must be a fully qualifed name of a Java class that implements <b>org.eclipse.debug.ui.memory.IMemoryRenderingTypeDelegate</b>.</li>
+<li>Value of the attribute <b>class</b> in a <b>renderingBindings</b> element must be a fully qualifed name of a Java class that implements <b>org.eclipse.debug.ui.memory.IMemoryRenderingBindingsProvider</b>.</li>
+</p>
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Supplied Implementation: </h6><p>
+The debug platform provides the following rendering types:<br>
+<li>Hex Rendering (rendering id: org.eclipse.debug.ui.rendering.raw_memory)</li>
+<li>ASCII Rendering (rendering id: org.eclipse.debug.ui.rendering.ascii)</li>
+<li>Signed Integer Rendering (rendering id: org.eclipse.debug.ui.rendering.signedint)</li>
+<li>Unsigned Integer Rendering (rendering id: org.eclipse.debug.ui.rendering.unsignedint) </li>
+<br>
+</p>
+<p>
+The debug platform provides a memory view to host renderings.
+</p>
+<p></p>
+
+<br>
+<p class="note SchemaCopyright">
+Copyright (c) 2004, 2005 IBM Corporation and others.<br>
+All rights reserved. This program and the accompanying materials are made 
+available under the terms of the Eclipse Public License v1.0 which 
+accompanies this distribution, and is available at 
+<a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>
+
+</p>
+</BODY>
+</HTML>

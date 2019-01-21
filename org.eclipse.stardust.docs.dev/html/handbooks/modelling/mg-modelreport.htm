@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="../../styles/carnot.css" CHARSET="ISO-8859-1" TYPE="text/css">
+<TITLE>Process Model Report</TITLE>
+<script language="JavaScript" src="../../styles/naviLine.js" type="text/javascript"></script>  
+</head>
+<body>
+<script language="JavaScript">
+<!--
+	writeNavigation("Loading Models from Audit Trail","../../toc.html","mg-defdesk-16.htm","mg-defdesk-17.htm",
+		"../handbooks.htm","Developer Handbook",
+		"mg-preface.htm","Modeling Guide",
+		"mg-modeler-preface.html","The Process Workbench");
+ -->
+</script>
+<h1>Process Model Report</h1>
+<p>The process model report offers static information derived from the model definition.</p>
+<p>Stardust offers a pre-installed BIRT version to be able to run the process model report. If you
+use your own BIRT installation, please refer to the corresponding 
+  <a href="http://www.eclipse.org/birt/phoenix/build/">Birt Installation 
+  Guide</a> on how to install BIRT.
+  Refer to the 
+  <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.installation/html/releasenotes/releasenotes_@ipp.version.major@@ipp.version.minor@@ipp.version.micro@.html">
+Stardust Release Notes</a> for details on the supported Birt version.</p>
+<h2>Start the Process Model Report</h2> 
+<p>To run the process model report:</p>
+<ul>
+	<li>In the main toolbar select the <strong>Process Model Report</strong> button.</li>
+	<li>Choose the report format <tt>HTML</tt> or <tt>PDF</tt>.</li>
+	<li><strong>OK</strong> the dialog.</li>
+</ul>
+<p class="image"><img src="images/mg-report-button.png" alt="Starting Model Process Report"/>
+<br><strong>Figure:</strong> Starting Model Process Report</p>
+<h2>Definitions</h2>
+<p>Now the Report Viewer opens with details on your model. To view these details there are 
+several definition views:</p>
+<ul>
+	<li><a href="#overview">Overview</a></li>
+	<li><a href="#process">Process Definition Details</a></li>
+	<li><a href="#appl">Application Details</a></li>
+	<li><a href="#role">Role Details</a></li>
+	<li><a href="#org">Organization Details</a></li>
+	<li><a href="#activity">Activity Details</a></li>
+	<li><a href="#data">Data Details</a></li>
+</ul>
+<h3 id="overview">Definition - Overview</h3>
+<p>The report <strong>Definition - Overview</strong> gives an overview of the model's
+basic attributes like name, description and id as well as the following components:
+<ul>
+    <li> Process Definitions</li>
+    <li> Roles</li>
+    <li> Organizations </li>
+    <li> Applications</li>
+    <li> Data</li>
+</ul>
+<p class="image"><a href="images/mg-report_orgSize.png" target="_blank">
+	<img src="images/mg-report.png" alt="Model Process Report"/></a></p>
+<p>The name and the description of each component are displayed. Click the <strong>Details</strong> link
+in the <strong>Definition</strong> column to go to the detailed definition report for each component.</p>
+<h3 id="process">Definition - Process Definition Details</h3>
+<p>A <strong>Process Definition Details</strong> report can be opened by 
+  clicking on a <strong>Details</strong> link behind the name of a process definition 
+  in the <strong>Definition Overview</strong> report. It shows detailed information 
+  about a process definition. In addition to the name, the description and the 
+  id of the selected process definition, all model components directly related 
+  to it are listed in this report, like:</p>
+<ul>
+	<li>Starting Roles or Organizations</li>
+	<li>Activities</li>
+	<li>Subprocesses</li>
+	<li>Superprocesses</li>
+</ul> 
+  
+<h4>Starting Roles or Organizations</h4>
+<p>This section shows a list of all roles or organizations which are entitled to 
+create and start a new instance of the process definition. The names displayed 
+link to the detailed Report for the roles or organizations.</p>
+<h4>Activities</h4>
+<p>All activities are listed, which are part of the process definition and 
+therefore can become part of its instances. A table containing description, 
+performer and application used, is displayed for each of these activities. Click on the names
+of the activities or components to go to the detailed report on them.</p>
+<h4>Subprocesses and Superprocesses</h4>
+<p>This table shows all sub- and superprocesses of the selected 
+process definition. Click their names to link to their respective 
+<strong>Process Definition Detail</strong> report.</p>
+<p class="image"><a href="images/mg-report-process_orgSize.png" target="_blank">
+	<img src="images/mg-report-process.png" alt="Process Definition Details"/></a></p>
+<h3 id="appl">Definition - Application Details</h3>
+<p>An Application Details report can be opened by clicking on the <strong>Details</strong>
+link behind the name of an application in the <strong>Definition Overview</strong> report.
+It shows information about an application, like name and description.</p>
+<p class="image"><a href="images/mg-report-appl_orgSize.png" target="_blank">
+	<img src="images/mg-report-appl.png" alt="Definition - Application Details"/></a></p>
+<h3 id="role">Definition - Role Details </h3>
+<p>A Role Details sample report can be opened by clicking on the Details link behind 
+the name of a role in the <strong>Definition Overview</strong> report. It 
+shows detailed information about a role, like name, description and activities.</p>
+<p class="image"><a href="images/mg-report-role_orgSize.png" target="_blank">
+	<img src="images/mg-report-role.png" alt="Definition - Role Details"/></a></p>
+<h3 id="org">Definition - Organization Details</h3>
+<p>An Organization Details sample report can be opened by clicking on the 
+Details link behind the name of an organization in the 
+<strong>Definition Overview</strong> report. It shows detailed information about 
+an organization, like name, description and activities.</p>
+<p class="image"><a href="images/mg-report-org_orgSize.png" target="_blank">
+	<img src="images/mg-report-org.png" alt="Definition - Organization Details"/></a></p>
+<h3 id="activity">Definition - Activity Details</h3>
+<p>An <strong>Activity Details</strong> report can be opened by clicking 
+the name of an activity in a <strong>Process Definition Details</strong> 
+report. It shows detailed information about an activity. In addition to 
+the type, name, description and id of the selected activity, all model components 
+directly related to it are listed in this report:</p>
+<ul>
+	<li>Performer</li>
+	<li>Application</li>
+	<li>Model Name</li>
+	<li>Process Definition Name</li>
+	<li>Preceeding Activities</li>
+	<li>Succeeding Activities</li>
+	<li>Input Data</li>
+	<li>Output Data</li>
+</ul>
+<h4>Performer</h4>
+<p>This section displays the organization or role performing this activity.</p>
+<h4>Application</h4>
+<p>Application used to perform this activity.</p>
+<h4>Preceding Activities</h4>
+<p>In this section the names of all activities directly preceding this activity 
+in its process definition are listed. The activity names link to their respective 
+<strong>Activity Detail</strong> reports.</p>
+<h4>Succeeding Activities</h4>
+<p>In this section the names of all activities directly succeeding this activity 
+in its process definition are listed. The activity names link to their respective 
+<strong>Activity Detail</strong> reports.</p>
+<h4>Input Data</h4>
+<p>This table lists the names, types, Ids and descriptions of all data objects which may 
+serve as input for this activity.</p>
+<h4>Output Data</h4>
+<p>This table lists the names, types, Ids and descriptions of all data objects which may be altered 
+during this activity.</p>
+<p class="image"><a href="images/mg-report-activity_orgSize.png" target="_blank">
+	<img src="images/mg-report-activity.png" alt="Definition - Activity Details"/></a></p>
+<h3 id="data">Definition - Data Details</h3>
+<p>This section displays the name, id, type and description of the selected data. Additionally
+there are two tables to list the activities, which the data is input and output for. Clicking
+on the activities names link to their Details definition.</p>
+<p class="image"><a href="images/mg-report-data_orgSize.png" target="_blank">
+	<img src="images/mg-report-data.png" alt="Definition - Data Details"/></a></p>
+<script language="JavaScript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

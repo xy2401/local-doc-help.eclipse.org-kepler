@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Console Pattern Match Listeners</title>
+<style type="text/css">@import url("../../book.css");</style>
+<style type="text/css">@import url("../../schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">Console Pattern Match Listeners</H1>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>org.eclipse.ui.console.consolePatternMatchListeners<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Since: </h6>3.1
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6>Provides regular expression matching for text consoles. Pattern match listeners can be contributed to specific consoles by using an enablement expression. Listeners are notified as matches are found.<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.consolePatternMatchListener">consolePatternMatchListener</a>*)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p>
+<p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>point</b> - a fully qualified identifier of the target extension point</li>
+<li><b>id</b> - an optional identifier of the extension instance</li>
+<li><b>name</b> - an optional name of the extension instance</li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.consolePatternMatchListener">consolePatternMatchListener</a> (<a href="#e.enablement">enablement</a>)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST consolePatternMatchListener</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">regex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">flags&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p>
+<p class="code SchemaDtdAttlist">qualifier&nbsp;CDATA #IMPLIED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>id</b> - specifies a unique identifier for this console pattern match listener</li>
+<li><b>class</b> - specifies a fully qualified name of a Java class that implements <code>IPatternMatchListenerDelegate</code></li>
+<li><b>regex</b> - specifies the regular expression to be matched. Since 3.2, this attribute supports string variable substitution.</li>
+<li><b>flags</b> - specifies flags to be used when matching the pattern. Acceptable flags are defined in <code>java.util.regex.Pattern</code> and should be specified as Strings (eg "Pattern.MULTILINE" or "MULTILINE")</li>
+<li><b>qualifier</b> - a simple regular expression used to identify a line that may contain this pattern match listener's complete regular expression <code>regex</code>. When a line is found containing this expression, a search is performed from the beginning of the line for this pattern matcher's complete <code>regex</code>. Use of this attribute is optional but can greatly improve performance as lines not containing this expression are disqualified from the search. Since 3.2, this attribute supports string variable substitution.</li>
+</ul>
+<br><h6 class="CaptionFigColumn SchemaHeader">Examples: </h6>The following is an example of a console pattern match listener extension point: 
+<pre class="Example"><span class="code SchemaTag">
+   &lt;extension
+         point=</span><span class="code SchemaCstring">&quot;org.eclipse.ui.console.consolePatternMatchListeners&quot;</span><span class="code SchemaTag">&gt;
+      &lt;consolePatternMatchListener
+            class=</span><span class="code SchemaCstring">&quot;com.example.ExampleConsolePatternMatcher&quot;</span><span class="code SchemaTag">
+            id=</span><span class="code SchemaCstring">&quot;com.example.ExampleConsolePatternMatcher&quot;</span><span class="code SchemaTag">
+            regex=</span><span class="code SchemaCstring">&quot;.*foo.*&quot;</span><span class="code SchemaTag">&gt;
+         &lt;enablement&gt;
+            &lt;test property=</span><span class="code SchemaCstring">&quot;org.eclipse.ui.console.consoleTypeTest&quot;</span><span class="code SchemaTag"> value=</span><span class="code SchemaCstring">&quot;exampleConsole&quot;</span><span class="code SchemaTag">/&gt;
+         &lt;/enablement&gt;
+      &lt;/consolePatternMatchListener&gt;
+   &lt;/extension&gt;
+</span></pre>
+In the above example, the contributed console pattern matcher will be used for consoles with a type of "exampleConsole."
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">API Information: </h6>Value of the attribute <b>class</b> must be a fully qualified name of a Java class that implements the interface <b>org.eclipse.ui.console.IPatternMatchListenerDelegate</b>.
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Supplied Implementation: </h6>The console plug-in provides a console type property tester for enablement expressions that tests the value of <code>IConsole.getType()</code>. The property tester's identifier is <code>org.eclipse.ui.console.consoleTypeTest</code>.
+<p></p>
+
+<br>
+<p class="note SchemaCopyright">
+Copyright (c) 2000, 2005 IBM Corporation and others.<br>
+All rights reserved. This program and the accompanying materials are made 
+available under the terms of the Eclipse Public License v1.0 which 
+accompanies this distribution, and is available at 
+<a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>
+
+</p>
+</BODY>
+</HTML>

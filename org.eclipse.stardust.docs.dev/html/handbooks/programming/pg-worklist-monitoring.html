@@ -1,0 +1,86 @@
+<!doctype html PUBLIC "-//W3C//DTD html 4.01//en" "http://www.w3.org/TR/html4/strict.dtd"><html>
+<head>
+<!--<meta http-equiv="Content-Type" content="text/html"; charset=ISO-8859-1">  -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="../../styles/carnot.css" charset="ISO-8859-1" type="text/css">
+<title>Monitoring Worklists</title>
+<script language="JavaScript" src="../../styles/naviLine.js" type="text/javascript"></script>  
+</head>
+<body>
+<script language="JavaScript">
+<!--
+writeNavigation("Monitoring Model Deployment","../../toc.html",
+	    "pg-ldap.html","pg-part-monitoring.html",
+	        "../handbooks.htm","Developer Handbook",
+	        "pg-preface.htm","Programming Guide");
+ -->
+</script>
+<h1>Monitoring Worklists</h1>
+<p>To provide a worklist monitor which will be informed about changes
+to the worklist, you can implement the interface
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/core/spi/monitoring/IWorklistMonitor.html">
+org.eclipse.stardust.engine.core.spi.monitoring.IWorklistMonitor</a>.</p>
+<pre>
+package org.eclipse.stardust.engine.core.spi.monitoring;
+
+import org.eclipse.stardust.engine.api.model.IParticipant;
+import org.eclipse.stardust.engine.core.runtime.beans.IActivityInstance;
+
+public interface IWorklistMonitor
+{
+
+   void addedToWorklist(IParticipant participant, IActivityInstance activityInstance);
+
+   void removedFromWorklist(IParticipant participant, IActivityInstance activityInstance);
+
+}
+</pre>
+<p>This pattern follows the concept of the JDK6 <tt>ServiceLoader.</tt></p>
+<p>The <strong>participant</strong> parameter defines the participant 
+to whose worklist the activity instance has been added and from whose
+worklist the activity instance has been removed respectively.
+<strong>activityInstance</strong> specifies the activity instance 
+which is affected.</p>
+<p>Create your own implementations for this interface. 
+To publish an implementor to the engine, a file named by the interface's 
+factory has to be created in the <tt>/META-INF/services</tt> folder of the jar
+as follows:</p>
+<ol>
+	<li>Unzip the <tt><nobr>carnot-engine.jar</nobr></tt> file,
+	located in the root directory of the original <tt>carnot.ear</tt> file.
+   <div class="ipp">Refer to chapter 
+    <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.installation/html/installation/ig-maven.html">
+    Creating a Stardust Runtime Environment with Apache Maven</a>
+    in the
+    <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.installation/html/installation/ig-toc.html">
+    Installation Guide</a> for details on how to retrieve the
+    <tt>carnot.ear</tt> file from one of the preconfigured deployment 
+    configurations.</div></li>
+	<li>In folder <tt>/META-INF/services</tt>, create the following file:
+	<pre>org.eclipse.stardust.engine.core.spi.monitoring.IWorklistMonitor</pre></li>
+	<li>Add the fully qualified class name of your implementations to the file 
+	named as the interface, which the class implements.</li>
+</ol>
+<p>The methods in this class are called (on <tt>Session.flush()</tt>)
+in the following cases:</p>
+<ul>
+	<li><tt>addedToWorklist()</tt>: <br>
+	 Method is called at the end of transaction, when the 
+	 current performer of the activity instance has changed and is not null.</li>
+	<li><tt>removedFromWorklist()</tt>:<br>
+	 This method is called at the end of transaction,
+	 when the previous performer of the activity instance 
+	 has changed and is not null.</li>
+</ul>
+<p>Note, that the notifications are not transaction save. You will be informed 
+even if later in transaction a rollback happens and the change is not committed to
+the database.</p>
+
+<script language="JavaScript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

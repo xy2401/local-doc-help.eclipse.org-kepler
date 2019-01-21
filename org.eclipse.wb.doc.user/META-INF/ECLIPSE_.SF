@@ -1,0 +1,1285 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: dp/J2IeBDKo9Tj2DRRn3+RG9JVE=
+Created-By: 1.6.0 (IBM Corporation)
+SHA1-Digest-Manifest-Main-Attributes: RpeREWikaxPcRGj53KZKSLQ5Cq0=
+
+Name: html/whatsnew/v400.html
+SHA1-Digest: UEqBFC7DzBdnHh0Q3xzhSzdn+Ys=
+
+Name: html/userinterface/images/property_editor_font_swing.png
+SHA1-Digest: oqYMQMKXW0tvbL63My8lQ5v1hlM=
+
+Name: html/userinterface/images/marquee_select.png
+SHA1-Digest: GBTC+qt7lSrlqzLO8VOtpKuf9q4=
+
+Name: html/userinterface/index.html
+SHA1-Digest: mH5eQOkc58E24tSpNK7WGuGoWpk=
+
+Name: html/index_swing.html
+SHA1-Digest: lFrjbM08K3aC7Wrqmnx6nUmiiws=
+
+Name: html/userinterface/images/source_view_right.png
+SHA1-Digest: TkzuoLN0FOTH+mgZPPSQtjBU3Vs=
+
+Name: html/userinterface/images/add_static_factory_dialog2.png
+SHA1-Digest: GVunWux2xP1r0h+JPluLB52bQco=
+
+Name: html/features/images/menu_editing8.png
+SHA1-Digest: G9XX8RIwhdwEzZIJsk5mn6kxrbc=
+
+Name: html/userinterface/component_tree.html
+SHA1-Digest: EgKaNSav4EUJr3fwaOsdx+qy534=
+
+Name: html/features/images/custom_composite_used.png
+SHA1-Digest: aPj0Y3JLoeFnzeKp+Wq0gN6VEVs=
+
+Name: html/userinterface/images/property_editor_point3.png
+SHA1-Digest: oDJslHNmlo3kYS8YRkQLZuls7ks=
+
+Name: html/preferences/images/install_toolkit.png
+SHA1-Digest: bIA/6HyjWYTVQygZngYHmEqqsA4=
+
+Name: html/installation/updatesite_3.8.html
+SHA1-Digest: Rz//9SQKOHBPbg203EA6mGagLqc=
+
+Name: html/userinterface/property_editor_string.html
+SHA1-Digest: Xlp0PK2q2g1eamiG8b2TzJBVeXI=
+
+Name: html/features/images/nls_properties_fr.png
+SHA1-Digest: fNbTpL3RvX5XbK5Q2tf6FPCk7cw=
+
+Name: html/whatsnew/v510.html
+SHA1-Digest: cjtu8DiIXUmqxThbx+JGXYtA89Y=
+
+Name: html/installation/images/install_new_selectall_36.png
+SHA1-Digest: 928NBo96BpYCuFrir430BzD6aaA=
+
+Name: html/userinterface/palette_context_menu.html
+SHA1-Digest: gnUQgLM+RcoSNk2afv1MJqjqK4U=
+
+Name: html/userinterface/images/ellipses.png
+SHA1-Digest: JHlMx2ssqlHTFjSdCFhlHN9n23k=
+
+Name: html/userinterface/images/single_selection.png
+SHA1-Digest: qn/LI6ieiWZKuHJDlYpw7CDLqPQ=
+
+Name: html/features/bidirectional.html
+SHA1-Digest: xCa5+NIGmMcdRusFPdBTzvxGeow=
+
+Name: html/userinterface/images/SelectionTool.gif
+SHA1-Digest: ECqBmcUwacqD4cPvKs+M4jOC4HQ=
+
+Name: html/userinterface/images/tab_order.gif
+SHA1-Digest: fvq0Cs38e2cHJ/AdBZzokzEkMjA=
+
+Name: html/userinterface/images/property_editor_image1.png
+SHA1-Digest: iKqbib+vgjYnyvEtzW7qiDc6YYk=
+
+Name: html/index.html
+SHA1-Digest: 1KTF8h2E4ECbl/a5nkwtC1u8dj0=
+
+Name: html/userinterface/images/align_h_centers.gif
+SHA1-Digest: xJbE4DgJfQtnSOuokP9mLLpcWkU=
+
+Name: html/wizards/index.html
+SHA1-Digest: LfrXh1JK1kchrxLXY2kN61SPSYI=
+
+Name: html/features/images/menu_swt.png
+SHA1-Digest: t8pk+TA/3YB17zCjlpptxDryYZU=
+
+Name: html/features/images/create_factory_dialog2.png
+SHA1-Digest: OpVbqEcujPWTjH37H+nQiKRVfgg=
+
+Name: html/userinterface/images/preference_transfer.png
+SHA1-Digest: T+1xdmuKEvLsVbUtpwlRCYF2QkQ=
+
+Name: html/userinterface/images/add_static_factories_dialog.png
+SHA1-Digest: xSujh1mDWHIc+PPQ5QRzV5eLpRc=
+
+Name: html/whatsnew/v620.html
+SHA1-Digest: Oz/89o8EumEUaMkRrnRWQKaUxUw=
+
+Name: html/wizards/images/wizard_menu.png
+SHA1-Digest: lznVrNSMsQcrWNSDavtzg1pqhPU=
+
+Name: html/userinterface/property_editor_color.html
+SHA1-Digest: kme1dx7P9Jyu7NqH8VCYJoi1E2Q=
+
+Name: html/userinterface/images/align_v_space.gif
+SHA1-Digest: twCaVo/lfMgffTk9qrxAAdCfJp0=
+
+Name: html/faq_swing.html
+SHA1-Digest: XAoZ6aRoN0zx+D1Gs8oQadtOqPU=
+
+Name: html/preferences/images/activate_page1.gif
+SHA1-Digest: FsKgzZK32w8zj8vzkoAa8zJh1iQ=
+
+Name: html/userinterface/images/MarqueeSelectionTool.gif
+SHA1-Digest: PcaP6COrTJZMGmHAt6MxGBBozCw=
+
+Name: html/userinterface/property_pane.html
+SHA1-Digest: 9ocvDh9MKetCsJHQ3/0GH75gBKQ=
+
+Name: html/userinterface/images/wizard.gif
+SHA1-Digest: XyBYJ2+hcY98M70zilZdj8zB2j0=
+
+Name: html/userinterface/images/move_down.gif
+SHA1-Digest: k3U9RfP9hNA1aqttdVBl9lEXmW4=
+
+Name: html/features/images/nls_externalize_strings5.png
+SHA1-Digest: g/VU3nqdl53F4UGW6RqJP1tztH0=
+
+Name: html/userinterface/images/evant_handler_swt.png
+SHA1-Digest: mPhZ8vCb1Rt5vFd3UH9Xz3Id144=
+
+Name: html/features/images/add_event_handler_menu.png
+SHA1-Digest: a3HSIrAP+ityDiI7tTYRxm5gA9Y=
+
+Name: html/features/images/nls_new_source1.png
+SHA1-Digest: mwsPWVhYIvPrFUFmZVjkE3ViX4A=
+
+Name: html/features/factories.html
+SHA1-Digest: 3w3aW4YSSSluiTRlXgA1tv5yboU=
+
+Name: html/whatsnew/v730.html
+SHA1-Digest: ujfHbmao0ZHzjCRo51B/8keLbYw=
+
+Name: html/features/images/nls_package_explorer2.png
+SHA1-Digest: D6cyw9DhhStxE5zlJDysr4jSkQU=
+
+Name: html/userinterface/images/add_component.gif
+SHA1-Digest: H3GeHGdOQsDwfQJBfjCltWaBQIw=
+
+Name: html/preferences/preferences_export.html
+SHA1-Digest: RGqNyILFdcYKVAv1dYQsjcCqRYs=
+
+Name: html/preferences/images/export_preferences1.png
+SHA1-Digest: uPCCVLpU2q3lYylp2spyv9m+rpg=
+
+Name: html/preferences/images/preferences_usage_profiler.png
+SHA1-Digest: MVPAOEtjFg082s+7FLg1hn694Z0=
+
+Name: html/features/custom_composites.html
+SHA1-Digest: RHCj/Bk5PNccN1qHtNdB14OmtDg=
+
+Name: html/userinterface/images/design_view.png
+SHA1-Digest: cD0cmSQ8tsM3d3fnW0tblr9OeWo=
+
+Name: html/userinterface/images/add_instance_factories_dialog.png
+SHA1-Digest: tgrW7CyiqzTqCblf/OfFUq78CXw=
+
+Name: html/GWT-quick_start.html
+SHA1-Digest: uc/1rHKDg4eYkgMnhk1p2RcA7g8=
+
+Name: html/wizards/images/wizards.png
+SHA1-Digest: lgv7pMqkTa2oY6VrsV/lMHrPVnY=
+
+Name: toc_installation.xml
+SHA1-Digest: wIOsvqH618LoANPPEvGT6/GDmSo=
+
+Name: toc_features.xml
+SHA1-Digest: MzcCkLro9L8+nNSCh19yubT3Yt8=
+
+Name: html/userinterface/images/open_factory.gif
+SHA1-Digest: ZY3cLY39c8GcA1XaPA7AtfdsRm4=
+
+Name: html/userinterface/images/bring_forward.png
+SHA1-Digest: h/P01EgPwljT5tKFHhuKf5ZY9e0=
+
+Name: html/whatsnew/v670.html
+SHA1-Digest: cSf+ZEdZSOC9gXWQRD0LKa5635M=
+
+Name: html/installation/images/available_updates.png
+SHA1-Digest: QKd7BgVstEQew1A1+3eax/Tl+CE=
+
+Name: html/features/images/menu_editing7.png
+SHA1-Digest: GlsY7MAwhuVxlRb/Yy5Hv6DUA40=
+
+Name: html/preferences/images/hiding_after.png
+SHA1-Digest: mrk69XyRtaUI7KHnNTJkV3MXtIA=
+
+Name: html/userinterface/images/delete.gif
+SHA1-Digest: tWfeljcsFq/h6gmH+qndA3DTlhw=
+
+Name: html/features/images/nls_source_view2.png
+SHA1-Digest: SRg+wCKRqDHqhgrfDZU55aQWQG4=
+
+Name: html/userinterface/images/property_editor_point2.png
+SHA1-Digest: vELuoOpz0fJh0g/A4dPzCfaIeRQ=
+
+Name: html/userinterface/images/paste_edit.gif
+SHA1-Digest: dDObZsPBQ0prRgvPcZHvG0QmzuE=
+
+Name: html/support/test_cases.html
+SHA1-Digest: oJ1xVjxH8HdDPwuIJ+9fhZptUqM=
+
+Name: html/preferences/images/manage_license_info.gif
+SHA1-Digest: 8JqRUrJFjKNe8o8avx6Eb1U+YW8=
+
+Name: html/installation/images/wb_add_local_site.png
+SHA1-Digest: dGEEDi42m1i/Uwzvxt/TfTH7Z5o=
+
+Name: html/tutorials/index.html
+SHA1-Digest: jatmr7wmOQFdBxfdsrXUkxkDRxY=
+
+Name: html/preferences/images/preferences_uitoolkits.png
+SHA1-Digest: nDWPay/g5Uo3Gz6QMSgmcodnGXM=
+
+Name: html/features/images/create_factory_menu.png
+SHA1-Digest: /l2YWT30ParSZ3eVfXBLK+QoJTg=
+
+Name: html/features/images/select_factory_menu.png
+SHA1-Digest: X1rzSHrF1VsauuHg+aVVs9vA334=
+
+Name: html/features/images/visual_inheritance_child.png
+SHA1-Digest: 49AvxwOAl2OOROy+/uSfF2wW9DQ=
+
+Name: html/features/images/nls_key_as_value.gif
+SHA1-Digest: /OkYZn7cgRBA+NoGymqKlhMuPIM=
+
+Name: html/images/file_attachments2.png
+SHA1-Digest: kQH1mHiVY6EiIaFk43vE9zkKj1Y=
+
+Name: html/features/images/nls_messages2.png
+SHA1-Digest: p9iesnvUK4EYlUCPA6nuo5x087A=
+
+Name: html/userinterface/images/manager.gif
+SHA1-Digest: TCDLMyHyAMB7NvazLvStR9GJKZA=
+
+Name: html/userinterface/images/components_view.gif
+SHA1-Digest: i/NJJ5MbDKHnunS7AGj2q1jQq6s=
+
+Name: html/features/menu_editing.html
+SHA1-Digest: G6WQCer7Um976NM3J5WQ/c/duiU=
+
+Name: html/features/images/create_factory_dialog1.png
+SHA1-Digest: qdF7SmbuysCEJakHGJTgKpWd/EU=
+
+Name: toc_userinterface.xml
+SHA1-Digest: jTN3VRENx1+nMGWnz98JvHIK/S0=
+
+Name: html/userinterface/images/remove_from_history.png
+SHA1-Digest: +ajIiw8ihyMaNNDRiNRyhZ1+K40=
+
+Name: html/userinterface/images/set_layout_swt.png
+SHA1-Digest: KYkYHlVxwb4O3dPmP79f5CQKYSA=
+
+Name: toc_tutorials.xml
+SHA1-Digest: KdWgzySrt2nd8izzE6vDbF8CCAc=
+
+Name: html/features/images/open_with.gif
+SHA1-Digest: /Nq3EfHXrqHgLRZ65t0xqOAsfKQ=
+
+Name: html/userinterface/images/move_up.gif
+SHA1-Digest: AF4SezCel0kQh05TILCJAMIqxVI=
+
+Name: html/userinterface/images/add_entry_menu.gif
+SHA1-Digest: UnnO1X91sJdF/qFXmNurg0qiiOc=
+
+Name: html/NewComponentsTutorial.pdf
+SHA1-Digest: HMxTSO23+SRL7TlDPe0pKN0/+to=
+
+Name: html/preferences/images/import_preferences.png
+SHA1-Digest: 2X6W7U2vl2NjKTANhENtz8GzWOk=
+
+Name: html/features/images/nls_externalize_strings4.png
+SHA1-Digest: SO12d14MeQRblfsSsjKMsx1Trhg=
+
+Name: html/features/images/nls_messages.png
+SHA1-Digest: RqrBvLqgx/arQ0OtaGHG8/kh0Oo=
+
+Name: html/userinterface/images/choose_component_dialog.png
+SHA1-Digest: ms/jIAeb5x+qdYezb2fxJ6p07eA=
+
+Name: html/preferences/images/palette_view.png
+SHA1-Digest: iyZlp0WyH1r+JnYNATDWQOx56QM=
+
+Name: html/whatsnew/v500.html
+SHA1-Digest: JKU2mFl1AP7eLLkKMRVbYhLZDH4=
+
+Name: html/features/images/nls_package_explorer1.png
+SHA1-Digest: /Ra1l6fNUJ5wjrAIuzt9aMl9upg=
+
+Name: html/features/images/source_design.png
+SHA1-Digest: t8SJE9k3N6QvZzc6FEuhB/7agLs=
+
+Name: html/userinterface/images/palette_workspace_jar_selection_dialog
+ .png
+SHA1-Digest: C5YsLAIBWk39VRE2HAc21SKCwDY=
+
+Name: html/features/GWT-index.html
+SHA1-Digest: sJubgP49TALhRz7j3OeikQuivRE=
+
+Name: html/installation/images/available_software35.png
+SHA1-Digest: Ot3rBGPWBMysyuPjvD1DHqxkULw=
+
+Name: html/whatsnew/v610.html
+SHA1-Digest: DRLBL7d1M3/VT5qant6rkZu3NOg=
+
+Name: html/userinterface/images/events.gif
+SHA1-Digest: ntH3MuvanXfcsJ7SYBzN4trLRf4=
+
+Name: html/features/images/nls_new_locale2.png
+SHA1-Digest: rBdGZEbmwRqBhuD01mDnZ/LUR9c=
+
+Name: html/userinterface/images/structure_view_dock_on.gif
+SHA1-Digest: dDPwKhIj2STU2Rcxr/RJO8N4wgA=
+
+Name: html/installation/images/install_new_36.png
+SHA1-Digest: 2ld5smxzukIDswa0alWo5pQXPhk=
+
+Name: html/features/images/menu_editing6.png
+SHA1-Digest: LjpXHEwuMjJBSCzSU412RSMVFec=
+
+Name: toc_layoutmanagers.xml
+SHA1-Digest: tLVG+vNCBqvEDq25FHwHZvBRUeE=
+
+Name: html/userinterface/images/filter_advanced_properties.gif
+SHA1-Digest: d6QyER2+0sCbpr/ZIzXlZ7YW/5Q=
+
+Name: html/features/images/event_line_number_menu.png
+SHA1-Digest: K34IlErfw7VvHNsU8Z04wVlf+sA=
+
+Name: html/userinterface/images/property_editor_point1.png
+SHA1-Digest: SQc54A0viS0GaHzzSn77Cn/wYGw=
+
+Name: html/features/images/nls_source_view1.png
+SHA1-Digest: nkZUSXyCb61UASld8qLpCdd2EHQ=
+
+Name: html/userinterface/design_view.html
+SHA1-Digest: 9VNBSEqMKAGWGuFNxQpaib8f+9o=
+
+Name: toc_wizards.xml
+SHA1-Digest: ERl+ED1ISfySNq0FHkVnLf9EmQo=
+
+Name: html/features/images/menu_editing10.png
+SHA1-Digest: /gOI1H0QUKvDJ9AUQPeU8D+VTx4=
+
+Name: html/whatsnew/v720.html
+SHA1-Digest: 6F28tJAUtCFjVoo4bcxkd/KaqT0=
+
+Name: html/userinterface/images/property_editor_font_derived.png
+SHA1-Digest: Jg14gHilpDwUukxDmLuzBVccynA=
+
+Name: html/images/submit_manually.png
+SHA1-Digest: r9yMN/tDonmsjfEqo4ot9pccyUg=
+
+Name: html/userinterface/images/send_backward.png
+SHA1-Digest: sH9YV/qhZVstzuT+6qLsaK1vPEo=
+
+Name: html/userinterface/images/property_editor_inset2.png
+SHA1-Digest: UrWRqStIK4T9wsWPMu9uAyVxhW0=
+
+Name: html/images/file_attachments1.png
+SHA1-Digest: j/NogJTIOw+j+81os+a7hMxdT4I=
+
+Name: html/quick_start.html
+SHA1-Digest: Z0WK/mQFLY6wIC+vCrAhLZK1bFg=
+
+Name: html/accessibility.html
+SHA1-Digest: mjIs+M4aat11XkKXEUBl28sDdGI=
+
+Name: html/preferences/preferences_usage_profiler.html
+SHA1-Digest: JM8XHgZFmq//R0E2dMQ9nwIgQUY=
+
+Name: html/images/switch_to_code_button.png
+SHA1-Digest: Ek7Ow4iwSncSTdjzJjZJc+dKc6A=
+
+Name: html/userinterface/property_pane_context_menu.html
+SHA1-Digest: kZgpRsKL/WOsDG20SVu/1ZFPCWo=
+
+Name: html/userinterface/images/property_editor_taborder2.png
+SHA1-Digest: wLRDStiYyQ+nV2AzU3Ux6dcrCOA=
+
+Name: html/images/create_report_dialog.png
+SHA1-Digest: cq41iH8FHlbdaB6f06t/VLOco40=
+
+Name: html/preferences/images/hiding_before.png
+SHA1-Digest: w/kEGZLfO+pV9H6tU7k5l/T/hFw=
+
+Name: html/tipsandtricks.html
+SHA1-Digest: akuk388U4+Oux1hl0SQiStwaUmY=
+
+Name: html/features/event_handling.html
+SHA1-Digest: v311usfe4UlqH7Duk6DMmQ1jPZY=
+
+Name: html/whatsnew/v660.html
+SHA1-Digest: lqqQo42J+Bca6VKlwtz04NEKdpg=
+
+Name: html/installation/uninstall.html
+SHA1-Digest: B4q2ZHt5lVEwTDI9eEad7LlfOPY=
+
+Name: html/userinterface/images/property_pane_context_menu.png
+SHA1-Digest: 0wIkbXTHw6/i+Lo6iYhGmR0abtc=
+
+Name: html/userinterface/property_editor_image.html
+SHA1-Digest: rM4JSCCcf/px//O65xKvvY2fxIQ=
+
+Name: html/userinterface/images/be_field.png
+SHA1-Digest: gSVg7dnf30u+OBC+JRZpKDPICMM=
+
+Name: html/features/images/nls_externalize_strings3.png
+SHA1-Digest: wEldVWDQLKIDQt15joXaSlDdd+0=
+
+Name: html/userinterface/images/property_editor_treemodel2.gif
+SHA1-Digest: 57az7NA82Q3atPbqx979r2fkNO0=
+
+Name: html/installation/images/wb_copy_updatesite_url.png
+SHA1-Digest: rmKRu1F/XzilejiKmosLKHM3vSw=
+
+Name: html/preferences/images/windowbuilder_views.png
+SHA1-Digest: 88CxAMiALiqgH2pgrbgwC6mX7KA=
+
+Name: html/userinterface/images/add_static_factory_dialog.png
+SHA1-Digest: uuK8BylPvw6P04WZ8ZABjbKR5DE=
+
+Name: html/userinterface/images/export_palette_dialog.png
+SHA1-Digest: XQehtLfPRJKU9JJs9oNllZzyONA=
+
+Name: html/whatsnew/v100.html
+SHA1-Digest: qPKIh1fEDavJnguWOdRJ+HVVxcs=
+
+Name: html/preferences/images/new_wizard_uninstalled_toolkit2.png
+SHA1-Digest: Of8SwS37mohTYpAwogSQL7KKQpU=
+
+Name: html/faq.html
+SHA1-Digest: CGTqaeC1lLt+/dX5lfGSVt+V0ow=
+
+Name: html/userinterface/images/editor_design_page.png
+SHA1-Digest: vIvXDAvg0m/QX1jszFcBkESz0pM=
+
+Name: about.html
+SHA1-Digest: Aj5HNx2khG4ejAT7ghA8xkruzOg=
+
+Name: html/userinterface/images/add_static_factories_dialog2.png
+SHA1-Digest: gD6MkIL2KUVaB5+h3LHMBLnrH9A=
+
+Name: html/userinterface/images/align_v_bottom.gif
+SHA1-Digest: Ah6X8uGrbm5vYA75mr7+UhANfH0=
+
+Name: html/userinterface/images/collapse_all.gif
+SHA1-Digest: Rw/PkmDh9uLgTb07O/ejDvQ8p2I=
+
+Name: html/preferences/preferences_code_parsing.html
+SHA1-Digest: jbrgblAQNQOf7zitJZ0ZUqCWF8Y=
+
+Name: html/features/images/morph_menu.png
+SHA1-Digest: CCxAqC7sS9YJTz6xdbOA4CISpZ8=
+
+Name: html/features/images/nls_design_view4.png
+SHA1-Digest: Sd+3lFbgYkDTtys9JM3HQPvg3mQ=
+
+Name: html/userinterface/images/order_menu.png
+SHA1-Digest: +fdLROOHXIMBK072tcp2CrDY5zA=
+
+Name: book.css
+SHA1-Digest: Y0S052wV5TzuXmJ5OKEz1XT9HJs=
+
+Name: html/userinterface/images/rename_convert.png
+SHA1-Digest: cieAd3jqUrsd4S+rSy+HU+dkTqs=
+
+Name: html/userinterface/images/add_static_factory.gif
+SHA1-Digest: sYA1cRZHF8Buxp8ib2kWkvGw1/A=
+
+Name: html/userinterface/images/palette_manager_swng.png
+SHA1-Digest: GQ8U8zEn0qT8rRqonZOQguhIqyo=
+
+Name: html/userinterface/property_editor_string_array.html
+SHA1-Digest: uwsRSwA3+5eqmuNWVXa4Z368v+w=
+
+Name: html/userinterface/images/choose_locale.gif
+SHA1-Digest: st27+KMIu91uzulzt6l+algVyEc=
+
+Name: html/userinterface/images/expose_component.png
+SHA1-Digest: +aASrwUXkbHDUSyYCf+sMiSRWNk=
+
+Name: html/features/images/menu_editing5.png
+SHA1-Digest: iz+9UuZNfx8JjdT7s/AHq802vKs=
+
+Name: html/preferences/images/dock_left.png
+SHA1-Digest: fpVjrt1F36PDqAQ3caT3ot0wjio=
+
+Name: html/features/images/visual_inheritance_expose_property_menu.png
+SHA1-Digest: JIySdhq24BhFTHEMVK/MrAEEF6w=
+
+Name: html/installation/system.html
+SHA1-Digest: NHQeRhYD9zKqJlIh9WEi0urODaI=
+
+Name: html/installation/updatesite_3.4.html
+SHA1-Digest: OSI87nSvy+xVeGbxeOaHOtoK5N0=
+
+Name: html/userinterface/images/add_factory_menu.png
+SHA1-Digest: 4SPYNNN2QUX0FdyKhz1E5xe7NuM=
+
+Name: html/preferences/index.html
+SHA1-Digest: MvK5i0oQBm/L3yFYtBo8JsizdjM=
+
+Name: html/userinterface/images/morph_menu2.png
+SHA1-Digest: XaqejIeFQWwAJ29gGujzhKEUXRY=
+
+Name: html/installation/images/add_site.png
+SHA1-Digest: DX8OO5qPFFxgIFdvXORTRexCFIY=
+
+Name: html/userinterface/images/property_editor_string_array2.png
+SHA1-Digest: ygoMzVXVLtXGIiXN9kknLEJt4QU=
+
+Name: html/userinterface/images/property_editor_inset1.png
+SHA1-Digest: i9FiRPAamodmGNs3nKeAMa8Nmbw=
+
+Name: html/preferences/preferences_uitoolkits.html
+SHA1-Digest: eo0PDlGwONdxsSzFqh9UyKnSS6w=
+
+Name: html/GWT-faq.html
+SHA1-Digest: cDeFVutLuNI8QNQC8S8ywhDdyCk=
+
+Name: target.properties
+SHA1-Digest: 6PrHrMFV3w1zRPq9A7y1qd9ivtA=
+
+Name: html/userinterface/images/variable_no_conversion.gif
+SHA1-Digest: OFCU8VujFbtZ3t93SYzB3v+wPsE=
+
+Name: html/userinterface/images/property_editor_taborder1.png
+SHA1-Digest: +LiPUd6U9VdOtuV4iLnQ3sDDfho=
+
+Name: html/userinterface/images/align_h_space.gif
+SHA1-Digest: Rk7iwoCx4H6UZFrtdFHFwOhoSKg=
+
+Name: html/preferences/images/designer_epf.png
+SHA1-Digest: ORE+mnplz+mQZ3gyo5G2fmgRcbc=
+
+Name: html/whatsnew/v600.html
+SHA1-Digest: l920I+tZRzV9HBJ46L2nZ9ZkTB0=
+
+Name: html/userinterface/images/edit_palette_category.png
+SHA1-Digest: oYtHoaFeqs0oWQvV2xGVfG+HzTY=
+
+Name: html/userinterface/images/send_to_back.png
+SHA1-Digest: axcvFay25Qyk9zqSq8FaBk4AsNM=
+
+Name: html/layoutmanagers/index.html
+SHA1-Digest: vYGoRVcwBWBm0IJMxTYTN10MuHU=
+
+Name: html/userinterface/toolbar.html
+SHA1-Digest: 26hol2L1V8TXfWVORmnNn0K83JM=
+
+Name: html/whatsnew/v430.html
+SHA1-Digest: rwgiDwy6fsU4WMP5WJdn3SGGg8E=
+
+Name: html/userinterface/images/property_editor_color_websafe.png
+SHA1-Digest: b9N1Rl6nrbli1dubtH7DUx8adNE=
+
+Name: html/userinterface/images/import_palette.gif
+SHA1-Digest: n2nRMihZWGTMbuqWRGxJsPA+X6g=
+
+Name: html/userinterface/images/evant_handler_swing.png
+SHA1-Digest: eA4hUTrPyjo2w8EMRVKoy71oCh0=
+
+Name: html/userinterface/images/new_palette_category.png
+SHA1-Digest: Mhr9eEHJxJ1UqTXYbq7tcStayBc=
+
+Name: html/images/play_movie.gif
+SHA1-Digest: sdnhQOwdgKNy4yFOLbN9dAM286w=
+
+Name: html/userinterface/images/import_palette_dialog.png
+SHA1-Digest: Ot+QkqU5w9pd39p2il4w2+ddNpQ=
+
+Name: html/features/images/nls_externalize_strings2.png
+SHA1-Digest: q1XAN7ZKaSJoILbGtBR9iu+aido=
+
+Name: html/userinterface/images/listener_interface.gif
+SHA1-Digest: BD5bmwZEvK0fBJxDzVRDeXyyQns=
+
+Name: html/userinterface/images/property_editor_treemodel1.gif
+SHA1-Digest: BiNj2Eq31wZzPwD+wzC+NtzmArA=
+
+Name: html/userinterface/images/minus.png
+SHA1-Digest: r3xluhFtyGyvp2Xefv1aABWi4+4=
+
+Name: html/support/product_support.html
+SHA1-Digest: 35vwnFDlbqxTduiRhJuPkVB9Yi4=
+
+Name: html/whatsnew/v710.html
+SHA1-Digest: Mu9AQCQONsF29kmI6lvL9kQOqQ8=
+
+Name: html/userinterface/images/property_editor_spinnermodel3.gif
+SHA1-Digest: jpTWL0JRCx23pyJBh0AugLbVuMY=
+
+Name: html/preferences/images/new_wizard_uninstalled_toolkit1.png
+SHA1-Digest: mP9IShb6GMmqG+PkHrMtt7znMD0=
+
+Name: html/userinterface/images/category.gif
+SHA1-Digest: SxeCWLQ3vCOvL7sUFKVDP+wlTuQ=
+
+Name: html/preferences/images/structure_view.png
+SHA1-Digest: AuRrJ83RM3+ifGSZdfMGBzHlR5A=
+
+Name: html/userinterface/images/local_to_field.gif
+SHA1-Digest: RhSQ8nJMbajEPEH3ET+KghK7/zw=
+
+Name: html/userinterface/images/add_component_dialog.png
+SHA1-Digest: qIG+TV68Ix9q681IiezCsT9vXko=
+
+Name: html/features/images/nls_design_view3.png
+SHA1-Digest: Uct3Kosm0kdhKvy25j0RmPxhM5U=
+
+Name: html/userinterface/images/property_pane.png
+SHA1-Digest: SKVS2CuTmDDADWsQcJMFFE4vs8k=
+
+Name: about.ini
+SHA1-Digest: AoXKskgaYgeZ12mdXhoOkjjF1DA=
+
+Name: html/userinterface/images/property_editor_string3.png
+SHA1-Digest: AfXTUfZ/tznKGerDymO401Fszpk=
+
+Name: html/whatsnew/v650.html
+SHA1-Digest: Vo6XJe8wtW+pvcT9DOHj8H6NDi8=
+
+Name: html/userinterface/images/align_height.gif
+SHA1-Digest: 6XCJ3EJ+5VFEMQOKj3lq5n3HxCQ=
+
+Name: html/userinterface/images/structure_extract_as_view.gif
+SHA1-Digest: 8jKcBjPbd0EVRuA8PWPKF58rme0=
+
+Name: html/features/images/menu_editing4.png
+SHA1-Digest: bTBqKZkN0rYjlbg6ZCIZe6jS11U=
+
+Name: html/userinterface/images/edit_palette_component.png
+SHA1-Digest: JY5LZGfvrZQr624ZKYbVjPAxvos=
+
+Name: html/userinterface/images/boolean_true.png
+SHA1-Digest: nHtPDNdrK7SBh1shQHdl/GA/1V8=
+
+Name: html/userinterface/images/other.gif
+SHA1-Digest: OrDOAmzveC15C4z8dQp1oxLLpMI=
+
+Name: html/features/internationalization.html
+SHA1-Digest: brE123Zch+PW64B1xP07umVnpNg=
+
+Name: html/userinterface/images/listener_class.gif
+SHA1-Digest: vv/1nud9kQ5R+94rzA1uTahp9+k=
+
+Name: html/installation/images/wb_updatesite_features.png
+SHA1-Digest: dvcTifCWLHp2f0HWi2NpxogRX8E=
+
+Name: html/userinterface/images/property_editor_rectangle4.png
+SHA1-Digest: Y2jn3DF2cZ58xdJK78ahDFi4zGI=
+
+Name: html/features/images/nls_button.gif
+SHA1-Digest: vtjeaSSDceXHd9gkPp62lcTReqs=
+
+Name: icons/wb-icon.gif
+SHA1-Digest: pfQBbMmfxgi4+u8QVli1xtYxR0I=
+
+Name: html/userinterface/images/properties_default.gif
+SHA1-Digest: L6DTAMxlx+j3v3zy22oeNJHh1zU=
+
+Name: html/features/images/nls_toolbar.gif
+SHA1-Digest: +TPt5UCe49Y5YqxIGXTnSLTHzdY=
+
+Name: html/whatsnew/v760.html
+SHA1-Digest: 368lmr2gyalWkwd9RfMOcOjllKY=
+
+Name: html/userinterface/images/morph_menu1.png
+SHA1-Digest: tkf5Zc8Zg2LE6wHR8elDwCZ3hVM=
+
+Name: html/features/images/nls_new_locale.png
+SHA1-Digest: yKTQiflk83M459XD6M9/J8ruKhI=
+
+Name: html/userinterface/images/property_editor_string_array1.png
+SHA1-Digest: iRo0fC592fcK5dvNll9PWKn+adQ=
+
+Name: html/images/create_report_button.png
+SHA1-Digest: mDXTn1xqjAyQ/OCH/2lE5NfWMXQ=
+
+Name: html/userinterface/images/existing_class.gif
+SHA1-Digest: W2+s6oB2zXFB8kOjy0KbS2rVslA=
+
+Name: html/userinterface/images/source_view_bottom.png
+SHA1-Digest: BFOpoetbOhbtMd5VinGA3jxVvOk=
+
+Name: html/userinterface/images/tab_selection_true.gif
+SHA1-Digest: 731G+i6X6vfRN9I8BM6H4vOG2LU=
+
+Name: html/installation/images/install_check_updates_36.png
+SHA1-Digest: xTIZ+HWdzxYEdaNYU/TF4reh/PI=
+
+Name: html/GWT-index.html
+SHA1-Digest: jzSMebHFuU+nsBr+1IKTF4OKO+8=
+
+Name: about.properties
+SHA1-Digest: 1D2DmjMVOtrdnpj7kAS7VF5RDg0=
+
+Name: html/userinterface/images/palette_settings.png
+SHA1-Digest: l/5jc7fhke5uwylKWV6hf6v+9Qw=
+
+Name: html/userinterface/property_editor_point.html
+SHA1-Digest: nXjeZ0zBmzy8JkgTO08gfTkU1i0=
+
+Name: html/userinterface/images/userinterface.png
+SHA1-Digest: nz3EhyM1SU6ZO8uwWC/aC4CmlJQ=
+
+Name: html/images/error_handling_page.png
+SHA1-Digest: z++565wRLV9HNa7PTmYro5Uoa9o=
+
+Name: html/installation/updatesite_3.5.html
+SHA1-Digest: HWsOqsSvGdrEyN1nzibAyN2ALMk=
+
+Name: html/features/images/custom_composite.png
+SHA1-Digest: S2Py7NjNsOZdaKQrmTaz+Xy9caU=
+
+Name: html/images/reparse_button.png
+SHA1-Digest: SRthDMsdK3dY+4+8swldUkbWKaU=
+
+Name: html/preferences/images/dock_top.png
+SHA1-Digest: HF+c58IUHQYGLtacx4yVOQwaPpE=
+
+Name: html/userinterface/images/rename_convert2.gif
+SHA1-Digest: 4NlaViGmanfupP0Z17uE4UthXKA=
+
+Name: toc_databinding.xml
+SHA1-Digest: OKxg/untr/l85HHnmD4xtDXD1q8=
+
+Name: html/userinterface/images/cut_edit.gif
+SHA1-Digest: ftFbdN4JDG+p+fwADmAiWrFnhII=
+
+Name: html/userinterface/images/listener_method.gif
+SHA1-Digest: HStq8N6izkd5aqTde7uorIhfPwM=
+
+Name: html/features/images/nls_externalize_strings1.png
+SHA1-Digest: 2dy/m3kmzLpmgfdbXfkEfpjhweE=
+
+Name: html/userinterface/images/errors.gif
+SHA1-Digest: sF0KK13kLzKOjao4gNcHdDFTOFA=
+
+Name: html/userinterface/images/factory_new.png
+SHA1-Digest: dGEAHlOWTVOtb8H0JX+lC1LM8SY=
+
+Name: html/userinterface/images/editor_refresh.png
+SHA1-Digest: MHVFqp1eyfdjWbsGR4Okd+MdVvE=
+
+Name: html/userinterface/images/property_editor_spinnermodel2.gif
+SHA1-Digest: jEYbBRbroPp6E6BAhzONBWGJM7w=
+
+Name: html/installation/images/wb_select_local_site_components.png
+SHA1-Digest: aSzLXc80y6zco925SGcLVRryvyQ=
+
+Name: html/userinterface/images/property_editor_color_awt.png
+SHA1-Digest: 9MGnEEHwHLeq096QyW1qigs8v5E=
+
+Name: html/userinterface/structure_view.html
+SHA1-Digest: bWJEW7eBucyjI7NG7ixZx01FUbw=
+
+Name: html/error_reporting.html
+SHA1-Digest: Bfa2JsyNe5u93h02obrorzeDGes=
+
+Name: html/userinterface/images/component_tree.png
+SHA1-Digest: Z7zm99rKBSJCwgMdRxDQDGRrKfY=
+
+Name: html/userinterface/images/existing_interface.gif
+SHA1-Digest: hJleS3VQoEDtecMscwTagWXvxi4=
+
+Name: html/userinterface/images/externalize_strings.gif
+SHA1-Digest: oKFI9QCoBd7n1rGam3G8fZWmnbM=
+
+Name: html/userinterface/images/set_tab_order.png
+SHA1-Digest: XJ9/wgZYcja/CrKX+wbOuM6sTg8=
+
+Name: toc.xml
+SHA1-Digest: 92r38JDABcOSAV9CdZXp6a048U8=
+
+Name: html/userinterface/images/morph.png
+SHA1-Digest: 5iOKhHqY8lty0zkhpg+rzHrNVLM=
+
+Name: html/features/images/nls_design_view2.png
+SHA1-Digest: Jf+TCe5j8p4JlSS8VX2VHU6Y9lM=
+
+Name: html/userinterface/images/feedback_drag_xy.png
+SHA1-Digest: u5K5k66D01Vj8NB0e2NwB95BTF0=
+
+Name: html/userinterface/images/property_editor_color_system.png
+SHA1-Digest: 5WD3r1UkIkcv5z82I23vYMQwAaQ=
+
+Name: html/userinterface/images/property_editor_string2.png
+SHA1-Digest: KHvaYgGSPtHDcxXjQRv6vn/QRFc=
+
+Name: html/features/images/nls_properties_default.png
+SHA1-Digest: RO8rEgAAUhMdY1+scuedOJltNyA=
+
+Name: html/whatsnew/v420.html
+SHA1-Digest: vGujLRbQPgH3AxBkcvJHNYvd+Ro=
+
+Name: html/userinterface/images/property_editor_font2.png
+SHA1-Digest: goyRim6podouSzG6KgBP3NIbblU=
+
+Name: html/features/images/factory_example.png
+SHA1-Digest: UelYmK+OYCPhHdYSstMCPQzJ4vg=
+
+Name: html/userinterface/images/event_icon_decorator.png
+SHA1-Digest: 5v/QytngXPFVEqH74fVWll4Xgww=
+
+Name: html/userinterface/images/settings.gif
+SHA1-Digest: 9EjEYt4Rce97p8f14W1ufCu54wA=
+
+Name: html/features/images/menu_editing3.png
+SHA1-Digest: 9K7BI6dgACckWheJCLXbJDnv6Es=
+
+Name: html/installation/images/apple.png
+SHA1-Digest: 8rLqwj/QPvFAT9lz6/txhmQ2vO0=
+
+Name: html/userinterface/images/align_width.gif
+SHA1-Digest: 2FzlqKvRJtExhzyy5pS3kpVq8OY=
+
+Name: html/userinterface/images/palette_extract_as_view.gif
+SHA1-Digest: m1AyR41AGo97vIGptNKz/jKjA2w=
+
+Name: html/userinterface/images/copy_edit.gif
+SHA1-Digest: DlSgz9a2zHtLxF0EoiAp8BwXTl8=
+
+Name: html/userinterface/images/property_editor_rectangle3.png
+SHA1-Digest: 7x6GDKTlIPK1HX/O4HCwFoX6Jmg=
+
+Name: html/userinterface/images/exposeComponent.gif
+SHA1-Digest: ml9u2rBx1WT5OBNIIderT7Ktkp0=
+
+Name: html/whatsnew/v700.html
+SHA1-Digest: GR2yIBiedx+B6PGyaVI7dtdaqyg=
+
+Name: html/userinterface/images/property_editor_color_named.png
+SHA1-Digest: TchpQB+zhHk67mKI6QNvKjrGCnk=
+
+Name: html/userinterface/images/align_v_center.gif
+SHA1-Digest: cjsXuWyCpcU5EdqG6hGvS/cBqYk=
+
+Name: html/whatsnew/index.html
+SHA1-Digest: GHnivHOx0JXI575kl0G3tKj429M=
+
+Name: html/userinterface/images/palette_import_jar_archive_dialog.gif
+SHA1-Digest: S8Y2mik+y5wA4x02WcskGiJizRs=
+
+Name: html/userinterface/images/palette_swing.png
+SHA1-Digest: Pi4Lk2kmqG1b5r3Sdda+bfLliPE=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: QdryQvJlVywlE0MGLuwYCkmkyWk=
+
+Name: html/userinterface/images/property_editor_color2.png
+SHA1-Digest: yxJUdZgxljlpl4zggzlZbY+Yw0Q=
+
+Name: about.mappings
+SHA1-Digest: XA6D89qvG38CQiXj8gAWNdi28do=
+
+Name: html/userinterface/images/source_view.png
+SHA1-Digest: nVlibhU7Gb5xLrF9q0cgw5NVT10=
+
+Name: html/userinterface/images/property_pane_events.png
+SHA1-Digest: +2OoWNiXbiVWBWKcCkP4VLJ/EW8=
+
+Name: html/userinterface/images/field_to_local.gif
+SHA1-Digest: luzEeX1QHW+xLQ6kwieQb66BmG0=
+
+Name: html/installation/images/windows.png
+SHA1-Digest: yZWHiI2Zkhp74gzcW/G2brdqUCU=
+
+Name: html/features/images/create_factory_dialog5.png
+SHA1-Digest: CEIh7FGIwy89g5D9L8a2mlIeE0Y=
+
+Name: html/whatsnew/v810.html
+SHA1-Digest: 1anm0PPlkcTY3Yk8v8SaIiXSK0U=
+
+Name: html/userinterface/images/factory_menu.png
+SHA1-Digest: IDP3qpBYRV0qX+iwKsbfUNZ8vIM=
+
+Name: html/whatsnew/v640.html
+SHA1-Digest: 79BQQ3+CVPk0OR2raSt/KsCnZWg=
+
+Name: html/preferences/images/enable_usage_profiling.png
+SHA1-Digest: RmuPiNtJApIyyT1mA2T0KhvdbTU=
+
+Name: html/userinterface/palette.html
+SHA1-Digest: 3BDwcc3r2ADKtzKopezW/GTm1nc=
+
+Name: html/userinterface/images/feedback_drag_grid3.png
+SHA1-Digest: 0bRMqJb8nFWaRfqwLrXjYCFihxI=
+
+Name: html/userinterface/property_editor_inset.html
+SHA1-Digest: e9iibFXeUXOzz2h7HeVcUhuwe9k=
+
+Name: html/preferences/images/activate_page4.gif
+SHA1-Digest: I0B+1dEdAo5gDZ6H2DjGGKoqS+w=
+
+Name: html/features/images/visual_inheritance_expose_component_menu.pn
+ g
+SHA1-Digest: 98vejSkFxlyM368e1+jFiGhYRN0=
+
+Name: plugin.properties
+SHA1-Digest: 2KmP3t2UhBvlolHiEWJ0isTLyCE=
+
+Name: html/wizards/index_swing.html
+SHA1-Digest: pCYICmxy7ZShLnBgT/UW9Q0SBZI=
+
+Name: html/preferences/images/flyout_palette2.png
+SHA1-Digest: O5D5JFUKeKD86SOMHdYvigWAPAw=
+
+Name: plugin.xml
+SHA1-Digest: eHnzL4jUppJy/tsfGXHgBkzn97E=
+
+Name: html/installation/updatesite_3.6.html
+SHA1-Digest: WATIuhX0iu8oanmu+yFQwQAfmPw=
+
+Name: html/userinterface/images/property_editor_spinnermodel1.gif
+SHA1-Digest: yuzlNTVBaC0A7574UJ+ogpRfzbQ=
+
+Name: html/userinterface/images/test.png
+SHA1-Digest: 2LP5ASXx9gdEMWtR2kB+clJU6gY=
+
+Name: html/userinterface/images/align_h_left.gif
+SHA1-Digest: j0vf0/OouAa0CIeb5BBceER2vuk=
+
+Name: html/features/images/nls_new_source4.png
+SHA1-Digest: PhjVA8X+28q2wHcwWdU2Tm0nkdY=
+
+Name: html/whatsnew/v750.html
+SHA1-Digest: VEzHs8C4TNPpAQ8MAB5dMubcZ8I=
+
+Name: html/userinterface/images/palette.png
+SHA1-Digest: zNVtL17ffVkCTDXrXzPJh3aaXug=
+
+Name: html/userinterface/images/remove.gif
+SHA1-Digest: t1Z0hTEDfsXuTzpfyzKcJcopaGQ=
+
+Name: html/features/images/nls_design_view1.png
+SHA1-Digest: WQez3qWDdO1jCCXhdUoSTbPO66o=
+
+Name: html/userinterface/images/change_style3.png
+SHA1-Digest: F981/AuRtnBTOIcQVLOJvqdd/BQ=
+
+Name: html/installation/images/help_install_new_software.png
+SHA1-Digest: rzJMgU60jbYkHh91l/0ok776IBI=
+
+Name: html/userinterface/images/palette_context_menu.png
+SHA1-Digest: GXrnWhMfa3S/7rzoDTCnp7ON1VQ=
+
+Name: html/userinterface/images/property_editor_string1.png
+SHA1-Digest: ltEGc7MICfViivFcY1v3IPJxrUA=
+
+Name: html/userinterface/images/property_editor_font1.png
+SHA1-Digest: +PygzeLv/CEeiBdvjKrC6S1SYKM=
+
+Name: html/whatsnew/v690.html
+SHA1-Digest: Uq73ErfJrxT3AusMtfeB+Z+u0iE=
+
+Name: html/userinterface/images/ChooseComponent.gif
+SHA1-Digest: eb2/enRtbAR88TlxZQ7DxwRKLNQ=
+
+Name: html/features/images/menu_editing2.png
+SHA1-Digest: 72rdIJ0gphVfDxStKJRIHIHIx7g=
+
+Name: html/userinterface/images/feedback_size_xy.png
+SHA1-Digest: odmEC5e4WY71OjmXaY0GiiSmBYg=
+
+Name: html/images/screenshots2.png
+SHA1-Digest: q172ORizZ/a3ZhG3xne4Lpukp6A=
+
+Name: html/userinterface/palette_manager.html
+SHA1-Digest: Au4GpaporkQQzxMWRz9hItVeazE=
+
+Name: html/userinterface/images/property_editor_rectangle2.png
+SHA1-Digest: o4RC1NurIRkOMBKZfrGXzHOOdVs=
+
+Name: html/installation/images/help_check_for_updates.png
+SHA1-Digest: f4X/nMBM91Tqd+r1TtKHRnyLgBM=
+
+Name: html/userinterface/images/subclass.gif
+SHA1-Digest: MYuYqZzg+YA9NrcGOhebnpSMKpA=
+
+Name: html/whatsnew/v300.html
+SHA1-Digest: OTghpxIVTG3JrzqD38SyEhdGglU=
+
+Name: html/preferences/images/preferences_windowbuilder.png
+SHA1-Digest: PR9G+uky1MNKhERdXAP3YjLHv6E=
+
+Name: html/userinterface/images/palette_manager_swt.png
+SHA1-Digest: /6U7YpqXbh822IYxz2a8aTY6cMA=
+
+Name: html/userinterface/images/property_editor_color1.png
+SHA1-Digest: qA0NdeXnfCQ4OnG9ENXoFRx28Q8=
+
+Name: html/installation/images/linux.png
+SHA1-Digest: SN0l0UVueOUVIz/oR7HET0qobJs=
+
+Name: toc_preferences.xml
+SHA1-Digest: xAwjK17ZHdNrGy063+acPxATxQU=
+
+Name: html/userinterface/images/property_editor_image3.png
+SHA1-Digest: nGQ5UUGRuMpKKox33JNg9WQnTbE=
+
+Name: html/features/images/visual_inheritance_parent.png
+SHA1-Digest: 4jyFhNnv0xh1FOCMX4CJIDbxMgI=
+
+Name: html/userinterface/images/properties_view.gif
+SHA1-Digest: XloB4j1P7nTyacqQYVgo7i2FR4w=
+
+Name: html/userinterface/source_view.html
+SHA1-Digest: SNF2SNmY5vfe/fDFE7fMvbXPm3E=
+
+Name: html/userinterface/property_editor_rectangle.html
+SHA1-Digest: bDYm4/BG5aipMD00TExy4qIgH/I=
+
+Name: html/features/images/create_factory_dialog4.png
+SHA1-Digest: VJXV6WsuiegYSRKwYepQwkw0gy4=
+
+Name: html/preferences/images/preferences_code_parsing.png
+SHA1-Digest: cAoh5l/qSrEZq3q8dM8pVfVB4oo=
+
+Name: html/userinterface/images/be_local.png
+SHA1-Digest: JhLYD5Kzmi5DAHCSdTlgJyhWqqI=
+
+Name: html/userinterface/images/align_v_centers.gif
+SHA1-Digest: qya6Cpmdd4DwTicKxM9e8obbjOw=
+
+Name: html/userinterface/images/bring_to_front.png
+SHA1-Digest: qSnzX++RJdx5kc2jrx5cOc2DrNM=
+
+Name: html/whatsnew/v410.html
+SHA1-Digest: TxqnBbDa+sphmq/G1gRKmmzObMs=
+
+Name: html/userinterface/images/feedback_drag_grid2.png
+SHA1-Digest: 7ADIGo0cPrtJ3oRXst0PJ1wbZKI=
+
+Name: html/features/images/factory_custom_palette.png
+SHA1-Digest: GMX8BMqm0G+JE/HidaSmustJOP8=
+
+Name: html/userinterface/images/palette_context_menu2.png
+SHA1-Digest: Ov9Wr4Jjgjq+7FXePLcdFzBgU9g=
+
+Name: html/images/error_handling_page_stack_trace.png
+SHA1-Digest: bnj/cgrtjYlqodtbJ8kKkVt9keE=
+
+Name: html/preferences/images/activate_page3.gif
+SHA1-Digest: YWltuz51xpV0R4hD1CSp15NumxU=
+
+Name: html/installation/images/installed_software.png
+SHA1-Digest: 7b/MzsnPWMjkPPAbg+gXCeo5huo=
+
+Name: html/userinterface/images/feedback_size_grid.png
+SHA1-Digest: Rj69KlUSP0f83KcyoOz80XKs8Ww=
+
+Name: html/userinterface/images/export_palette.gif
+SHA1-Digest: 6Z5VRo6tkp9wVXnbVIIFua7T5mA=
+
+Name: html/preferences/images/flyout_palette1.png
+SHA1-Digest: BS7ZDXgs0eFB5+9WwJd0xIaLFSU=
+
+Name: html/features/images/nls_externalize_strings7.png
+SHA1-Digest: /3mneKGqM6l/OZUsxDMJ41TAtFE=
+
+Name: html/DesignerCustomizationAPI.pdf
+SHA1-Digest: M8jO7To1d0JABcIf8yX+aO255kU=
+
+Name: html/userinterface/images/event_decorator.gif
+SHA1-Digest: j/+QmSgliohK+hHk3vGci4UFilw=
+
+Name: html/whatsnew/v811.html
+SHA1-Digest: u/D2Q82JXwtBHnkYdVE9kYyrnD8=
+
+Name: html/preferences/images/parse_example.png
+SHA1-Digest: hABG4RpAtfdapWUcL52nyDC+Djc=
+
+Name: html/userinterface/property_editor_font.html
+SHA1-Digest: 4ODbG+D9MalbREjuWpdNNC3ZnFo=
+
+Name: html/features/images/nls_new_source3.png
+SHA1-Digest: PuCOXcLe1gu+wP75O4Q1MTypdiU=
+
+Name: html/features/images/menu_swing.png
+SHA1-Digest: HTfR6ILkYYcxLDE8CMGim62aoys=
+
+Name: html/userinterface/images/align_h_center.gif
+SHA1-Digest: ikcVD2pE/Ly3aWuFccX81m/MXvQ=
+
+Name: html/images/software_and_hardware_info.png
+SHA1-Digest: X4lFJBQgeG4UCX9rIg/89FR0DpU=
+
+Name: html/userinterface/images/change_style2.png
+SHA1-Digest: tVEWtKDLEpTmWvKXr6kCbW6VsMY=
+
+Name: html/installation/updatesite_3.7.html
+SHA1-Digest: W17smsNe/Lpd/WXoxkix/gJ4ZhM=
+
+Name: html/features/data_binding.html
+SHA1-Digest: /Pe0TyfvROvMKTY0TXLUxSImVbM=
+
+Name: html/whatsnew/v800.html
+SHA1-Digest: tyf3I7F6TGe122jWhoeC66D2D90=
+
+Name: html/features/visual_inheritance.html
+SHA1-Digest: RDrxTRE3eJ3IwkDssAEf3ROIU4c=
+
+Name: html/whatsnew/v630.html
+SHA1-Digest: 3E9Ri+rlXU45wrc4sDDEN5tjZ0c=
+
+Name: html/userinterface/images/property_editor_font_construction.png
+SHA1-Digest: hrEmGSTtmuxWNNYeTWdJVKYH0PM=
+
+Name: html/userinterface/images/direct_edit.png
+SHA1-Digest: LP3nONAH+HBZdlnDeQQ2wqOWSOc=
+
+Name: html/userinterface/images/tab_selection_false.gif
+SHA1-Digest: oaNettRWiS9T1nf3R0dxdpQsvEw=
+
+Name: html/features/images/menu_editing1.png
+SHA1-Digest: w3qONpFwWCmG2kR9y3Cm2yKheT0=
+
+Name: html/quick_start_swing.html
+SHA1-Digest: YNL5zuBODy6BpAQaXIr+82OubZw=
+
+Name: html/userinterface/images/factory.gif
+SHA1-Digest: pZuGWnJsh7g/y+d3nIvyfvPLi1E=
+
+Name: html/wizards/images/wizards_swing.gif
+SHA1-Digest: xvDS3b7FCwEGluy4RUdawd4F1Cw=
+
+Name: html/images/screenshots1.png
+SHA1-Digest: z3fGd1JMg0U4j9rowC0PS0GzLAY=
+
+Name: html/userinterface/images/clear_filter.gif
+SHA1-Digest: TEa/IA30Ls5UKWuwBvOsVuWO8Qg=
+
+Name: html/userinterface/images/morph2.gif
+SHA1-Digest: iumASYd/9+HpIcA2uuaF4UqtHR0=
+
+Name: html/features/images/menu_editing9.png
+SHA1-Digest: E4V5eGmNHybljaIXpQxh3mjjW+Y=
+
+Name: html/userinterface/property_editor_taborder.html
+SHA1-Digest: k8NmZOL+SY0Ku6Iq2WctnkUkgo4=
+
+Name: html/userinterface/images/property_editor_rectangle1.png
+SHA1-Digest: uEryyJe5ncUkKtz6VMv67mwdrUg=
+
+Name: html/userinterface/images/property_editor_point4.png
+SHA1-Digest: tRZGk7TEW4GnEocP1N4jM4Okqw8=
+
+Name: html/userinterface/images/exposeProperty.gif
+SHA1-Digest: TnpalgfvA7v4dhoZ1lJAXXYBFaY=
+
+Name: html/whatsnew/v740.html
+SHA1-Digest: ytJoklvEO6Lgx2pM3gFoGb2TWfs=
+
+Name: html/installation/images/help_software_updates.png
+SHA1-Digest: 9PDUCQAqimxQcKKJmNTAlUPFGAo=
+
+Name: html/features/editing_existing_window.html
+SHA1-Digest: 8Wssk5IzYOdBuyCqgSJXQbv/X0E=
+
+Name: html/userinterface/images/palette_dock_on.gif
+SHA1-Digest: 7g3nsSfio0a/NsDp+BwQUhlsKbQ=
+
+Name: html/userinterface/images/property_editor_image2.png
+SHA1-Digest: T8KEGjUYSNzR+xT6nMmyGdr10vw=
+
+Name: html/features/images/nls_rename_key.png
+SHA1-Digest: 1O6ZPEiYThSzu/Gi4d5wkUbZ7Oo=
+
+Name: html/userinterface/images/editor_source_page.png
+SHA1-Digest: tMhdZJgH8ksB2DeqVLzgWMYYiNc=
+
+Name: html/userinterface/images/goto_definition.gif
+SHA1-Digest: 6FFIOwa+8Khmof75KC3XLqXDaFk=
+
+Name: html/userinterface/images/globe3.png
+SHA1-Digest: H0GtPpB0Ua3pbhYZDq1oTrcftFk=
+
+Name: html/userinterface/images/palette_swt.png
+SHA1-Digest: A4qw/SrkYdfh1XqeVXIlPfrbU/c=
+
+Name: html/userinterface/images/boolean_false.png
+SHA1-Digest: h7QZkV1dVsTg5c3INeK//fLEfpc=
+
+Name: html/features/images/create_factory_dialog3.png
+SHA1-Digest: EgSYgKCBRO+Gxp/bGRqCIabDMVg=
+
+Name: html/userinterface/images/feedback_drag_grid1.png
+SHA1-Digest: lcWL2LU+r8yUjqznbaEf1J8OBNM=
+
+Name: html/userinterface/images/add_category.gif
+SHA1-Digest: lcEy+Ui+DLBP29NloTd5iEttmMc=
+
+Name: html/userinterface/images/superclass.gif
+SHA1-Digest: 0F2Iq9uVS8Eb6+Rx/aCg3uyi2vc=
+
+Name: html/whatsnew/v680.html
+SHA1-Digest: imM16stc/b0TYdFfHZxg6zRpwqc=
+
+Name: html/preferences/images/activate_page2.gif
+SHA1-Digest: 3kaO4izEfQNWLKc+oS0TFpvUEoA=
+
+Name: html/features/images/nls_select_messages_class.gif
+SHA1-Digest: ku8/TaX96qRTxNCNBHBRWb/JovI=
+
+Name: html/userinterface/images/import_jar.png
+SHA1-Digest: r8DfgjJcJl2mmKuG7KtiY2/m43k=
+
+Name: html/userinterface/images/align_h_right.gif
+SHA1-Digest: Uvma/v8avrnoBk1S4dHaS70fHqE=
+
+Name: html/features/morphing.html
+SHA1-Digest: G7V1v25E9sMkLEy9MpkDdj2ycKM=
+
+Name: html/userinterface/images/add_instance_factory_dialog.png
+SHA1-Digest: HM8z96u2kN1QD/QTTadIFlcqWO4=
+
+Name: html/userinterface/images/layout_assistant.png
+SHA1-Digest: xb15vtfALpTH3vtmX5sFyhyKTcE=
+
+Name: html/userinterface/images/align_v_top.gif
+SHA1-Digest: up0tqXbMPwPlznUjaL70qzhr2rY=
+
+Name: html/features/images/nls_externalize_strings6.png
+SHA1-Digest: pGeixF5/vqnBcYQjnBK4NtrPkjE=
+
+Name: html/installation/index.html
+SHA1-Digest: SuU2S+0vPkil4Li7wt3H+eaWdfw=
+
+Name: html/userinterface/images/gui_editor.gif
+SHA1-Digest: D1TWI2nQmgQFG1wLOH0yE7ZxaSc=
+
+Name: html/userinterface/images/expose_property.png
+SHA1-Digest: VEOMXOh0b3ukNBM1Yk/X201mdko=
+
+Name: html/userinterface/images/exposed_decorator.gif
+SHA1-Digest: R7xad5WkpR3H2T+ewvsoSLWgNZo=
+
+Name: html/features/images/nls_new_source2.png
+SHA1-Digest: OMlr2z4x4oJCgOJiZzupP+6Ixzk=
+
+Name: html/userinterface/images/assistant.gif
+SHA1-Digest: pyY3PQ8qevwrEzzbaAGAwILIhOQ=
+
+Name: html/userinterface/images/property_editor_color_swing.png
+SHA1-Digest: Qj1Cy1vWm8de0tNWlS+Jg8pCZ1c=
+
+Name: html/features/images/nls_package_explorer3.png
+SHA1-Digest: 83Texnf+81F2uYvM65ZXIXkqBXg=
+
+Name: html/userinterface/images/expand_all.gif
+SHA1-Digest: aYsv51vZdvvYc/sf2NT9t5gfzh8=
+
+Name: html/preferences/images/export_preferences2.png
+SHA1-Digest: QgxHV47XctSTIvpJGUrL0RR2D3M=
+
+Name: html/userinterface/context_menu.html
+SHA1-Digest: E6NpfmH6h4U3akmzEhMVbQa0Cog=
+
+Name: html/userinterface/images/plus.png
+SHA1-Digest: m1RYFeDUHbvrDlNSluVbtNSRDho=
+
+Name: html/features/index.html
+SHA1-Digest: MH65IizurtwO+gIAxQZd3sqOvlc=
+
+Name: html/userinterface/images/change_style1.png
+SHA1-Digest: XXTsAPAkHeaR2ixV3LtSS/phUGs=
+
+Name: html/userinterface/images/generate_name.png
+SHA1-Digest: JAEPnSv33ckYqc6dxUMBNkYxwTY=
+

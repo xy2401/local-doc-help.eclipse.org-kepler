@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../../styles/carnot.css" charset="ISO-8859-1"
+    type="text/css">
+<title>Concurrency Control</title>
+<script language="JavaScript" src="../../../styles/naviLine.js"
+    type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Locking and Unlocking Elements","../../../toc.html",
+        "con-introduction.html","con-locking.html",
+        "../../handbooks.htm","Developer Handbook",
+        "../mg-preface.htm","Modeling Guide",
+        "con-preface.html","Collaborative Modeling");
+ -->
+</script>
+
+<h1>Concurrency Control</h1>
+<ul>
+    <li><a href="#requirements">Preparing for Concurrency Control</a></li>
+    <li><a href="#adding">Adding Concurrency Control to Process Models</a></li>
+    <li><a href="#prefs">Setting Concurrency Preferences</a></li>
+    <li><a href="#disconnect">Disconnecting From Concurrency Control</a></li>
+    <li><a href="#lockFiles">Lock Files</a></li>
+ <!--    <li><a href="#offline">Working Offline</a></li> -->
+ <!--   <li><a href="#consistency">Maintaining Model Consistency</a></li>-->
+    <li><a href="#upgrade">Upgrading Models</a></li>
+</ul>
+
+<h2 id="requirements">Preparing for Concurrency Control</h2>
+<p>The Concurrency Control functionality is only available in case you have a 
+project with a connection to a Subversion repository and your model is shared
+with this connection.
+To work with a shared project you either have to check out an existing project
+from the repository or share a local project with the repository.</p>
+
+<h3>Subversion Connection</h3>
+<p>You need an Subversion (SVN) repository added to your workspace to work in concurrency
+mode. To add an existing 
+Subversion repository to your workspace:</p>
+<ol>
+    <li>Select <strong>Windows &gt; Open Perspective &gt; Other &gt; SVN Repository Exploring</strong>.</li>
+    <li>Click the <strong>Add SVN Repository</strong> icon.</li>
+    <li>In the upcoming dialog enter the URL of your repository location.</li>
+    <li>Select <strong>Finish</strong>.</li>
+</ol>
+<p>For detailed information on adding an SVN connection, please refer to
+the <strong>Subclipse - Subversion Eclipse Plugin</strong> documentation 
+(Workbench User Guide &gt; Getting started &gt; Team SVN tutorial &gt;
+Creating a new Repository Location).</p>
+<h3 id="share">Sharing a Project</h3>
+<p>In case you want to use a local project for concurrency mode, you have to share this project
+with an SVN repository. To share a project:</p>
+<ol>
+    <li>Right-click your project in the Package Explorer.</li>
+    <li>Select <strong>Team &gt; Share Project</strong>.
+<p class="image"><img src="images/share-project.png" alt=""><br>
+<strong>Figure:</strong></p></li>
+    <li>Select <strong>SVN</strong> as repository plug-in.
+    <p class="image"><img src="images/share-project-svn.png" alt=""></p></li>
+    <li>Click <strong>Next</strong>.</li>
+    <li>Create a new repository location or use an existing repository location.</li>
+    <li>In the latter case browse to the existing location.</li>
+</ol>
+<p class="image"><img src="images/share-project-rep.png" alt=""></p>
+<p>For detailed information on sharing a project, please refer to
+the <strong>Subclipse - Subversion Eclipse Plugin</strong> documentation
+(Workbench User Guide &gt; Getting started &gt; Team SVN tutorial 
+&gt; Connect an Existing Project with SVN).</p>
+<h3 id="checkout">Checking out existing Projects</h3>
+<p>To check out an existing project:</p>
+<ol>
+    <li>Switch to the <strong>SVN Repositories</strong> perspective.</li>
+    <li>Go to the location of your project.</li>
+    <li>Select the project and choose <strong>Checkout</strong>.</li>
+</ol>
+<p>For detailed information on checking out existing projects from the repository,
+ please refer to the <strong>Subclipse - Subversion Eclipse Plugin</strong> documentation
+(Workbench User Guide &gt; Getting started &gt; Team SVN tutorial &gt; Checkout).</p>
+
+<h3 id="checkoutRep">Checking out Models from the Repository</h3>
+<p>In case a new model has been checked in by another user, you can
+check out this model and its lock files from the repository.
+Synchronizing your project with the repository indicates if new models
+have been added. For detailed information on synchronizing with a repository,
+please refer to the <strong>Subclipse - Subversion Eclipse Plugin</strong> 
+documentation (Reference &gt; Team Menu &gt; Team Synchronizing Perspective ).</p>
+
+<p class="note"><strong>Note</strong><br>
+Please make sure that you use the latest version of a model element for 
+concurrency control, otherwise it might lead to inconsistencies.</p>
+<h2 id="adding">Adding Concurrency Control to Process Models</h2>
+<p>To add concurrency control to a model, right-click the model in the Outline view
+and select <strong>Add Concurrency Management</strong>. With this action a
+commit to the repository is invoked automatically.</p>
+<p class="image"><img src="images/add-concurrency.png"
+    alt="Adding Concurrency Control"><br>
+<strong>Figure:</strong> Add Concurrency Control.</p>
+<p>If the model is in <a href="con-introduction.html#version">version management mode</a>,
+the necessary lock files are created and the model state is switched to
+concurrency mode. In case the model is in <a href="con-introduction.html#local">local
+file mode</a>, the model file is checked into the subversion repository.</p>
+<p>In case a model has been shared before and changes are performed
+in local mode, it is not possible to share this model again. You have
+to check out a clean copy of the model from the repository and repeat the
+changes. An according warning message is opening to inform you about these
+necessary steps:</p>
+<p class="image"><img src="images/share-operation-warning.png"
+    alt="Sharing Warning Message"><br>
+<strong>Figure:</strong> Warning Message for already Shared Model.</p>
+<h2 id="prefs">Setting Concurrency Preferences</h2>
+<p>You can set the following preferences for handling the Concurrency
+Management Control:</p>
+<ul>
+    <li>enable and enter a rate for a refresh job to periodically refresh
+	informations from the repository. Please note that the value must be an
+	Integer between 30 and 7200 (seconds).</li>
+    <li>enable and set a retry rate in seconds in case of connection failure.
+     Please note that the value must be an
+	Integer between 30 and 7200 (seconds).</li>
+</ul>
+<p>To set these preferences, open the <strong>Preferences</strong> dialog:</p>
+<ol>
+    <li>Select <strong>Window &gt; Preferences</strong>.</li>
+    <li><span>Expand the <strong>Process Manager</strong> entry in the left
+    pane and select <strong>Concurrency Management Preferences</strong>.</span></li>
+    <li><span>Now you can set your preferences.</span></li>
+</ol>
+<p class="image"><img src="images/preferences.png" alt="Concurrency Preferences"><br>
+<strong>Figure:</strong> Concurrency Management Preferences.</p>
+<h2 id="disconnect">Disconnecting From Concurrency Control</h2>
+<p>To exit the <strong>Concurrency Management Mode</strong>, right-click the
+model in the Outline view and select <strong>Disconnect From Concurrency Management</strong>:</p>
+<p class="image"><img src="images/disconnect.png"
+    alt="Disconnect From Cocurrency Control"><br>
+<strong>Figure:</strong> Disconnect From Concurrency Control.</p>
+<p>The following steps are performed automatically during a disconnect to
+ensure that the disconnect is not called by several users simultaneously or one
+after another:</p>
+<ul>
+    <li>locking and updating the XPDL</li>
+    <li>removing lock folder and all collaboration extended attributes</li>
+    <li>saving and committing the XPDL file</li>
+    <li>locking the folder</li>
+    <li>unlocking the XPDL file</li>
+</ul>
+<h2 id="lockFiles">Lock Files</h2>
+<p>For all separately lockable model elements, lock files are created in a
+model specific directory inside the same project. All lock files are added and
+committed to the version control system, when the <strong>Concurrency Management Mode</strong>
+is switched on. To be able
+to track changes, lock files are modified and committed upon changes of these
+model elements. A number that will be incremented on
+each commit of a changes of an element is stored in the according lock files.</p>
+
+<h3>Lock File Naming</h3>
+<p>The names of lock files look are composed as follows:</p>
+<pre>&lt;project_root&gt;/.MODEL_&lt;GUID&gt;/&lt;element_type&gt;/&lt;element_type&gt;__&lt;element_uuid&gt;.lck</pre>
+<p>Whereby:</p>
+<ul>
+    <li>MODEL_&lt;GUID&gt; is a GUID generated on entering the concurrency mode and saved in the model extended attributes</li>
+    <li>element_type corresponds the EMF specific name feature, for example: <tt>processDefinition__ProcessDefinition_1.lck</tt></li>
+    <li>element UUID, this number is saved with the element in its extended attributes and does not change, e.g. on element renaming.</li>
+</ul>
+<!--  <h2 id="offline">Working Offline</h2>
+<p>You can work offline on process models. Locked model elements can be modified without server connectivity.</p>-->
+
+<h2 id="upgrade">Upgrading Models</h2>
+<p>Upgrading a model requires a lock on all model elements as obtained by the 
+<strong>Lock All for Editing</strong> option. Please refer to section
+<a href="con-locking.html#lockAll">Locking all Lockable Elements</a> of chapter
+<a href="con-locking.html">Locking and Unlocking Elements</a> for information on this
+option. For a model upgrade, the lock on all
+model elements is obtained implicitly.</p>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>
